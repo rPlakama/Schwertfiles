@@ -8,50 +8,23 @@
 #Componentes Principais
 
   vim 
-  neovim
   kitty 
   mesa
-  yazi
   brightnessctl
   gcc
-  ripgrep
 
 #Serviços
 
-  pavucontrol
-  wofi
   git
   p7zip
   unzip
   yadm
-  rust-analyzer  
   power-profiles-daemon
-  waybar
-  mako
-  nodejs_23
-  alsa-utils
   
-
 #Programas
 
-  vlc
-  spotify
-  krita
-  telegram-desktop
   firefox
-  discord
 
-#Ferramentas
-
-  btop
-  hyprpaper
-  obsidian
-  xfce.thunar
-  hyprshot
-  fastfetch
-  wl-clipboard-rs
-  hunspellDicts.pt_BR
-  
 ];
 # Serviços e configurações diversas
 
@@ -68,11 +41,8 @@
   services.displayManager.autoLogin.user = "rplakama";
   services.displayManager.defaultSession = "hyprland";
 
-#  Nvim como editor padrão
- environment.variables.EDITOR = "nvim";
- programs.neovim.defaultEditor = true;
- programs.neovim.enable = true ;
-
-  
+# Configurações NVIM Instalado Via Home_Manager
+programs.neovim.enable = true;
+programs.neovim.defaultEditor = true;
 
 }
