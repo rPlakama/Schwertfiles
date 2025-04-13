@@ -45,4 +45,7 @@
 programs.neovim.enable = true;
 programs.neovim.defaultEditor = true;
 
+# Ativar Bluetooth
+hardware.bluetooth.enable = true;
+
 }
