@@ -6,7 +6,11 @@
   home.username = "rplakama";
   home.homeDirectory = "/home/rplakama";
   home.stateVersion = "24.11"; # Please read the comment before changing.
-  home.packages = [
+
+  home.packages = with pkgs; [
+  	
+	nodejs
+
   ];
 
   home.sessionVariables = {
