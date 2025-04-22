@@ -103,7 +103,7 @@
             headset = "󰋋";
             default = [""];
           };
-          on-click = "pavucontrol";
+          on-click = "pwvucontrol";
           on-click-right = "amixer -D pipewire set Capture 0+ toggle";
         };
         network = {
@@ -164,6 +164,7 @@
        }
 
        #bluetooth {
+	   color: white;
        	padding-right: 0px;
       }
        #clock {
@@ -186,6 +187,7 @@
        }
 
        #network {
+	   	color: white;
        	padding-right: 9px;
       }
     '';
@@ -223,15 +225,32 @@
     };
   }; #End of Yazi
 
+  # GTK + cursor + theme (Corrigido)
+  gtk = {
+    enable = true;
+
+    theme = {
+      name = "Catppuccin-Mocha-Compact-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "blue" ];
+        size = "compact";
+        variant = "mocha";
+      };
+    };
+
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+  };
+
   home.pointerCursor = {
-  gtk.enable = true;
-  x11.enable = true;
-  package = pkgs.bibata-cursors;
-  name = "Bibata-Modern-Ice";
-  size = 16;
-};
-
-
+    gtk.enable = true;
+    x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    size = 16;
+  };
 
   programs.home-manager.enable = true;
 }
