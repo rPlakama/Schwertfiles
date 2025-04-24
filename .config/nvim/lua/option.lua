@@ -1,4 +1,4 @@
-	--------------------------------------------------
+--------------------------------------------------
 -- Configurações Básicas do Neovim
 --------------------------------------------------
 -- Configuração para usar a área de transferência do sistema
@@ -36,6 +36,9 @@ vim.keymap.set('n', '<Space>f', function()
     hidden = true               -- Incluir arquivos ocultos
   })
 end, { desc = "Busca de arquivos (incluindo ocultos) dentro do diretório home com Telescope" })
+
+vim.keymap.set('n', '<leader>e', ':NvimTreeFindFile<CR>', { desc = 'Reveal current file in tree' })
+
 
 
 --------------------------------------------------

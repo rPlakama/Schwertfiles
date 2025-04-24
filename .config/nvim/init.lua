@@ -1,58 +1,15 @@
 require("config.lazy")
 require("option")
--- default config:
-require('peek').setup({
-  auto_load = true,         -- whether to automatically load preview when
-                            -- entering another markdown buffer
-  close_on_bdelete = true,  -- close preview window on buffer delete
-
-  syntax = true,            -- enable syntax highlighting, affects performance
-
-  theme = 'dark',           -- 'dark' or 'light'
-
-  update_on_change = true,
-
-  app = 'webview',          -- 'webview', 'browser', string or a table of strings
-                            -- explained below
-
-  filetype = { 'markdown' },-- list of filetypes to recognize as markdown
-
-  -- relevant if update_on_change is true
-  throttle_at = 200000,     -- start throttling when file exceeds this
-                            -- amount of bytes in size
-  throttle_time = 'auto',   -- minimum amount of time in milliseconds
-                            -- that has to pass before starting new render
-})
 require('mini.animate').setup()
-require('lazy').setup {
-  {'romgrk/barbar.nvim',
-    dependencies = {
-      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
-      'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
-    },
-    init = function() vim.g.barbar_auto_setup = false end,
-    opts = {
-		  icons = {
-    close = {
-      enabled = false
-    },
-  },
-},
-
-
-    },
-    version = '^1.0.0', -- optional: only update when a new 1.x version is released
-  }
-
 require("catppuccin").setup({
-    flavour = "auto", -- latte, frappe, macchiato, mocha
+    flavour = "auto", 
     background = { -- :h background
         light = "latte",
         dark = "macchiato",
     },
     transparent_background = true, -- disables setting the background color.
     show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-    term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+    term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
     dim_inactive = {
         enabled = false, -- dims the background color of inactive window
         shade = "dark",
@@ -95,47 +52,22 @@ require("catppuccin").setup({
 
 -- setup must be called before loading
 vim.cmd.colorscheme "catppuccin"
--- Telescope
 require('telescope').setup{
   defaults = {
-    -- Default configuration for telescope goes here:
-    -- config_key = value,
     mappings = {
       i = {
-        -- map actions.which_key to <C-h> (default: <C-/>)
-        -- actions.which_key shows the mappings for your picker,
-        -- e.g. git_{create, delete, ...}_branch for the git_branches picker
         ["<C-h>"] = "which_key"
       }
     }
   },
   pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-    --   ...
-    -- }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
   },
   extensions = {
-    -- Your extension configuration goes here:
-    -- extension_name = {
-    --   extension_config_key = value,
-    -- }
-    -- please take a look at the readme of the extension you want to configure
   }
 }
 
--- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
--- optionally enable 24-bit colour
-vim.opt.termguicolors = true
--- OR setup with some options
---
---
 require("nvim-tree").setup({
   sync_root_with_cwd = true,
   update_focused_file = {
@@ -149,9 +81,6 @@ require("nvim-tree").setup({
     centralize_selection = true
   }
 })
-
--- Optional: Create mapping to reveal current file in tree
-vim.keymap.set('n', '<leader>e', ':NvimTreeFindFile<CR>', { desc = 'Reveal current file in tree' })
 
 -- Optional: Auto-open tree when Neovim starts in directory
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
