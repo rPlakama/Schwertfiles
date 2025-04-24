@@ -155,11 +155,11 @@ return {
     workspaces = {
       {
         name = "Livro",
-        path = "~/Dropbox/obisidan-vauts/Livro/",
+        path = "~/Dropbox/vaults/Livro/",
       },
       {
         name = "Estudo",
-        path = "~/Dropbox/obisidan-vauts/Estudos/",
+        path = "~/Dropbox/vaults/Estudos/",
       },
     },
 

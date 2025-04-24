@@ -257,6 +257,7 @@
 	 enable = true;
 	 shellInit = ''
       set -g fish_greeting ""
+	  set -g fish_key_bindings fish_vi_key_bindings
     '';
   };
 
@@ -268,13 +269,15 @@
       format = "$shell$nix_shell$git_branch$git_commit$git_state$git_status$directory$jobs$cmd_duration$character";
       shell = {
         disabled = false;
-		style = "gray bold";
+		style = "cyan bold";
 		fish_indicator = "󰈺";
       };
 
 	  character = {
 	  	success_symbol = "[>>](bold white)";
 		error_symbol = "[<<](bold red)";
+		vimcmd_symbol = "[>>](bold green)";
+		vimcmd_visual_symbol = "[>>](bold white)";
 		};
       username = {
         style_user = "bright-white bold";
