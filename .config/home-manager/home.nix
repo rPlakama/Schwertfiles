@@ -2,14 +2,36 @@
   config,
   pkgs,
   ...
-}: {
+}: 
+
+{
   home.username = "rplakama";
   home.homeDirectory = "/home/rplakama";
-  home.stateVersion = "24.11"; # Please read the comment before changing.
-
+  home.stateVersion = "24.11"; 
+  nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
   	
-	nodejs
+	nodejs_23
+	yarn
+	ripgrep
+	mpvpaper
+	yadm
+	dropbox
+	discord
+	obs-studio
+	spotify
+	xfce.thunar
+	p7zip
+	pwvucontrol
+	gcc
+	wezterm
+	overskride
+	telegram-desktop
+	brightnessctl
+	wl-clipboard-rs
+	btop
+
+
 
   ];
 
@@ -232,15 +254,6 @@
   # GTK + cursor + theme (Corrigido)
   gtk = {
     enable = true;
-
-    theme = {
-      name = "Catppuccin-Mocha-Compact-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "blue" ];
-        size = "compact";
-        variant = "mocha";
-      };
-    };
 
     iconTheme = {
       name = "Papirus-Dark";

@@ -1,4 +1,4 @@
---------------------------------------------------
+	--------------------------------------------------
 -- Configurações Básicas do Neovim
 --------------------------------------------------
 -- Configuração para usar a área de transferência do sistema
@@ -22,6 +22,21 @@ vim.o.updatetime = 300      -- Tempo de atualização mais rápido para melhor e
 
 -- Configuração de Highlight de Linha
 vim.o.cursorline = false -- Criar highlight na linha do cursor
+
+vim.keymap.set("n", "<C-q>", function()
+  vim.cmd("bd")  -- fecha o buffer atual
+  vim.defer_fn(function()
+    Snacks.dashboard()
+  end, 1) 
+end, { desc = "Fechar buffer e abrir o menu" })
+
+vim.keymap.set('n', '<Space>f', function()
+  require('telescope.builtin').find_files({ 
+    cwd = vim.fn.expand('~'),  -- Diretório home
+    hidden = true               -- Incluir arquivos ocultos
+  })
+end, { desc = "Busca de arquivos (incluindo ocultos) dentro do diretório home com Telescope" })
+
 
 --------------------------------------------------
 -- Configurações de Verificação Ortográfica
@@ -79,9 +94,6 @@ vim.keymap.set("i", "<up>", "<nop>", { noremap = true, desc = "Desabilita tecla 
 vim.keymap.set("i", "<down>", "<nop>", { noremap = true, desc = "Desabilita tecla para baixo no modo de inserção" })
 vim.opt.mouse = ""          -- Desabilita interações com o mouse
 
--- Telescope Finder 
-vim.keymap.set('n', '<Space>f', '<cmd>Telescope find_files<cr>', { desc = "Busca de arquivos com Telescope" })
-
 --------------------------------------------------
 -- Gerenciamento de Abas/Buffers
 --------------------------------------------------
@@ -102,7 +114,7 @@ vim.api.nvim_set_keymap('n', '<C-Space>', ':tabnew<CR>', {
 })
 
 -- Fechar buffer atual
-vim.api.nvim_set_keymap('n', '<C-X>', ':BufferClose<CR>', {
+vim.api.nvim_set_keymap('n', '<C-X>', '<Cmd>bd<CR>', {
   noremap = true,
   silent = true,
   desc = "Fecha o buffer atual"
@@ -139,6 +151,7 @@ vim.keymap.set("n", "<M-b>", "<Cmd>ObsidianQuickSwitch<CR>",
 vim.keymap.set("n", "<M-l>", "<Cmd>ObsidianSearch<CR>",
                { desc = "Pesquisar nas notas do Obsidian" })
 
+
 --------------------------------------------------
 -- Configurações do LSP
 --------------------------------------------------
@@ -146,4 +159,6 @@ vim.keymap.set("n", "<M-l>", "<Cmd>ObsidianSearch<CR>",
 vim.keymap.set('n', '<C-e>', function()
   vim.diagnostic.open_float({ scope = 'cursor', border = 'rounded' })
 end, { noremap = true, silent = true, desc = 'LSP Error' })
+
+
 

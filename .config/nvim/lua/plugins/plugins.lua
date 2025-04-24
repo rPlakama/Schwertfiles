@@ -109,7 +109,7 @@ return {
         ---@type snacks.dashboard.Item[]
         keys = {
 
-		  { icon = "󱝩 ", key = "f", desc = "Find File", action = ":lua require('telescope.builtin').find_files({ layout_config = { width = 0.8 }, previewer = false })" },
+		  { icon = "󱝩 ", key = "f", desc = "Find File", action = ":lua require('telescope.builtin').find_files({ cwd = vim.fn.expand('~'), hidden = true, layout_config = { width = 0.8 }, previewer = false })" },
           { icon = "󱝏 ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
 
 		  { icon = "󱝯 ", key = "s", desc = "Restore Session", section = "session" },
@@ -314,10 +314,19 @@ return {
 },
 
 {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    ft = { "markdown" },
-    build = function() vim.fn["mkdp#util#install"]() end,
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+    opts = {},
+},
+
+{
+  "iamcco/markdown-preview.nvim",
+  cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+  build = "cd app && yarn install",
+  init = function()
+    vim.g.mkdp_filetypes = { "markdown" }
+  end,
+  ft = { "markdown" },
 }
 
 
