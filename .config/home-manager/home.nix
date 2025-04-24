@@ -264,26 +264,24 @@
 		enable = true;
 		enableZshIntegration = true;
 		settings = {
-      add_newline = false;
-      format = "$shlvl$shell$nix_shell$git_branch$git_commit$git_state$git_status$directory$jobs$cmd_duration$character";
-      shlvl = {
-        disabled = true;
-        symbol = "ﰬ";
-        style = "bright-red bold";
-      };
+      add_newline = true;
+      format = "$shell$nix_shell$git_branch$git_commit$git_state$git_status$directory$jobs$cmd_duration$character";
       shell = {
         disabled = false;
-        format = "$indicator";
-        fish_indicator = "";
-        bash_indicator = "(bright-white) ";
-        zsh_indicator = "(bright-white) ";
+		style = "gray bold";
+		fish_indicator = "󰈺";
       };
+
+	  character = {
+	  	success_symbol = "[>>](bold white)";
+		error_symbol = "[<<](bold red)";
+		};
       username = {
         style_user = "bright-white bold";
         style_root = "bright-red bold";
-      };
-	};
-  };
+        };
+	  };
+    };
 
 
   # GTK + cursor + theme (Corrigido)
