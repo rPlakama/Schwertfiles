@@ -12,6 +12,7 @@
   home.packages = with pkgs; [
   	
 	nodejs_23
+	starship
 	yarn
 	ripgrep
 	mpvpaper
@@ -233,7 +234,7 @@
 
   programs.yazi = {
     enable = true;
-    enableZshIntegration = true;
+    enableFishIntegration = true;
     settings = {
       manager = {
         show_hidden = true;
@@ -250,6 +251,40 @@
       ];
     };
   }; #End of Yazi
+
+  
+  programs.fish = {
+	 enable = true;
+	 shellInit = ''
+      set -g fish_greeting ""
+    '';
+  };
+
+    programs.starship = {
+		enable = true;
+		enableZshIntegration = true;
+		settings = {
+      add_newline = false;
+      format = "$shlvl$shell$username$hostname$nix_shell$git_branch$git_commit$git_state$git_status$directory$jobs$cmd_duration$character";
+      shlvl = {
+        disabled = false;
+        symbol = "ﰬ";
+        style = "bright-red bold";
+      };
+      shell = {
+        disabled = false;
+        format = "$indicator";
+        fish_indicator = "";
+        bash_indicator = "(bright-white) ";
+        zsh_indicator = "(bright-white) ";
+      };
+      username = {
+        style_user = "bright-white bold";
+        style_root = "bright-red bold";
+      };
+	};
+  };
+
 
   # GTK + cursor + theme (Corrigido)
   gtk = {
