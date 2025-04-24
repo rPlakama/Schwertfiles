@@ -265,9 +265,9 @@
 		enableZshIntegration = true;
 		settings = {
       add_newline = false;
-      format = "$shlvl$shell$username$hostname$nix_shell$git_branch$git_commit$git_state$git_status$directory$jobs$cmd_duration$character";
+      format = "$shlvl$shell$nix_shell$git_branch$git_commit$git_state$git_status$directory$jobs$cmd_duration$character";
       shlvl = {
-        disabled = false;
+        disabled = true;
         symbol = "ﰬ";
         style = "bright-red bold";
       };
