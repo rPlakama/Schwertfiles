@@ -12,6 +12,9 @@
   home.packages = with pkgs; [
   	
 	nodejs_23
+	hyprindle
+	any-nix-shell
+	hyprshot
 	starship
 	yarn
 	ripgrep
@@ -258,6 +261,7 @@
 	 shellInit = ''
       set -g fish_greeting ""
 	  set -g fish_key_bindings fish_vi_key_bindings
+      ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
     '';
   };
 
