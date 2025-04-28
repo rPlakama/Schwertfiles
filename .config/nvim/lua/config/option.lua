@@ -3,10 +3,12 @@
 --------------------------------------------------
 -- Configuração para usar a área de transferência do sistema
 vim.o.clipboard = 'unnamedplus'
+vim.g.maplocalleader = " "
 
 -- Configurações de exibição de números
 vim.o.number = true         -- Mostra números de linha
 vim.o.relativenumber = true -- Mostra números relativos à linha atual
+vim.opt.scrolloff = 10 
 
 -- Configurações de aparência
 vim.o.signcolumn = 'yes'    -- Coluna de sinais sempre visível

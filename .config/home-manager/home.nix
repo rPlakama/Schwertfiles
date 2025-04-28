@@ -12,7 +12,10 @@
   home.packages = with pkgs; [
   	
 	nodejs_23
-	hyprindle
+	pyright
+	hypridle
+	pandoc
+	texliveTeTeX
 	any-nix-shell
 	hyprshot
 	starship
@@ -23,7 +26,6 @@
 	dropbox
 	discord
 	obs-studio
-	spotify
 	xfce.thunar
 	p7zip
 	pwvucontrol
@@ -290,8 +292,14 @@
 	  };
     };
 
-
   # GTK + cursor + theme (Corrigido)
+
+  dconf.settings = {
+  "org/gnome/desktop/interface" = {
+    color-scheme = "prefer-dark";
+  };
+};
+
   gtk = {
     enable = true;
 
