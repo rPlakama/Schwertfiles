@@ -12,6 +12,8 @@
   home.packages = with pkgs; [
   	
 	nodejs_23
+	brave
+	hyprpaper
 	pyright
 	hypridle
 	pandoc
@@ -21,7 +23,6 @@
 	starship
 	yarn
 	ripgrep
-	mpvpaper
 	yadm
 	dropbox
 	discord
