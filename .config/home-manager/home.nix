@@ -12,6 +12,7 @@
   home.packages = with pkgs; [
   	
 	nodejs_23
+	ventoy-full-gtk
 	nixd
 	brave
 	hyprpaper
