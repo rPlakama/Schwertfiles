@@ -11,7 +11,6 @@
   environment.systemPackages = with pkgs; [
     # Main Components
     mesa
-    firefox
     yazi
 
     # Serviços
@@ -23,6 +22,7 @@
   # Habilitando programas com configurações
   programs = {
     hyprland.enable = true;
+	hyprlock.enable = true;
     fish.enable = true;
     neovim = {
       enable = true;
@@ -30,7 +30,7 @@
     };
   };
 
-  # Configurando fontes:
+  # Configurando fontes
   fonts.packages = with pkgs; [
     nerd-fonts.geist-mono
     nerd-fonts.caskaydia-cove
@@ -40,14 +40,18 @@
     symbola
   ];
 
-  # Habilitando Serviços:
   services = {
+  	displayManager = {
+	  autoLogin.user = "rplakama";
+	  autoLogin.enable = true;
+	  };
+
     displayManager.sddm = {
       enable = true;
       wayland.enable = true;
     };
 
-    # Serviços de Bateria:
+    # Serviços de Bateria
     system76-scheduler.settings.cfsProfiles.enable = true;
 
     tlp = {
@@ -71,8 +75,13 @@
     options = "--delete-older-than 7d";
   };
 
-  # Hardwware 
+  # Hardware
   hardware.bluetooth.enable = true;
   boot.loader.timeout = 0;
+
+
+  # Systemd
+  systemd.services.systemd-udev-settle.enable = false;
+  systemd.services.NetworkManager-wait-online.enable = false;
 }
 
