@@ -10,38 +10,45 @@
   home.stateVersion = "24.11"; 
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-  	
-	nodejs_23
-	ventoy-full-gtk
-	nixd
-	brave
-	hyprpaper
-	pyright
-	hypridle
-	pandoc
-	texliveTeTeX
-	any-nix-shell
-	hyprshot
-	starship
-	yarn
-	ripgrep
-	yadm
-	dropbox
-	discord
-	obs-studio
-	xfce.thunar
-	p7zip
-	pwvucontrol
-	gcc
-	wezterm
-	overskride
-	telegram-desktop
-	brightnessctl
-	wl-clipboard-rs
-	btop
 
+ # Development Tools & Utilities
 
+  nodejs_23
+  tidal-hifi
+  yarn
+  pyright
+  gcc
+  ripgrep
+  pandoc
+  texliveTeTeX
+  any-nix-shell
+  starship
+  btop
+  nixd
 
+  # System & Configuration Tools
+  yadm
+  brightnessctl
+  pwvucontrol
+  p7zip
+  wl-clipboard-rs
+  overskride  
+
+  # Desktop Environment & UI Tools
+  swww
+  hypridle
+  hyprshot
+  wezterm
+  xfce.thunar
+
+  # Web & Communication Apps
+  firefox-bin
+  discord
+  telegram-desktop
+  dropbox
+
+  # Media Tools
+  obs-studio
   ];
 
   home.sessionVariables = {
@@ -65,6 +72,18 @@
         text-color = mkLiteral "white";
         width = 700;
         spacing = 3;
+      };
+	  "#listview" = {
+      spacing = 2; # vertical space between rows
+      };
+
+	   "element" = {
+        padding = mkLiteral "2px 0px";
+      };
+
+	   "#prompt" = {
+        text = "𐖠";  # or "" to hide completely
+        text-color = mkLiteral "white";
       };
       "#inputbar" = {
         children = map mkLiteral ["prompt" "entry"];
@@ -286,7 +305,7 @@
 	  	success_symbol = "[>>](bold white)";
 		error_symbol = "[<<](bold red)";
 		vimcmd_symbol = "[>>](bold green)";
-		vimcmd_visual_symbol = "[>>](bold white)";
+		vimcmd_visual_symbol = "[>](bold green)";
 		};
       username = {
         style_user = "bright-white bold";
@@ -319,6 +338,7 @@
     name = "Bibata-Modern-Ice";
     size = 16;
   };
+
 
   programs.home-manager.enable = true;
 }

@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 return {
   -- Window settings
   window_close_confirmation = "NeverPrompt",
-  window_background_opacity = 0.9,
+  window_background_opacity = 0.8,
   hide_tab_bar_if_only_one_tab = true,
   integrated_title_buttons = { 'Close' },
   use_fancy_tab_bar = true,
@@ -11,7 +11,7 @@ return {
 
   -- Font settings
   font = wezterm.font_with_fallback({
-    'CaskaydiaCove Nerd Font',
+	'CaskaydiaCove Nerd Font',
     'Noto Sans'
   }),
   font_size = 9.0,
