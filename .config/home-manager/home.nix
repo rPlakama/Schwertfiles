@@ -50,8 +50,14 @@
   telegram-desktop
   dropbox
 
-  # Media Tools
+  # Misc 
   obs-studio
+  heroic
+  qbittorrent
+  lutris
+  wine
+  mesa 
+
   ];
 
   home.sessionVariables = {
@@ -343,6 +349,7 @@
     size = 16;
   };
 
+  # Scripts 
 
   programs.home-manager.enable = true;
 }

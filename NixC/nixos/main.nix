@@ -14,9 +14,6 @@
   # Pkgs:
   environment.systemPackages = with pkgs; [
 
-    mesa
-    libadwaita
-    yazi
     git
     neovim
     home-manager
