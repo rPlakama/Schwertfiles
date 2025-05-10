@@ -11,6 +11,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.plymouth.enable = true;
+  boot.plymouth.theme = "nixos-bgrt"; 
+  boot.plymouth.themePackages = with pkgs; [ nixos-bgrt-plymouth ]; 
+
   # Network.
   networking.hostName = "Elisheva"; 
   networking.networkmanager.enable = true;
