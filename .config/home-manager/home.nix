@@ -14,7 +14,6 @@
  # Development Tools & Utilities
 
   nodejs_23
-  wallust
   tidal-hifi
   yarn
   pyright
@@ -48,7 +47,6 @@
   # Web & Communication Apps
 
   firefox-bin
-  microsoft-edge
   discord
   telegram-desktop
   dropbox
@@ -347,8 +345,6 @@ gtk = {
     name = "Bibata-Modern-Ice";
     size = 16;
   };
-
-  # Scripts 
 
   programs.home-manager.enable = true;
 }
