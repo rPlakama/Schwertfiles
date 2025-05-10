@@ -53,6 +53,12 @@ return {
         long_message_to_split = true
       }
     },
+
+	  dependencies = {
+    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
+    },
     keys = {
       { "<leader>sn", "", desc = "+noice" },
       { "<S-Enter>", function() require("noice").redirect(vim.fn.getcmdline()) end, mode = "c", desc = "Redirect Cmdline" },

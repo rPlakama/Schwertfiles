@@ -17,7 +17,8 @@ return {
     opts = {
       workspaces = {
         { name = "Livro", path = "~/Dropbox/vaults/Livro/" },
-        { name = "Estudo", path = "~/Dropbox/vaults/Estudos/" }
+        { name = "Estudo", path = "~/Dropbox/vaults/Estudos/" },
+		{ name = "Random", path = "~/Dropbox/vaults/EscritasRD/"}
       },
       completion = {
         nvim_cmp = false,

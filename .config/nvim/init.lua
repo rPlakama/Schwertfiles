@@ -7,6 +7,7 @@ require("config.nvim-treesitter")
 require("config.lualine")
 require("config.mini-animate")
 require("config.lsp")
+require("config.notify")
 
 vim.cmd.colorscheme "catppuccin"
 vim.g.loaded_netrw = 1

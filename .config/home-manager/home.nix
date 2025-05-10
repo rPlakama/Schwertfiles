@@ -22,7 +22,6 @@
   ripgrep
   pandoc
   texliveTeTeX
-  any-nix-shell
   starship
   btop
   nixd
@@ -35,8 +34,11 @@
   p7zip
   wl-clipboard-rs
   overskride  
+  ncdu
+  
 
   # Desktop Environment & UI Tools
+
   swww
   hypridle
   hyprshot
@@ -44,19 +46,20 @@
   xfce.thunar
 
   # Web & Communication Apps
+
   firefox-bin
-  vivaldi
+  microsoft-edge
   discord
   telegram-desktop
   dropbox
 
   # Misc 
-  obs-studio
-  heroic
-  qbittorrent
-  lutris
-  wine
-  mesa 
+
+  mesa
+  zathura
+  transmission_4-gtk
+  steam-run-native #May you use this for certain .sh installs
+  easyeffects
 
   ];
 
@@ -249,7 +252,6 @@
 	 shellInit = ''
       set -g fish_greeting ""
 	  set -g fish_key_bindings fish_vi_key_bindings
-      ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
     '';
   };
 
@@ -326,20 +328,17 @@
 
   # GTK + cursor + theme (Corrigido)
 
-  dconf.settings = {
-  "org/gnome/desktop/interface" = {
-    color-scheme = "prefer-dark";
+gtk = {
+  enable = true;
+  theme = { 
+    name = "Orchis-Grey-Dark";
+    package = pkgs.orchis-theme;
+  };
+  iconTheme = {
+    name = "Papirus-Dark";
+    package = pkgs.papirus-icon-theme;
   };
 };
-
-  gtk = {
-    enable = true;
-
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-  };
 
   home.pointerCursor = {
     gtk.enable = true;
