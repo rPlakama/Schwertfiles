@@ -14,7 +14,8 @@
  # Development Tools & Utilities
 
   nodejs_23
-  tidal-hifi
+  rust-analyzer
+  rustc
   yarn
   pyright
   gcc
@@ -30,11 +31,11 @@
   yadm
   brightnessctl
   pwvucontrol
-  p7zip
+  unzip
+  zip
   wl-clipboard-rs
   overskride  
   ncdu
-  
 
   # Desktop Environment & UI Tools
 
@@ -42,20 +43,23 @@
   hypridle
   hyprshot
   wezterm
-  xfce.thunar
+  hyprpolkitagent
 
-  # Web & Communication Apps
+
+  # Web & Apps
 
   firefox-bin
   discord
   telegram-desktop
   dropbox
+  tidal-hifi
+  zathura
+  transmission_4-gtk
+  easyeffects
 
   # Misc 
 
   mesa
-  zathura
-  transmission_4-gtk
   steam-run-native #May you use this for certain .sh installs
   easyeffects
 
@@ -254,9 +258,9 @@
   };
 
     programs.starship = {
-		enable = true;
-		enableZshIntegration = true;
-		settings = {
+      enable = true;
+      enableZshIntegration = true;
+      settings = {
       add_newline = true;
       format = "$shell$nix_shell$git_branch$git_commit$git_state$git_status$directory$jobs$cmd_duration$character";
       shell = {
@@ -266,10 +270,10 @@
       };
 
 	  character = {
-	  	success_symbol = "[>>](bold white)";
-		error_symbol = "[<<](bold red)";
-		vimcmd_symbol = "[>>](bold green)";
-		vimcmd_visual_symbol = "[>](bold green)";
+	  	success_symbol = "[](bold white)";
+		error_symbol = "[](bold white)";
+		vimcmd_symbol = "[](bold white)";
+		vimcmd_visual_symbol = "[](bold white)";
 		};
       username = {
         style_user = "bright-white bold";
