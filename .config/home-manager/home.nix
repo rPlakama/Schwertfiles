@@ -34,7 +34,6 @@
   unzip
   zip
   wl-clipboard-rs
-  overskride  
   ncdu
 
   # Desktop Environment & UI Tools
