@@ -9,7 +9,7 @@ vim.opt.clipboard = "unnamedplus"
 -- Configurações de exibição de números
 vim.o.number = true         -- Mostra números de linha
 vim.o.relativenumber = true -- Mostra números relativos à linha atual
-vim.opt.scrolloff = 10 
+vim.opt.scrolloff = 999 
 
 -- Configurações de aparência
 vim.o.signcolumn = 'yes'    -- Coluna de sinais sempre visível

@@ -32,7 +32,6 @@
   brightnessctl
   pwvucontrol
   unzip
-  zip
   wl-clipboard-rs
   ncdu
 
@@ -44,7 +43,6 @@
   wezterm
   hyprpolkitagent
 
-
   # Web & Apps
 
   firefox-bin
@@ -54,13 +52,6 @@
   tidal-hifi
   zathura
   transmission_4-gtk
-  easyeffects
-
-  # Misc 
-
-  mesa
-  steam-run-native #May you use this for certain .sh installs
-  easyeffects
 
   ];
 
@@ -157,7 +148,7 @@
        #workspaces button {
            padding: 0 5px;
            background: transparent;
-           color: rgba(100%, 100%, 100%, 0.3);
+           color: rgba(100%, 100%, 100%, 0.8);
        }
        #workspaces button.active {
            color: rgba(100%, 100%, 100%, 1.0);
