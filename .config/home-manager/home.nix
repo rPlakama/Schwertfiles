@@ -14,11 +14,12 @@
  # Development Tools & Utilities
 
   nodejs_23
-  rust-analyzer
-  rustc
+  rust-analyzer # lsp
+  rustc #compiler
   yarn
-  pyright
-  gcc
+  pyright #lsp
+  gcc #compiler
+  ccls #lsp
   ripgrep
   pandoc
   texliveTeTeX
