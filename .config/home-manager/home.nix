@@ -14,18 +14,29 @@
  # Development Tools & Utilities
 
   nodejs_23
-  rust-analyzer # lsp
-  rustc #compiler
   yarn
-  pyright #lsp
-  gcc #compiler
-  ccls #lsp
   ripgrep
   pandoc
   texliveTeTeX
   starship
   btop
+
+  # LSP's & Compilers
+
+  # C/C++
+  gcc
+  clang-tools
+
+  # Python
+  python314
+  pyright
+
+  # Nix
   nixd
+
+  # Rust
+  rustc
+  rust-analyzer
 
   # System & Configuration Tools
 
@@ -42,6 +53,7 @@
   hypridle
   hyprshot
   wezterm
+  fastfetch
   hyprpolkitagent
 
   # Web & Apps

@@ -27,7 +27,6 @@ end
 local servers = {
   pyright = {},
   rust_analyzer = {},
-  ccls = {},
   nixd = {},
 }
 
