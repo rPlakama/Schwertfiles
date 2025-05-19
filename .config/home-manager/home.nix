@@ -82,7 +82,7 @@
         position = "bottom";
         modules-left = ["hyprland/workspaces"];
         modules-center = ["hyprland/window"];
-        modules-right = ["pulseaudio" "bluetooth" "network" "battery" "clock" "tray"];
+        modules-right = ["pulseaudio" "bluetooth" "network" "battery" "clock" "power-profile-daemon" "tray"];
         spacing = 0;
         height = 20;
         "hyprland/window" = {
@@ -92,9 +92,24 @@
           format = "{icon}";
           format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
         };
+		power-profile-daemon = {
+		format = "{icon}";
+		tooltip-format = "Power profile: {profile}\nDriver: {driver}";
+		tooltip = true;
+		format-icons ={
+			default = "";
+			balanced = "";
+			power-saver = "";
+		};
+	};
+
         clock = {
-          format-alt = "{:%a, %d. %b  %H:%M}";
+		  tooltip-format = "<tt><big>{calendar}</big></tt>";
+          format = "{:%a, %d. %b  %H:%M}";
+		  calendar = {
+		  	mode = "month";
         };
+		};
         tray = {
           icon-size = 10;
           spacing = 5;
@@ -136,7 +151,7 @@
           format = "{icon}";
           format-wifi = " 󰖩";
           format-disconnected = " 󱚼";
-          max-length = 25;
+		  tooltip-format = "{essid}";
         };
       }
     ];
@@ -174,6 +189,10 @@
        #workspaces button.empty {
            color: rgba(100%, 100%, 100%, 0.2);
        }
+	   #power-profiles-daemon {
+	   		color: #ffffff;
+			}
+
        #mode,
        #bluetooth,
        #network, /* Corrected from #networks */
