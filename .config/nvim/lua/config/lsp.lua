@@ -27,7 +27,12 @@ end
 local servers = {
   pyright = {},
   rust_analyzer = {},
-  nixd = {},
+  nixd = {
+	  formatting = {
+		  command = { "alejandra" },
+	  },
+	},
+  clangd = {},
 }
 
 -- Setup each server
