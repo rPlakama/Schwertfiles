@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+
   home.username = "rplakama";
   home.homeDirectory = "/home/rplakama";
   home.stateVersion = "24.11";
