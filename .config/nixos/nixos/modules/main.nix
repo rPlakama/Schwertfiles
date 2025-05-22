@@ -18,15 +18,14 @@
 };
 
   # Services.	
-  services = {
-    displayManager = {
-      autoLogin.enable = true;
-      autoLogin.user = "rplakama";
-      sddm.enable = true;
-      sddm.wayland.enable = true;
-    };
-  system76-scheduler.settings.cfsProfiles.enable = true;
+  services = { displayManager = { autoLogin.enable = true; autoLogin.user = "rplakama"; sddm.enable = true; sddm.wayland.enable = true; };
+  power-profiles-daemon.enable = true;
+  system76-scheduler.settings.cfsProfiles.enable = true; 
+  gvfs.enable = true;
+  udisks2.enable = true;
+
   };
+
   #Thunar 
   programs.xfconf.enable = true;
   programs.thunar.enable = true;
@@ -35,9 +34,6 @@
     thunar-archive-plugin
     thunar-media-tags-plugin
   ];
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
-
   nix.gc = {
     automatic = true;
     dates = "weekly";

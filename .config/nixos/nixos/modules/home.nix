@@ -12,17 +12,37 @@
     ./configs/starship.nix
     ./configs/mako.nix
     ./configs/rofi.nix
-	./configs/ghostty.nix
+    ./configs/alacritty.nix
 
   ];
+
+    home.pointerCursor = {
+
+    gtk.enable = true;
+    x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    size = 16;
+
+  };
+    gtk = {
+    enable = true;
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+  };
   stylix = {
 
     enable = true;
     image = ./wallpapers/1.png;
     polarity = "dark";
     autoEnable = true;
-
     targets.firefox.enable = true;
+    targets.nixos-icons.enable = true;
+    fonts.sizes.terminal = 9;
+	opacity.terminal = 0.9;
+
     };
 
 

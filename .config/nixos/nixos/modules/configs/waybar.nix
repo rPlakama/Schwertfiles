@@ -12,9 +12,9 @@
         modules-center = ["hyprland/window"];
         modules-right = [
           "pulseaudio"
+          "battery"
           "bluetooth"
           "network"
-          "battery"
           "temperature"
           "clock"
           "tray"
@@ -66,9 +66,9 @@
         };
 
         battery = {
-          format = "{icon}";
+          format = "{capacity}% {icon} ";
           format-icons = [
-            "󰁺" "󰁻" "󰁼" "󰁽" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"
+            " 󰁺" " 󰁻" " 󰁼" " 󰁽" " 󰁿" " 󰂀" " 󰂁" " 󰂂" " 󰁹"
           ];
         };
 

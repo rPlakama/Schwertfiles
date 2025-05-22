@@ -1,4 +1,4 @@
-{ libs, config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
 
@@ -9,6 +9,7 @@
 	git
 	neovim
 	yarn
+	nodejs_latest
 	gcc
 	nixd
 
@@ -19,6 +20,8 @@
 	brightnessctl
 	swww
 	hyprshot
+	ripgrep
+	pwvucontrol
 
 	# Programs
 
@@ -26,7 +29,7 @@
 	zathura
 	telegram-desktop
 	btop
-	ghostty
+	dropbox
 
   ];
 
