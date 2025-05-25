@@ -13,10 +13,10 @@
         modules-right = [
           "pulseaudio"
           "battery"
+		  "clock"
           "bluetooth"
           "network"
           "temperature"
-          "clock"
           "tray"
         ];
 

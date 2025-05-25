@@ -1,41 +1,30 @@
 { config, pkgs, ... }:
 
 {
- programs.rofi = {
-    enable = true;
+  programs.rofi = {
+    enable = false;
     terminal = "${pkgs.wezterm}/bin/wezterm";
-    theme = let
-      #Theme configuration by Inherit
-      inherit (config.lib.formats.rasi) mkLiteral;
-    in {
-      "*" = {
-        border-radius = mkLiteral "0.5%";
-        width = 700;
-        spacing = 3;
+    extraConfig = {
+      show-icons = false;
+      drun-display-format = "{name}";
+      display-drun = "";  # Left as is, assuming intentional
+      lines = 1;
+      scrollbar = false;
+    };
+    theme = {
+	  window = {
+        width = 600;
       };
-	  "#listview" = {
-      spacing = 2; # vertical space between rows
+      mainbox = {
+        children = [
+          "inputbar"
+          "listview"
+        ];
       };
-
-	   "element" = {
-        padding = mkLiteral "2px 0px";
+      listview = {
+        lines = 1;
+        fixed-height = true;
       };
-
-	   "#prompt" = {
-        text = "𐖠";  # or "" to hide completely
-      };
-      "#inputbar" = {
-        children = map mkLiteral ["prompt" "entry"];
-      };
-      "#textbox-prompt-colon" = {
-        expand = false;
-        str = ":";
-        margin = mkLiteral "0px 0.3em 0em 0em";
-      };
-      "#window" = {
-        border-radius = mkLiteral "0.5%";
-        padding = 5;
-      };
-    }; 
-  }; 
+    };
+  };
 }

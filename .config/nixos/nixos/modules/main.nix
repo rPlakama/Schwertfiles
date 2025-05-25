@@ -11,6 +11,7 @@
   programs = {
   hyprland.enable = true;
   hyprlock.enable = true;
+  steam.enable = true;
   fish.enable = true;
   neovim.enable = true;
   neovim.defaultEditor = true;

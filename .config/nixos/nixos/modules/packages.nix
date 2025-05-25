@@ -30,6 +30,9 @@
 	telegram-desktop
 	btop
 	dropbox
+	tidal-hifi
+	rofi
+
 
   ];
 

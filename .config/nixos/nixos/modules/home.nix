@@ -13,6 +13,7 @@
     ./configs/mako.nix
     ./configs/rofi.nix
     ./configs/alacritty.nix
+	./configs/fuzzel.nix
 
   ];
 
