@@ -27,11 +27,11 @@
 
 	firefox
 	zathura
-	telegram-desktop
 	btop
 	dropbox
 	tidal-hifi
-	rofi
+	overskride
+	telegram-desktop
 
 
   ];

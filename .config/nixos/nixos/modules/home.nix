@@ -11,9 +11,11 @@
     ./configs/fish.nix
     ./configs/starship.nix
     ./configs/mako.nix
-    ./configs/rofi.nix
-    ./configs/alacritty.nix
 	./configs/fuzzel.nix
+	./configs/vesktop.nix
+	./configs/wezterm.nix
+	./configs/alacritty.nix
+	./configs/ghostty.nix
 
   ];
 
