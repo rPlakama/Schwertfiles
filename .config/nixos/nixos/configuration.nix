@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   imports =
@@ -12,6 +12,8 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  swapDevices = lib.mkForce [ ];
+  zramSwap.enable = false;
 
   # Network.
   networking.hostName = "Elisheva"; 

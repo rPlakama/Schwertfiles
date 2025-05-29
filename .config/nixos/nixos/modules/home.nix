@@ -14,8 +14,7 @@
 	./configs/fuzzel.nix
 	./configs/vesktop.nix
 	./configs/wezterm.nix
-	./configs/alacritty.nix
-	./configs/ghostty.nix
+	./configs/helix.nix
 
   ];
 
@@ -23,9 +22,9 @@
 
     gtk.enable = true;
     x11.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Ice";
-    size = 16;
+    package = pkgs.volantes-cursors;
+    name = "volantes_light_cursors";
+    size = 22;
 
   };
     gtk = {
@@ -38,7 +37,7 @@
   stylix = {
 
     enable = true;
-    image = ./wallpapers/1.png;
+    image = ./wallpapers/scpr.png;
     polarity = "dark";
     autoEnable = true;
     targets.firefox.enable = true;
