@@ -12,6 +12,7 @@
 	nodejs_latest
 	gcc
 	nixd
+	alejandra
 
 	# System
 
@@ -21,7 +22,13 @@
 	swww
 	hyprshot
 	ripgrep
-	pwvucontrol
+	alsa-utils
+	alsa-tools
+	pavucontrol
+	overskride
+	bluez
+	bluez-alsa
+	mpvpaper
 
 	# Programs
 
@@ -30,7 +37,6 @@
 	btop
 	dropbox
 	tidal-hifi
-	overskride
 	telegram-desktop
 
 

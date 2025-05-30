@@ -11,7 +11,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   swapDevices = lib.mkForce [ ];
   zramSwap.enable = false;
 
@@ -43,6 +42,17 @@
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish; #Tem que habilitar, tá no main.nix
   };
+
+  #Audio 
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+
 
   system.stateVersion = "24.11"; # Did you read the comment?
 

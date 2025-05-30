@@ -3,9 +3,20 @@
   # Nix Configurations. 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
-  hardware = { bluetooth = { enable = true; powerOnBoot = false; }; graphics.enable = true; };
-  systemd.services = { systemd-udev-settle.enable = false; NetworkManager-wait-online.enable = false;};
-  boot.loader = { systemd-boot.enable = true; efi.canTouchEfiVariables = true; timeout = 0;};
+  hardware = { 
+  bluetooth = { 
+  enable = true; powerOnBoot = true; 
+  }; 
+  graphics.enable = true; 
+  };
+  systemd.services = { 
+  systemd-udev-settle.enable = false; 
+  NetworkManager-wait-online.enable = false;
+  };
+  boot.loader = { 
+  systemd-boot.enable = true; 
+  efi.canTouchEfiVariables = true; 
+  timeout = 0;};
 
   # Programs.
   programs = {
@@ -21,10 +32,9 @@
   # Services.	
   services = { displayManager = { autoLogin.enable = true; autoLogin.user = "rplakama"; sddm.enable = true; sddm.wayland.enable = true; };
   power-profiles-daemon.enable = true;
-  system76-scheduler.settings.cfsProfiles.enable = true; 
   gvfs.enable = true;
   udisks2.enable = true;
-
+  tumbler.enable = true;
   };
 
   #Thunar 
