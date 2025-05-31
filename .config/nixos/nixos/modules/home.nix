@@ -37,7 +37,7 @@
   stylix = {
 
     enable = true;
-    image = ./wallpapers/scpr.png;
+    image = ./wallpapers/sunrise.png;
     polarity = "dark";
     autoEnable = true;
     targets.firefox.enable = true;

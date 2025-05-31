@@ -28,7 +28,6 @@
 	overskride
 	bluez
 	bluez-alsa
-	mpvpaper
 
 	# Programs
 
