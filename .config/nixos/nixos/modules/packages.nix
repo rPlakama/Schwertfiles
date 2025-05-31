@@ -1,55 +1,50 @@
-{ config, lib, pkgs, ... }:
-
 {
-
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
-	
-	# Dev
+    # Dev
 
-	git
-	neovim
-	yarn
-	nodejs_latest
-	gcc
-	nixd
-	alejandra
+    git
+    neovim
+    yarn
+    nodejs_latest
+    gcc
+    nixd
+    alejandra
 
-	# System
+    # System
 
-	wl-clipboard-rs
-	yadm
-	brightnessctl
-	swww
-	hyprshot
-	ripgrep
-	alsa-utils
-	alsa-tools
-	pavucontrol
-	overskride
-	bluez
-	bluez-alsa
+    wl-clipboard-rs
+    yadm
+    brightnessctl
+    swww
+    hyprshot
+    ripgrep
+    alsa-utils
+    alsa-tools
+    pavucontrol
+    overskride
+    bluez
+    bluez-alsa
 
-	# Programs
+    # Programs
 
-	firefox
-	zathura
-	btop
-	dropbox
-	tidal-hifi
-	telegram-desktop
-
-
+    firefox
+    zathura
+    btop
+    dropbox
+    tidal-hifi
+    telegram-desktop
   ];
 
   fonts.packages = with pkgs; [
-
     nerd-fonts.caskaydia-cove
     noto-fonts
     oswald
     unifont
     symbola
-
   ];
-
 }
-

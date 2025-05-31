@@ -13,7 +13,7 @@
         modules-right = [
           "pulseaudio"
           "battery"
-		  "clock"
+          "clock"
           "bluetooth"
           "network"
           "temperature"
@@ -60,15 +60,23 @@
 
         network = {
           format = "{icon}";
-          format-wifi = "󰖩 ";             # ← fixed: removed leading space
-          format-disconnected = "󱚼 ";     # ← fixed: removed leading space
+          format-wifi = "󰖩 "; # ← fixed: removed leading space
+          format-disconnected = "󱚼 "; # ← fixed: removed leading space
           tooltip-format = "{essid}";
         };
 
         battery = {
           format = "{capacity}% {icon} ";
           format-icons = [
-            " 󰁺" " 󰁻" " 󰁼" " 󰁽" " 󰁿" " 󰂀" " 󰂁" " 󰂂" " 󰁹"
+            " 󰁺"
+            " 󰁻"
+            " 󰁼"
+            " 󰁽"
+            " 󰁿"
+            " 󰂀"
+            " 󰂁"
+            " 󰂂"
+            " 󰁹"
           ];
         };
 
@@ -88,61 +96,61 @@
     ];
 
     style = ''
-      * {
-        font-family: Cascadia Code;
-        font-size: 9px;
-        min-height: 0;
-      }
+          * {
+            font-family: Cascadia Code;
+            font-size: 9px;
+            min-height: 0;
+          }
 
-      window#waybar {
-        background: @base00;
-        color: @base05;
-      }
+          window#waybar {
+            background: @base00;
+            color: @base05;
+          }
 
-      tooltip {
-        background: @base00;
-		border: none;
-        color: @base05;
-      }
+          tooltip {
+            background: @base00;
+      border: none;
+            color: @base05;
+          }
 
-      /* Mode indicator */
-      #mode {
-        background: @base02;
-        border-bottom: 3px solid @base05;
-        color: @base05;
-      }
+          /* Mode indicator */
+          #mode {
+            background: @base02;
+            border-bottom: 3px solid @base05;
+            color: @base05;
+          }
 
-      /* Workspaces */
-      .modules-left #workspaces button {
-        border-bottom: 1px solid transparent;
-        margin-right: 0px;  /* gap entre os botões */
-      }
+          /* Workspaces */
+          .modules-left #workspaces button {
+            border-bottom: 1px solid transparent;
+            margin-right: 0px;  /* gap entre os botões */
+          }
 
-      .modules-left #workspaces button.focused,
-      .modules-left #workspaces button.active {
-        border-bottom: 3px solid transparent;
-      }
+          .modules-left #workspaces button.focused,
+          .modules-left #workspaces button.active {
+            border-bottom: 3px solid transparent;
+          }
 
-      /* Right modules */
-      #bluetooth,
-      #network,
-      #tray,
-      #pulseaudio,
-      #clock,
-      #battery {
-        padding: 0 6px;
-        margin: 0;
-        color: @base05;
-        min-width: 2px;
-      }
+          /* Right modules */
+          #bluetooth,
+          #network,
+          #tray,
+          #pulseaudio,
+          #clock,
+          #battery {
+            padding: 0 6px;
+            margin: 0;
+            color: @base05;
+            min-width: 2px;
+          }
 
-      #battery.charging {
-        color: @base0A;
-      }
+          #battery.charging {
+            color: @base0A;
+          }
 
-      #pulseaudio.source-muted {
-        color: @base04;
-      }
+          #pulseaudio.source-muted {
+            color: @base04;
+          }
     '';
   };
 }

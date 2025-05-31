@@ -1,22 +1,30 @@
-{ lib, pkgs, ... }:
-
 {
-  imports =
-    [ 
-      ./hardware-configuration.nix
-      ./modules/packages.nix
-      ./modules/main.nix
-    ];
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix
+    ./modules/packages.nix
+    ./modules/main.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  swapDevices = lib.mkForce [ ];
+  swapDevices = lib.mkForce [];
   zramSwap.enable = false;
 
   # Network.
-  networking.hostName = "Elisheva"; 
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "Elisheva";
+    networkmanager.enable = true;
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [53317];
+      allowedUDPPorts = [53317];
+    };
+  };
 
   # Region.
   time.timeZone = "America/Recife";
@@ -39,11 +47,11 @@
   users.users.rplakama = {
     isNormalUser = true;
     description = "rPlakama";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     shell = pkgs.fish; #Tem que habilitar, tá no main.nix
   };
 
-  #Audio 
+  #Audio
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -53,7 +61,5 @@
     jack.enable = true;
   };
 
-
   system.stateVersion = "24.11"; # Did you read the comment?
-
 }
