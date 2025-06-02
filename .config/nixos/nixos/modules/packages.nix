@@ -27,8 +27,6 @@
     alsa-tools
     pavucontrol
     overskride
-    bluez
-    bluez-alsa
 
     # Programs
 
@@ -38,6 +36,7 @@
     dropbox
     tidal-hifi
     telegram-desktop
+	mpv
   ];
 
   fonts.packages = with pkgs; [

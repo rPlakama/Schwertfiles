@@ -42,7 +42,6 @@
       sddm.enable = true;
       sddm.wayland.enable = true;
     };
-    power-profiles-daemon.enable = true;
     gvfs.enable = true;
     udisks2.enable = true;
     tumbler.enable = true;
@@ -61,4 +60,20 @@
     dates = "weekly";
     options = "--delete-older-than 7d";
   };
+
+# Power
+services.auto-cpufreq = {
+	enable = true;
+	settings = {
+	  battery = {
+     governor = "powersave";
+     turbo = "auto";
+  };
+    charger = {
+     governor = "performance";
+     turbo = "auto";
+  };
+};
+};
+
 }
