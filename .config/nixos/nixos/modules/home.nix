@@ -35,6 +35,6 @@
     targets.firefox.enable = true;
     targets.nixos-icons.enable = true;
     fonts.sizes.terminal = 9;
-    opacity.terminal = 0.9;
+    opacity.terminal = 0.5;
   };
 }

@@ -36,7 +36,7 @@
     dropbox
     tidal-hifi
     telegram-desktop
-	mpv
+    mpv
   ];
 
   fonts.packages = with pkgs; [

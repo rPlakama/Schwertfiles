@@ -103,7 +103,7 @@
           }
 
           window#waybar {
-            background: @base00;
+            background: transparent;
             color: @base05;
           }
 

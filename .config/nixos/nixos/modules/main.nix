@@ -9,7 +9,7 @@
   hardware = {
     bluetooth = {
       enable = true;
-      powerOnBoot = true;
+      powerOnBoot = false;
     };
     graphics.enable = true;
   };
@@ -48,32 +48,22 @@
   };
 
   #Thunar
-  programs.xfconf.enable = true;
-  programs.thunar.enable = true;
-  programs.thunar.plugins = with pkgs.xfce; [
-    thunar-volman
-    thunar-archive-plugin
-    thunar-media-tags-plugin
-  ];
+  programs = {
+    xfconf.enable = true;
+    thunar.enable = true;
+    thunar.plugins = with pkgs.xfce; [
+      thunar-volman
+      thunar-archive-plugin
+      thunar-media-tags-plugin
+    ];
+  };
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 7d";
   };
 
-# Power
-services.auto-cpufreq = {
-	enable = true;
-	settings = {
-	  battery = {
-     governor = "powersave";
-     turbo = "auto";
-  };
-    charger = {
-     governor = "performance";
-     turbo = "auto";
-  };
-};
-};
+  # Power
 
+  services.tlp.enable = true;
 }
