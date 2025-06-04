@@ -11,6 +11,7 @@
     ./configs/vesktop.nix
     ./configs/wezterm.nix
     ./configs/helix.nix
+    ./configs/shell.nix
   ];
 
   home.pointerCursor = {

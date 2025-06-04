@@ -48,8 +48,8 @@
     isNormalUser = true;
     description = "rPlakama";
     extraGroups = ["networkmanager" "wheel"];
-    shell = pkgs.fish; #Tem que habilitar, tá no main.nix
   };
+
 
   #Audio
   security.rtkit.enable = true;

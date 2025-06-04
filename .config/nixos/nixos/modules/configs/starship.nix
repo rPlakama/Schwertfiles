@@ -1,7 +1,6 @@
 {...}: {
   programs.starship = {
     enable = true;
-    enableZshIntegration = true;
     settings = {
       add_newline = true;
       format = "$shell$nix_shell$git_branch$git_commit$git_state$git_status$directory$jobs$cmd_duration$character";
@@ -9,6 +8,7 @@
         disabled = false;
         style = "cyan bold";
         fish_indicator = "󰈺";
+		nu_indicator = ">";
       };
 
       character = {

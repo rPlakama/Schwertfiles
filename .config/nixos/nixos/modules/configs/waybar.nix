@@ -9,7 +9,6 @@
         spacing = 0;
 
         modules-left = ["hyprland/workspaces"];
-        modules-center = ["hyprland/window"];
         modules-right = [
           "pulseaudio"
           "battery"

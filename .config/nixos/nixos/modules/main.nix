@@ -6,6 +6,7 @@
   # Nix Configurations.
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   hardware = {
     bluetooth = {
       enable = true;
@@ -28,11 +29,15 @@
     hyprland.enable = true;
     hyprlock.enable = true;
     steam.enable = true;
-    fish.enable = true;
     neovim.enable = true;
     neovim.defaultEditor = true;
     neovim.viAlias = true;
   };
+
+  # Shell
+
+  users.defaultUserShell = pkgs.fish;
+  programs.fish.enable = true;
 
   # Services.
   services = {
@@ -65,5 +70,5 @@
 
   # Power
 
-  services.tlp.enable = true;
+  services.power-profiles-daemon.enable = true;
 }

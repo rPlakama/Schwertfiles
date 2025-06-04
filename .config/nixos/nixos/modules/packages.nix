@@ -24,9 +24,9 @@
     hyprshot
     ripgrep
     alsa-utils
-    alsa-tools
     pavucontrol
-    overskride
+	overskride
+	bluez
 
     # Programs
 
@@ -37,6 +37,7 @@
     tidal-hifi
     telegram-desktop
     mpv
+	discord
   ];
 
   fonts.packages = with pkgs; [
