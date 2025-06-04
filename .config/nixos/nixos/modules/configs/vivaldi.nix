@@ -1,0 +1,1 @@
+{...}: {programs.vivaldi.enable = true;}
