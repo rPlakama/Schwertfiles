@@ -50,6 +50,7 @@
     gvfs.enable = true;
     udisks2.enable = true;
     tumbler.enable = true;
+	blueman.enable = true;
   };
 
   #Thunar

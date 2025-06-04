@@ -9,7 +9,7 @@
 
     git
     neovim
-    yarn
+	pnpm
     nodejs_latest
     gcc
     nixd
@@ -25,7 +25,6 @@
     ripgrep
     alsa-utils
     pavucontrol
-	overskride
 	bluez
 
     # Programs
