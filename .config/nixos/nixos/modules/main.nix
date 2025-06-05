@@ -7,13 +7,8 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  hardware = {
-    bluetooth = {
-      enable = true;
-      powerOnBoot = false;
-    };
-    graphics.enable = true;
-  };
+  hardware = { bluetooth = { enable = false;};
+  graphics.enable = true;};
   systemd.services = {
     systemd-udev-settle.enable = false;
     NetworkManager-wait-online.enable = false;
@@ -50,7 +45,6 @@
     gvfs.enable = true;
     udisks2.enable = true;
     tumbler.enable = true;
-	blueman.enable = true;
   };
 
   #Thunar

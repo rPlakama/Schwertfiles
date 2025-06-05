@@ -13,7 +13,6 @@
           "pulseaudio"
           "battery"
           "clock"
-          "bluetooth"
           "network"
           "temperature"
           "tray"
@@ -26,66 +25,64 @@
         "hyprland/workspaces" = {
           format = "{icon}";
           format-icons = {
-            active = "󰫤";
-            default = "󰫥";
+
+			"1" = "󰬺";
+			"2" = "󰬻";
+			"3" = "󰬼";
+			"4" = "󰬽";
+			"5" = "󰬾";
+			"6" = "󰬿";
+			"7" = "󰭀";
+			"8" = "󰭁";
+			"9" = "󰭂"; 
+			"10" = "󰨿";
+
           };
           persistent-workspaces = {
             "*" = 0;
           };
         };
 
-        bluetooth = {
-          format-disabled = "󰂲";
-          format-off = "󰂲";
-          format-on = "󰂳";
-          format-connected = "󰂱";
-          on-click = "overskride";
-        };
-
         pulseaudio = {
-          format = "{volume}%  󰎇 {format_source} ";
-          format-muted = "󰎊  {format_source} ";
-          format-source = "󰨙";
-          format-source-muted = "󰨚";
+          format = "{volume}% 󰎇";
+          format-muted = "󰎊 {format_source} ";
           max-volume = 100;
           format-icons = {
             headphone = "";
             headset = "󰋋";
             default = [""];
           };
-          on-click = "pwvucontrol";
-          on-click-right = "amixer -D pipewire set Capture 0+ toggle";
+          on-click = "pulseaudio";
         };
 
         network = {
           format = "{icon}";
-          format-wifi = "󰖩 "; # ← fixed: removed leading space
-          format-disconnected = "󱚼 "; # ← fixed: removed leading space
+          format-wifi = ""; # ← fixed: removed leading space
+          format-disconnected = ""; # ← fixed: removed leading space
           tooltip-format = "{essid}";
         };
 
         battery = {
-          format = "{capacity}% {icon} ";
+          format = "{icon}";
           format-icons = [
-            " 󰁺"
-            " 󰁻"
-            " 󰁼"
-            " 󰁽"
-            " 󰁿"
-            " 󰂀"
-            " 󰂁"
-            " 󰂂"
-            " 󰁹"
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
           ];
         };
 
-        clock = {
-          tooltip-format = "<tt><big>{calendar}</big></tt>";
-          format = "{:%a, %d. %b  %H:%M}";
-          calendar = {
-            mode = "month";
-          };
-        };
+		clock = {
+		interval = 60;
+		format = "{:%H:%M}";
+		max-length = 25;
+		tooltip = false;
+		};
 
         tray = {
           icon-size = 10;
@@ -96,8 +93,7 @@
 
     style = ''
           * {
-            font-family: Cascadia Code;
-            font-size: 9px;
+            font-size: 10px;
             min-height: 0;
           }
 
@@ -131,13 +127,12 @@
           }
 
           /* Right modules */
-          #bluetooth,
           #network,
           #tray,
           #pulseaudio,
           #clock,
           #battery {
-            padding: 0 6px;
+            padding: 0 4px;
             margin: 0;
             color: @base05;
             min-width: 2px;

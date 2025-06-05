@@ -14,6 +14,7 @@
     gcc
     nixd
     alejandra
+	rust-analyzer
 
     # System
 
@@ -31,6 +32,7 @@
 
     firefox
     zathura
+	pandoc
     btop
     dropbox
     tidal-hifi

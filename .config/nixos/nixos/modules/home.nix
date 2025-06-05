@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{config, pkgs, ...}: {
   home.stateVersion = "24.11";
   imports = [
     ./configs/fastfetch.nix
@@ -8,10 +8,7 @@
     ./configs/starship.nix
     ./configs/mako.nix
     ./configs/fuzzel.nix
-    ./configs/vesktop.nix
-    ./configs/wezterm.nix
-    ./configs/helix.nix
-    ./configs/shell.nix
+	./configs/foot.nix
   ];
 
   home.pointerCursor = {
@@ -35,7 +32,16 @@
     autoEnable = true;
     targets.firefox.enable = true;
     targets.nixos-icons.enable = true;
-    fonts.sizes.terminal = 9;
+    fonts.sizes.terminal = 10;
     opacity.terminal = 0.5;
+	fonts = {
+	serif = config.stylix.fonts.monospace;
+    sansSerif = config.stylix.fonts.monospace;
+    emoji = config.stylix.fonts.monospace;
+	monospace = {
+      package = pkgs.nerd-fonts.caskaydia-cove;
+      name = "CaskaydiaCove Nerd Font Mono";
+	  };
+    };
   };
 }
