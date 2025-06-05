@@ -1,20 +1,17 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{ lib, config, pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     # Dev
 
     git
     neovim
-	pnpm
+    pnpm
     nodejs_latest
     gcc
     nixd
     alejandra
-	rust-analyzer
+    rust-analyzer
+	rustc
+	cargo
 
     # System
 
@@ -24,24 +21,24 @@
     swww
     hyprshot
     ripgrep
+    fd
+    bat
+    du-dust
     alsa-utils
     pavucontrol
-	bluez
-	powertop
 	
 
     # Programs
 
-    firefox
+    firefox 
     zathura
-	pandoc
+    pandoc
     btop
     dropbox
     tidal-hifi
     telegram-desktop
     mpv
-	discord
-	qemu
+    discord
 
   ];
 

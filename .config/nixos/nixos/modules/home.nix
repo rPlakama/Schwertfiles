@@ -9,6 +9,7 @@
     ./configs/mako.nix
     ./configs/fuzzel.nix
 	./configs/foot.nix
+	./configs/zed.nix
   ];
 
   home.pointerCursor = {
