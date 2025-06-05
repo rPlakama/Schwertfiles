@@ -27,6 +27,8 @@
     alsa-utils
     pavucontrol
 	bluez
+	powertop
+	
 
     # Programs
 
@@ -39,6 +41,8 @@
     telegram-desktop
     mpv
 	discord
+	qemu
+
   ];
 
   fonts.packages = with pkgs; [

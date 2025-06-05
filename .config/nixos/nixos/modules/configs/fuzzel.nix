@@ -7,7 +7,7 @@
     enable = true;
     settings = {
       main = {
-        terminal = "${pkgs.wezterm}/bin/wezterm -e";
+        terminal = "${pkgs.foot}/bin/foot -e";
         lines = 1;
         icons-enabled = false;
         anchor = "center";
