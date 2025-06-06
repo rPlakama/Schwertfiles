@@ -43,7 +43,7 @@
     targets.nixvim.transparentBackground.numberLine = true;
     targets.nixvim.transparentBackground.signColumn = true;
     fonts.sizes.terminal = 10;
-    opacity.terminal = 0.80;
+    opacity.terminal = 0.85;
 	fonts = {
 		serif = config.stylix.fonts.monospace;
 		sansSerif = config.stylix.fonts.monospace;
