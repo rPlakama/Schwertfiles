@@ -1,13 +1,1 @@
-require("config.lazy")
-require("config.option")
-require("config.theme")
-require("config.telescope")
-require("config.nvim-tree")
-require("config.nvim-treesitter")
-require("config.lualine")
-require("config.mini-animate")
-require("config.lsp")
-
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
+/nix/store/7fm2q2n02fpgfxrbyadwzv167aswgg9g-home-manager-files/.config/nvim/init.lua

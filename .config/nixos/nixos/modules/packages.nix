@@ -8,6 +8,7 @@
     nodejs_latest
     gcc
     nixd
+	nil
     alejandra
     rust-analyzer
 	rustc
@@ -39,7 +40,8 @@
     telegram-desktop
     mpv
     discord
-
+	obsidian
+	neovim
   ];
 
   fonts.packages = with pkgs; [

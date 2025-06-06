@@ -8,8 +8,9 @@
     ./configs/starship.nix
     ./configs/mako.nix
     ./configs/fuzzel.nix
-	./configs/foot.nix
-	./configs/zed.nix
+    ./configs/foot.nix
+    ./configs/zed.nix
+    ./configs/nixvim.nix
   ];
 
   home.pointerCursor = {
@@ -26,6 +27,11 @@
       package = pkgs.papirus-icon-theme;
     };
   };
+
+  # Services
+
+  services.hyprpolkitagent.enable = true;
+
   stylix = {
     enable = true;
     image = ./wallpapers/sunrise.png;
@@ -33,15 +39,18 @@
     autoEnable = true;
     targets.firefox.enable = true;
     targets.nixos-icons.enable = true;
+    targets.nixvim.transparentBackground.main = true;
+    targets.nixvim.transparentBackground.numberLine = true;
+    targets.nixvim.transparentBackground.signColumn = true;
     fonts.sizes.terminal = 10;
-    opacity.terminal = 0.5;
+    opacity.terminal = 0.80;
 	fonts = {
-	serif = config.stylix.fonts.monospace;
-    sansSerif = config.stylix.fonts.monospace;
-    emoji = config.stylix.fonts.monospace;
-	monospace = {
-      package = pkgs.nerd-fonts.caskaydia-cove;
-      name = "CaskaydiaCove Nerd Font Mono";
+		serif = config.stylix.fonts.monospace;
+		sansSerif = config.stylix.fonts.monospace;
+		emoji = config.stylix.fonts.monospace;
+		monospace = {
+		  package = pkgs.nerd-fonts.caskaydia-cove;
+		  name = "CaskaydiaCove Nerd Font Mono";
 	  };
     };
   };
