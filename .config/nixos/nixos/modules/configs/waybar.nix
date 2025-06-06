@@ -98,7 +98,7 @@
           }
 
           window#waybar {
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(0, 0, 0, 0.85);
             color: @base05;
           }
 
