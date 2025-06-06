@@ -1,13 +1,5 @@
 local lspconfig = require("lspconfig")
 
--- Optional: Enhance LSP capabilities for completion plugins like nvim-cmp or blink.cmp
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-local has_cmp, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if has_cmp then
-  capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
-end
-
--- Optional: Keybindings for LSP actions
 local on_attach = function(_, bufnr)
   local map = function(mode, lhs, rhs, desc)
     vim.keymap.set(mode, lhs, rhs, { buffer = bufnr, desc = desc, noremap = true, silent = true })
@@ -23,8 +15,8 @@ local on_attach = function(_, bufnr)
   end, "[F]ormat")
 end
 
--- List of language servers
 local servers = {
+
   pyright = {},
   rust_analyzer = {},
   nixd = {

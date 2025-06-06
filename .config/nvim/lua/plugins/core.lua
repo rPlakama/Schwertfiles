@@ -27,4 +27,9 @@ return {
     event = "BufReadPre",
     opts = {}
   },
+
+  {
+	  "RRethy/base16-nvim"
+  },
+
 }

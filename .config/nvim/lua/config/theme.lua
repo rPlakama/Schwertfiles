@@ -1,49 +1,22 @@
-require("catppuccin").setup({
+require('base16-colorscheme').setup({
 
-    flavour = "auto", 
-    background = { -- :h background
-        light = "latte",
-        dark = "macchiato",
-    },
-    transparent_background = true, -- disables setting the background color.
-    show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-    term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
-    dim_inactive = {
-        enabled = false, -- dims the background color of inactive window
-        shade = "dark",
-        percentage = 0.15, -- percentage of the shade to apply to the inactive window
-    },
-    no_italic = false, -- Force no italic
-    no_bold = false, -- Force no bold
-    no_underline = false, -- Force no underline
-    styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = { "italic" }, -- Change the style of comments
-        conditionals = { "italic" },
-        loops = {},
-        functions = {},
-        keywords = { "bold" },
-        strings = {},
-        variables = {},
-        numbers = {},
-        booleans = {},
-        properties = {},
-        types = {},
-        operators = {},
-        -- miscs = {}, -- Uncomment to turn off hard-coded styles
-    },
-    color_overrides = {},
-    custom_highlights = {},
-    default_integrations = true,
-    integrations = {
-        cmp = true,
-        gitsigns = true,
-        nvimtree = true,
-        treesitter = true,
-		barbar = true;
-        notify = false,
-        mini = {
-            enabled = true,
-            indentscope_color = "",
-        },
-    },
+  base00 = "#1d1b1c",
+  base01 = "#41484c",
+  base02 = "#656b76",
+  base03 = "#a79c91",
+  base04 = "#c9b19f",
+  base05 = "#c9b09c",
+  base06 = "#c7b09c",
+  base07 = "#c5b1a0",
+  base08 = "#8c9199",
+  base09 = "#978e95",
+  base0A = "#d9745a",
+  base0B = "#ac8884",
+  base0C = "#a28c8a",
+  base0D = "#ea6848",
+  base0E = "#cb7b6b",
+  base0F = "#958f8d",
+
+
 })
+
