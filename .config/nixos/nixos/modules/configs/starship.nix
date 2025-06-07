@@ -8,7 +8,7 @@
         disabled = false;
         style = "cyan bold";
         fish_indicator = "󰈺";
-		nu_indicator = ">";
+        nu_indicator = ">";
       };
 
       character = {

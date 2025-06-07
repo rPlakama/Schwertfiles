@@ -1,25 +1,22 @@
-{ ... }:
-
-{
-
-programs.zed-editor = { 
-	enable = true;
-	userSettings = {
-	vim_mode = true;
-	features = {
-    copilot = false;
+{...}: {
+  programs.zed-editor = {
+    enable = true;
+    userSettings = {
+      vim_mode = true;
+      features = {
+        copilot = false;
       };
-	};
-  extensions = [
-  	"nix"
-	];
-  userKeymaps = [
-    {
-      context = "Workspace";
-      bindings = {
-        "ctrl-shift-t" = "workspace::NewTerminal";
-      };
-    }
-  ];
+    };
+    extensions = [
+      "nix"
+    ];
+    userKeymaps = [
+      {
+        context = "Workspace";
+        bindings = {
+          "ctrl-shift-t" = "workspace::NewTerminal";
+        };
+      }
+    ];
   };
 }

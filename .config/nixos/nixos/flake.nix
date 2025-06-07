@@ -13,10 +13,17 @@
     stylix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, stylix, nixvim, ... }@inputs: {
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    stylix,
+    nixvim,
+    ...
+  } @ inputs: {
     nixosConfigurations."Elisheva" = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
       modules = [
         # NixOS Modules
         stylix.nixosModules.stylix
@@ -27,7 +34,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { inherit inputs; };
+          home-manager.extraSpecialArgs = {inherit inputs;};
 
           # Define the user and import the necessary modules for them.
           # This is the corrected part.

@@ -8,8 +8,9 @@
         height = 20;
         spacing = 0;
 
-        modules-left = ["hyprland/workspaces"];
+        modules-left = [ "hyprland/workspaces" "custom/rightarrow" ];
         modules-right = [
+	  "custom/leftarrow"
           "pulseaudio"
           "battery"
           "clock"
@@ -22,21 +23,27 @@
           max-length = 80;
         };
 
+	"custom/leftarrow" = {
+	  format = "";
+	  tooltip = false;
+	  };
+	"custom/rightarrow" = {
+	  format = "";
+	  tooltip = false;
+	  };
         "hyprland/workspaces" = {
           format = "{icon}";
           format-icons = {
-
-			"1" = "󰬺";
-			"2" = "󰬻";
-			"3" = "󰬼";
-			"4" = "󰬽";
-			"5" = "󰬾";
-			"6" = "󰬿";
-			"7" = "󰭀";
-			"8" = "󰭁";
-			"9" = "󰭂"; 
-			"10" = "󰨿";
-
+            "1" = "󰬺";
+            "2" = "󰬻";
+            "3" = "󰬼";
+            "4" = "󰬽";
+            "5" = "󰬾";
+            "6" = "󰬿";
+            "7" = "󰭀";
+            "8" = "󰭁";
+            "9" = "󰭂";
+            "10" = "󰨿";
           };
           persistent-workspaces = {
             "*" = 0;
@@ -77,12 +84,12 @@
           ];
         };
 
-		clock = {
-		interval = 60;
-		format = "{:%H:%M}";
-		max-length = 25;
-		tooltip = false;
-		};
+        clock = {
+          interval = 60;
+          format = "{:%H:%M}";
+          max-length = 25;
+          tooltip = false;
+        };
 
         tray = {
           icon-size = 10;
@@ -98,7 +105,7 @@
           }
 
           window#waybar {
-            background: rgba(0, 0, 0, 0.85);
+            background: transparent;
             color: @base05;
           }
 
@@ -126,6 +133,10 @@
             border-bottom: 3px solid transparent;
           }
 
+	  #workspaces {
+	    background-color: @base00;
+	    }
+
           /* Right modules */
           #network,
           #tray,
@@ -134,8 +145,10 @@
           #battery {
             padding: 0 4px;
             margin: 0;
+	    background-color: @base00;
             color: @base05;
             min-width: 2px;
+
           }
 
           #battery.charging {
@@ -145,6 +158,13 @@
           #pulseaudio.source-muted {
             color: @base04;
           }
+	  #custom-leftarrow,
+	  #custom-rightarrow {
+	    color: @base00;
+	    font-size: 18px;
+
+	}
+
     '';
   };
 }

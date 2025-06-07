@@ -50,7 +50,6 @@
     extraGroups = ["networkmanager" "wheel"];
   };
 
-
   #Audio
   security.rtkit.enable = true;
   services.pipewire = {

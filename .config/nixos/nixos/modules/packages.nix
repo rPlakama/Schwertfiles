@@ -1,4 +1,9 @@
-{ lib, config, pkgs, ... }: {
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     # Dev
 
@@ -8,11 +13,11 @@
     nodejs_latest
     gcc
     nixd
-	nil
+    nil
     alejandra
     rust-analyzer
-	rustc
-	cargo
+    rustc
+    cargo
 
     # System
 
@@ -27,11 +32,10 @@
     du-dust
     alsa-utils
     pavucontrol
-	
 
     # Programs
 
-    firefox 
+    firefox
     zathura
     pandoc
     btop
@@ -40,8 +44,8 @@
     telegram-desktop
     mpv
     discord
-	obsidian
-	neovim
+    obsidian
+    neovim
   ];
 
   fonts.packages = with pkgs; [
