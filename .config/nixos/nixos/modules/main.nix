@@ -26,6 +26,8 @@
     hyprland.enable = true;
     hyprlock.enable = true;
     steam.enable = true;
+    neovim.defaultEditor = true;
+    neovim.enable = true;
   };
 
   # Shell

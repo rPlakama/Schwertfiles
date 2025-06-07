@@ -38,11 +38,11 @@
 
   stylix = {
     enable = true;
-    image = ./wallpapers/sunrise.png;
+    image = ./wallpapers/6.png;
     polarity = "dark";
     autoEnable = true;
-    targets.firefox.enable = true;
     targets.nixos-icons.enable = true;
+    targets.firefox.enable = true;
     targets.nixvim.transparentBackground.main = true;
     targets.nixvim.transparentBackground.numberLine = true;
     targets.nixvim.transparentBackground.signColumn = true;

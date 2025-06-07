@@ -15,9 +15,9 @@
     nixd
     nil
     alejandra
+    cargo
     rust-analyzer
     rustc
-    cargo
 
     # System
 

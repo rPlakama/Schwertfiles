@@ -8,14 +8,13 @@
         height = 20;
         spacing = 0;
 
-        modules-left = [ "hyprland/workspaces" "custom/rightarrow" ];
+        modules-left = ["hyprland/workspaces" "custom/rightarrow"];
         modules-right = [
-	  "custom/leftarrow"
+          "custom/leftarrow"
           "pulseaudio"
           "battery"
           "clock"
           "network"
-          "temperature"
           "tray"
         ];
 
@@ -23,14 +22,14 @@
           max-length = 80;
         };
 
-	"custom/leftarrow" = {
-	  format = "";
-	  tooltip = false;
-	  };
-	"custom/rightarrow" = {
-	  format = "";
-	  tooltip = false;
-	  };
+        "custom/leftarrow" = {
+          format = "";
+          tooltip = false;
+        };
+        "custom/rightarrow" = {
+          format = "";
+          tooltip = false;
+        };
         "hyprland/workspaces" = {
           format = "{icon}";
           format-icons = {
@@ -64,13 +63,13 @@
 
         network = {
           format = "{icon}";
-          format-wifi = ""; # ← fixed: removed leading space
-          format-disconnected = ""; # ← fixed: removed leading space
+          format-wifi = "";
+          format-disconnected = "";
           tooltip-format = "{essid}";
         };
 
         battery = {
-          format = "{icon}";
+          format = "{capacity}% {icon}";
           format-icons = [
             "󰁺"
             "󰁻"
@@ -99,71 +98,71 @@
     ];
 
     style = ''
-          * {
-            font-size: 10px;
-            min-height: 0;
+               * {
+                 font-size: 10px;
+                 min-height: 0;
+               }
+
+               window#waybar {
+         background: alpha(@base00, 0.850000);
+                 color: @base05;
+               }
+
+               tooltip {
+                 background: @base00;
+           border: none;
+                 color: @base05;
+               }
+
+               /* Mode indicator */
+               #mode {
+                 background: @base02;
+                 border-bottom: 3px solid @base05;
+                 color: @base05;
+               }
+
+               /* Workspaces */
+               .modules-left #workspaces button {
+                 border-bottom: 1px solid transparent;
+                 margin-right: 0px;  /* gap entre os botões */
+               }
+
+               .modules-left #workspaces button.focused,
+               .modules-left #workspaces button.active {
+                 border-bottom: 3px solid transparent;
+               }
+
+        #workspaces {
+          background-color: @base00;
           }
 
-          window#waybar {
-            background: transparent;
-            color: @base05;
-          }
+               /* Right modules */
+               #network,
+               #tray,
+               #pulseaudio,
+               #clock,
+               #battery {
+                 padding: 0 4px;
+                 margin: 0;
+          background-color: @base00;
+                 color: @base05;
+                 min-width: 2px;
 
-          tooltip {
-            background: @base00;
-      border: none;
-            color: @base05;
-          }
+               }
 
-          /* Mode indicator */
-          #mode {
-            background: @base02;
-            border-bottom: 3px solid @base05;
-            color: @base05;
-          }
+               #battery.charging {
+                 color: @base0A;
+               }
 
-          /* Workspaces */
-          .modules-left #workspaces button {
-            border-bottom: 1px solid transparent;
-            margin-right: 0px;  /* gap entre os botões */
-          }
+               #pulseaudio.source-muted {
+                 color: @base04;
+               }
+        #custom-leftarrow,
+        #custom-rightarrow {
+          color: @base00;
+          font-size: 18px;
 
-          .modules-left #workspaces button.focused,
-          .modules-left #workspaces button.active {
-            border-bottom: 3px solid transparent;
-          }
-
-	  #workspaces {
-	    background-color: @base00;
-	    }
-
-          /* Right modules */
-          #network,
-          #tray,
-          #pulseaudio,
-          #clock,
-          #battery {
-            padding: 0 4px;
-            margin: 0;
-	    background-color: @base00;
-            color: @base05;
-            min-width: 2px;
-
-          }
-
-          #battery.charging {
-            color: @base0A;
-          }
-
-          #pulseaudio.source-muted {
-            color: @base04;
-          }
-	  #custom-leftarrow,
-	  #custom-rightarrow {
-	    color: @base00;
-	    font-size: 18px;
-
-	}
+      }
 
     '';
   };
