@@ -12,10 +12,10 @@
       markdown-preview.enable = true;
       telescope.enable = true;
       obsidian.enable = true;
-      smear-cursor.enable = true;
       neo-tree.enable = true;
       which-key.enable = true;
       treesitter.enable = true;
+      smear-cursor.enable = true;
 
       # LSP
 
@@ -46,6 +46,10 @@
           }
         ];
       };
+      transparent = {
+        enable = true;
+	autoLoad = true;
+	};
       mini = {
         enable = true;
         mockDevIcons = true;
@@ -55,6 +59,7 @@
           git.enable = true;
           diff.enable = true;
           notify.enable = true;
+	  animate.scroll.enable = true;
         };
       };
     };

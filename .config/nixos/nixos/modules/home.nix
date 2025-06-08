@@ -43,9 +43,6 @@
     autoEnable = true;
     targets.nixos-icons.enable = true;
     targets.firefox.enable = true;
-    targets.nixvim.transparentBackground.main = true;
-    targets.nixvim.transparentBackground.numberLine = true;
-    targets.nixvim.transparentBackground.signColumn = true;
     fonts.sizes.terminal = 10;
     opacity.terminal = 0.85;
     fonts = {
