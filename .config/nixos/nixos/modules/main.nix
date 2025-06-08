@@ -8,7 +8,7 @@
   nixpkgs.config.allowUnfree = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
   hardware = {
-    bluetooth = {enable = false;};
+    bluetooth = {enable = true; powerOnBoot = false;};
     graphics.enable = true;
   };
   systemd.services = {
@@ -46,6 +46,7 @@
     gvfs.enable = true;
     udisks2.enable = true;
     tumbler.enable = true;
+    blueman.enable = true;
   };
 
   #Thunar

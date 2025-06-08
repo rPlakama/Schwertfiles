@@ -14,12 +14,22 @@
           "pulseaudio"
           "battery"
           "clock"
+	  "bluetooth"
           "network"
           "tray"
         ];
 
         "hyprland/window" = {
           max-length = 80;
+        };
+
+	"bluetooth" = {
+          format-disabled = "󰂲";
+          format-off = "󰂲";
+          format-on = "󰂱";
+          format-connected = "󰂳";
+	  tooltip = true;
+	  tooltip-format = "{status}";
         };
 
         "custom/leftarrow" = {
@@ -32,6 +42,7 @@
         };
         "hyprland/workspaces" = {
           format = "{icon}";
+	  tooltip = false;
           format-icons = {
             "1" = "󰬺";
             "2" = "󰬻";
@@ -141,6 +152,7 @@
                #tray,
                #pulseaudio,
                #clock,
+	       #bluetooth,
                #battery {
                  padding: 0 4px;
                  margin: 0;
