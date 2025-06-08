@@ -44,7 +44,7 @@
     targets.nixos-icons.enable = true;
     targets.firefox.enable = true;
     fonts.sizes.terminal = 10;
-    opacity.terminal = 0.85;
+    opacity.terminal = 0.65;
     fonts = {
       serif = config.stylix.fonts.monospace;
       sansSerif = config.stylix.fonts.monospace;

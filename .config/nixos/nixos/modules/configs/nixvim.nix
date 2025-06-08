@@ -58,7 +58,6 @@
           statusline.enable = true;
           git.enable = true;
           diff.enable = true;
-	  animate.scroll.enable = true;
         };
       };
     };
