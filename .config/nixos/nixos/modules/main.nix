@@ -8,7 +8,10 @@
   nixpkgs.config.allowUnfree = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
   hardware = {
-    bluetooth = {enable = true; powerOnBoot = false;};
+    bluetooth = {
+      enable = true;
+      powerOnBoot = false;
+    };
     graphics.enable = true;
   };
   systemd.services = {
@@ -47,6 +50,8 @@
     udisks2.enable = true;
     tumbler.enable = true;
     blueman.enable = true;
+    flatpak.enable = true;
+    # For Flatpak, seek https://flathub.org/setup/NixOS. There is a extra step for working on NixOS. In this case: | flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo | Without the bars. So you can add the repo.
   };
 
   #Thunar
