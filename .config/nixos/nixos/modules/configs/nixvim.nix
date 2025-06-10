@@ -5,6 +5,7 @@
       conceallevel = 2;
       clipboard = "unnamedplus";
       shortmess = "filnxtToOFSI";
+      scrolloff = 999;
     };
 
     plugins = {

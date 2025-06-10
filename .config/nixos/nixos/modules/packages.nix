@@ -40,7 +40,6 @@
     pandoc
     btop
     dropbox
-    tidal-hifi
     telegram-desktop
     mpv
     discord

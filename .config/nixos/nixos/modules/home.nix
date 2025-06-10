@@ -13,7 +13,6 @@
     ./configs/mako.nix
     ./configs/fuzzel.nix
     ./configs/foot.nix
-    ./configs/zed.nix
     ./configs/nixvim.nix
   ];
 
@@ -32,13 +31,9 @@
     };
   };
 
-  # Services
-
-  services.hyprpolkitagent.enable = true;
-
   stylix = {
     enable = true;
-    image = ./wallpapers/6.png;
+    image = ./wallpapers/5.jpg;
     polarity = "dark";
     autoEnable = true;
     targets.nixos-icons.enable = true;
