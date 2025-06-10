@@ -39,6 +39,7 @@
     autoEnable = true;
     targets.nixos-icons.enable = true;
     targets.firefox.enable = true;
+    targets.qt.enable = true;
     fonts.sizes.terminal = 10;
     opacity.terminal = 0.65;
     fonts = {
