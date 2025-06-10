@@ -12,7 +12,6 @@
       markdown-preview.enable = true;
       telescope.enable = true;
       obsidian.enable = true;
-      neo-tree.enable = true;
       which-key.enable = true;
       treesitter.enable = true;
       smear-cursor.enable = true;
@@ -57,12 +56,17 @@
           icons.style = "glyph";
           statusline.enable = true;
           git.enable = true;
+          files.enable = true;
           diff.enable = true;
         };
       };
     };
     # keymaps
     keymaps = [
+      {
+      	action = "<cmd>lua vim.diagnostic.open_float()<CR>";
+	key = "<C-q>";
+      }
       {
         action = "<cmd>:Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>";
         key = "<C-f>";
@@ -79,7 +83,7 @@
         options.silent = true;
       }
       {
-        action = "<cmd>:Neotree reveal<CR>";
+        action = "<cmd>:lua MiniFiles.open() <CR>";
         key = "<C-n>";
         options.silent = true;
       }
@@ -137,11 +141,11 @@
       }
       {
         action = "<cmd>:tabnew | echo 'New Tab'<CR>";
-	key = "<S-M-T>";
+        key = "<S-M-T>";
       }
       {
-      	action = "<cmd>:tabclose | echo 'Tab Closed'<CR>";
-	key = "<S-M-W>";
+        action = "<cmd>:tabclose | echo 'Tab Closed'<CR>";
+        key = "<S-M-W>";
       }
     ];
   };

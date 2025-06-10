@@ -24,13 +24,19 @@
     timeout = 0;
   };
 
+  # Hyprland 
+  programs.hyprland = {
+    enable = true;
+    };
+
   # Programs.
   programs = {
-    hyprland.enable = true;
     hyprlock.enable = true;
     steam.enable = true;
     neovim.defaultEditor = true;
     neovim.enable = true;
+    neovim.viAlias = true;
+    neovim.vimAlias = true;
   };
 
   # Shell
@@ -50,6 +56,7 @@
     udisks2.enable = true;
     tumbler.enable = true;
     blueman.enable = true;
+    getty.autologinUser = "rplakama";
     flatpak.enable = true;
     # For Flatpak, seek https://flathub.org/setup/NixOS. There is a extra step for working on NixOS. In this case: | flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo | Without the bars. So you can add the repo.
   };
