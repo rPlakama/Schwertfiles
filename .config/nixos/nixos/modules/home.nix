@@ -14,6 +14,7 @@
     ./configs/fuzzel.nix
     ./configs/foot.nix
     ./configs/nixvim.nix
+    ./configs/spotify.nix
   ];
 
   home.pointerCursor = {
@@ -33,7 +34,7 @@
 
   stylix = {
     enable = true;
-    image = ./wallpapers/5.jpg;
+    image = ./wallpapers/7.jpg;
     polarity = "dark";
     autoEnable = true;
     targets.nixos-icons.enable = true;
