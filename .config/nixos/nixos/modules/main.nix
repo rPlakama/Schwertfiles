@@ -56,6 +56,7 @@
     udisks2.enable = true;
     tumbler.enable = true;
     blueman.enable = true;
+    power-profiles-daemon.enable = true;
   };
 
   #Thunar

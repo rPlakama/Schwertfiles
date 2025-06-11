@@ -28,7 +28,6 @@
     hyprshot
     ripgrep
     fd
-    bat
     du-dust
     alsa-utils
     pavucontrol
@@ -36,7 +35,6 @@
     # Programs
 
     firefox
-    tidal-hifi
     zathura
     pandoc
     btop

@@ -1,6 +1,6 @@
 { ... }: {
 
-programs.spicetify.enable = true;
-
-
+programs.ncspot = {
+  enable = true;
+  };
 }

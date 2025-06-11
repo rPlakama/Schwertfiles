@@ -6,6 +6,8 @@
       clipboard = "unnamedplus";
       shortmess = "filnxtToOFSI";
       scrolloff = 999;
+      number = true;
+      relativenumber = true;
     };
 
     plugins = {
@@ -16,20 +18,21 @@
       which-key.enable = true;
       treesitter.enable = true;
       smear-cursor.enable = true;
+      blink-cmp.enable = true;
+
 
       # LSP
 
-      lsp.enable = true;
-      blink-cmp = {
-        enable = true;
-      };
-      lsp.servers = {
+      lsp = {
+      enable = true;
+      servers = {
         rust_analyzer = {
           enable = true;
           installRustc = false;
           installCargo = false;
         };
         nixd.enable = true;
+      };
       };
       # Obsidian
 
@@ -56,9 +59,12 @@
         modules = {
           icons.style = "glyph";
           statusline.enable = true;
+	  snippets.enable = true;
           git.enable = true;
           files.enable = true;
+	  tabline.enable = true;
           diff.enable = true;
+
         };
       };
     };
@@ -99,46 +105,6 @@
       {
         action = "<cmd>:set nospell | echo 'Spell Disabled'<CR>";
         key = "<C-3>";
-      }
-      {
-        action = "<cmd>:tabnext 1 | echo 'Tab 1'<CR>";
-        key = "<M-1>";
-      }
-      {
-        action = "<cmd>:tabnext 2 | echo 'Tab 2'<CR>";
-        key = "<M-2>";
-      }
-      {
-        action = "<cmd>:tabnext 3 | echo 'Tab 3'<CR>";
-        key = "<M-3>";
-      }
-      {
-        action = "<cmd>:tabnext 4 | echo 'Tab 4'<CR>";
-        key = "<M-4>";
-      }
-      {
-        action = "<cmd>:tabnext 5 | echo 'Tab 5'<CR>";
-        key = "<M-5>";
-      }
-      {
-        action = "<cmd>:tabnext 6 | echo 'Tab 6'<CR>";
-        key = "<M-6>";
-      }
-      {
-        action = "<cmd>:tabnext 7 | echo 'Tab 7'<CR>";
-        key = "<M-7>";
-      }
-      {
-        action = "<cmd>:tabnext 8 | echo 'Tab 8'<CR>";
-        key = "<M-8>";
-      }
-      {
-        action = "<cmd>:tabnext 9 | echo 'Tab 9'<CR>";
-        key = "<M-9>";
-      }
-      {
-        action = "<cmd>:tabnext 10 | echo 'Tab 10'<CR>";
-        key = "<M-0>";
       }
       {
         action = "<cmd>:tabnew | echo 'New Tab'<CR>";
