@@ -56,9 +56,6 @@
     udisks2.enable = true;
     tumbler.enable = true;
     blueman.enable = true;
-    getty.autologinUser = "rplakama";
-    flatpak.enable = true;
-    # For Flatpak, seek https://flathub.org/setup/NixOS. There is a extra step for working on NixOS. In this case: | flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo | Without the bars. So you can add the repo.
   };
 
   #Thunar

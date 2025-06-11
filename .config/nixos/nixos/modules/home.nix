@@ -34,7 +34,7 @@
 
   stylix = {
     enable = true;
-    image = ./wallpapers/7.jpg;
+    image = ./wallpapers/13.jpg;
     polarity = "dark";
     autoEnable = true;
     targets.nixos-icons.enable = true;

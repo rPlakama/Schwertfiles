@@ -12,8 +12,8 @@
     pnpm
     nodejs_latest
     gcc
+    clang
     nixd
-    nil
     alejandra
     cargo
     rust-analyzer
@@ -36,6 +36,7 @@
     # Programs
 
     firefox
+    tidal-hifi
     zathura
     pandoc
     btop
@@ -43,8 +44,6 @@
     telegram-desktop
     mpv
     discord
-    obsidian
-    neovim
   ];
 
   fonts.packages = with pkgs; [
