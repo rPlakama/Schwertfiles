@@ -32,6 +32,7 @@
           installCargo = false;
         };
         nixd.enable = true;
+	clangd.enable = true;
       };
       };
       # Obsidian
