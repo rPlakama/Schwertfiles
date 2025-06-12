@@ -6,6 +6,7 @@
     stylix.url = "github:nix-community/stylix";
     home-manager.url = "github:nix-community/home-manager";
     nixvim.url = "github:nix-community/nixvim";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
@@ -18,6 +19,7 @@
     home-manager,
     stylix,
     nixvim,
+    spicetify-nix,
     ...
   } @ inputs: {
     nixosConfigurations."Elisheva" = nixpkgs.lib.nixosSystem {
@@ -37,6 +39,7 @@
             imports = [
               nixvim.homeModules.nixvim
               ./modules/home.nix
+	      spicetify-nix.homeManagerModules.spicetify
             ];
           };
         }

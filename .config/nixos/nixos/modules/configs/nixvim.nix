@@ -7,7 +7,6 @@
       shortmess = "filnxtToOFSI";
       scrolloff = 999;
       number = true;
-      relativenumber = true;
     };
 
     plugins = {
@@ -19,6 +18,8 @@
       treesitter.enable = true;
       smear-cursor.enable = true;
       blink-cmp.enable = true;
+      nvim-tree.enable = true;
+      barbar.enable = true;
 
 
       # LSP
@@ -62,8 +63,6 @@
           statusline.enable = true;
 	  snippets.enable = true;
           git.enable = true;
-          files.enable = true;
-	  tabline.enable = true;
           diff.enable = true;
 
         };
@@ -91,7 +90,7 @@
         options.silent = true;
       }
       {
-        action = "<cmd>:lua MiniFiles.open() <CR>";
+        action = "<cmd>:NvimTreeOpen<CR>";
         key = "<C-n>";
         options.silent = true;
       }
@@ -108,11 +107,11 @@
         key = "<C-3>";
       }
       {
-        action = "<cmd>:tabnew | echo 'New Tab'<CR>";
+        action = "<cmd>:tabnew | echo 'New Buffer'<CR>";
         key = "<S-M-T>";
       }
       {
-        action = "<cmd>:tabclose | echo 'Tab Closed'<CR>";
+        action = "<cmd>:BufferDelete<CR>";
         key = "<S-M-W>";
       }
     ];

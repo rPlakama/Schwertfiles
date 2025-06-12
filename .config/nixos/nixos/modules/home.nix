@@ -14,7 +14,7 @@
     ./configs/fuzzel.nix
     ./configs/foot.nix
     ./configs/nixvim.nix
-    ./configs/spotify.nix
+    ./configs/spice.nix
   ];
 
   home.pointerCursor = {
@@ -39,7 +39,8 @@
     autoEnable = true;
     targets.nixos-icons.enable = true;
     targets.firefox.enable = true;
-    targets.spotify-player.enable = true;
+    targets.vscode.enable = true;
+    targets.spicetify.enable = false;
     targets.qt.enable = true;
     fonts.sizes.terminal = 10;
     opacity.terminal = 0.65;
