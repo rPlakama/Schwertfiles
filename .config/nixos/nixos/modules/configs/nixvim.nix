@@ -21,20 +21,19 @@
       nvim-tree.enable = true;
       barbar.enable = true;
 
-
       # LSP
 
       lsp = {
-      enable = true;
-      servers = {
-        rust_analyzer = {
-          enable = true;
-          installRustc = false;
-          installCargo = false;
+        enable = true;
+        servers = {
+          rust_analyzer = {
+            enable = true;
+            installRustc = false;
+            installCargo = false;
+          };
+          nixd.enable = true;
+          clangd.enable = true;
         };
-        nixd.enable = true;
-	clangd.enable = true;
-      };
       };
       # Obsidian
 
@@ -61,18 +60,17 @@
         modules = {
           icons.style = "glyph";
           statusline.enable = true;
-	  snippets.enable = true;
+          snippets.enable = true;
           git.enable = true;
           diff.enable = true;
-
         };
       };
     };
     # keymaps
     keymaps = [
       {
-      	action = "<cmd>lua vim.diagnostic.open_float()<CR>";
-	key = "<C-q>";
+        action = "<cmd>lua vim.diagnostic.open_float()<CR>";
+        key = "<C-q>";
       }
       {
         action = "<cmd>:Telescope find_files find_command=rg,--ignore,--hidden,--files<CR>";

@@ -39,7 +39,7 @@
             imports = [
               nixvim.homeModules.nixvim
               ./modules/home.nix
-	      spicetify-nix.homeManagerModules.spicetify
+              spicetify-nix.homeManagerModules.spicetify
             ];
           };
         }

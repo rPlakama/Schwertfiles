@@ -34,18 +34,18 @@
 
   stylix = {
     enable = true;
-    image = ./wallpapers/7.jpg;
+    image = ./wallpapers/22.jpg;
     polarity = "dark";
     autoEnable = true;
     targets.nixos-icons.enable = true;
     targets.firefox.enable = true;
     targets.vscode.enable = true;
     targets.spicetify.enable = false;
+    targets.waybar.font = "sansSerif";
     targets.qt.enable = true;
     fonts.sizes.terminal = 10;
     opacity.terminal = 0.65;
     fonts = {
-      serif = config.stylix.fonts.monospace;
       sansSerif = config.stylix.fonts.monospace;
       emoji = config.stylix.fonts.monospace;
       monospace = {

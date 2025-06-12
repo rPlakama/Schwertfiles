@@ -24,10 +24,10 @@
     timeout = 0;
   };
 
-  # Hyprland 
+  # Hyprland
   programs.hyprland = {
     enable = true;
-    };
+  };
 
   # Programs.
   programs = {

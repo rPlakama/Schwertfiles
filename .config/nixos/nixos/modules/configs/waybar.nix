@@ -13,6 +13,7 @@
           "custom/leftarrow"
           "pulseaudio"
           "battery"
+          "cpu"
           "clock"
           "bluetooth"
           "network"
@@ -23,6 +24,11 @@
           max-length = 80;
         };
 
+        "cpu" = {
+          interval = 5;
+          format = "{}% ";
+          max-length = 10;
+        };
         "bluetooth" = {
           format-disabled = "󰂲";
           format-off = "󰂲";
@@ -152,11 +158,12 @@
                #tray,
                #pulseaudio,
                #clock,
-        #bluetooth,
+        #cpu,
+               #bluetooth,
                #battery {
                  padding: 0 4px;
                  margin: 0;
-          background-color: @base00;
+                 background-color: @base00;
                  color: @base05;
                  min-width: 2px;
 

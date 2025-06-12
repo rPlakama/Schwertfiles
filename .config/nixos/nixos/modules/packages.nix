@@ -37,14 +37,13 @@
     firefox
     zathura
     pandoc
-    texliveTeTeX
+    gimp
+    texliveSmall
     btop
     dropbox
     telegram-desktop
     mpv
     discord
-    vscode
-
   ];
 
   fonts.packages = with pkgs; [
