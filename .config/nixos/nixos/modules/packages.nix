@@ -31,19 +31,21 @@
     du-dust
     alsa-utils
     pavucontrol
+    smile
 
     # Programs
 
     firefox
     zathura
     pandoc
-    gimp
-    texliveSmall
+    tectonic
     btop
     dropbox
     telegram-desktop
     mpv
     discord
+    obsidian
+
   ];
 
   fonts.packages = with pkgs; [

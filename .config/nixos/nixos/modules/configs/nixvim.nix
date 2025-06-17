@@ -33,10 +33,20 @@
           };
           nixd.enable = true;
           clangd.enable = true;
+	  texlab.enable = true;
+
         };
       };
-      # Obsidian
 
+      # latex
+        vimtex = { 
+	  enable = true;
+	  settings = {
+	    compiler_method = "tectonic";
+	    };
+	    };
+
+      # Obsidian
       obsidian.settings = {
         new_notes_location = "current_dir";
         workspaces = [
