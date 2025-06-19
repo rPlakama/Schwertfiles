@@ -10,12 +10,18 @@
     pnpm
     nodejs_latest
     gcc
-    clang
-    nixd
     alejandra
     cargo
-    rust-analyzer
     rustc
+    unzip
+
+    # LSP's
+    nixd
+    clang
+    rust-analyzer
+    javascript-typescript-langserver
+    java-language-server
+    typescript
 
     # System
 

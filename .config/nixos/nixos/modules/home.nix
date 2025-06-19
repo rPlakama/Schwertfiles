@@ -16,6 +16,7 @@
     ./configs/nixvim.nix
     ./configs/spice.nix
     ./configs/zed-editor.nix
+    ./configs/vscode-editor.nix
   ];
 
   home.pointerCursor = {
@@ -40,7 +41,7 @@
     autoEnable = true;
     targets.nixos-icons.enable = true;
     targets.firefox.enable = true;
-    targets.vscode.enable = true;
+    targets.vscode.enable = false;
     targets.spicetify.enable = false;
     targets.waybar.font = "sansSerif";
     targets.qt.enable = true;
