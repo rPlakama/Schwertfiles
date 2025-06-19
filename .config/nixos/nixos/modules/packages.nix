@@ -1,6 +1,4 @@
 {
-  lib,
-  config,
   pkgs,
   ...
 }: {
@@ -32,6 +30,8 @@
     alsa-utils
     pavucontrol
     smile
+    lxqt.lxqt-policykit
+
 
     # Programs
 

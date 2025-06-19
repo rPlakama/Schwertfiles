@@ -7,6 +7,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  security.polkit.enable = true;
   hardware = {
     bluetooth = {
       enable = true;

@@ -15,6 +15,7 @@
     ./configs/foot.nix
     ./configs/nixvim.nix
     ./configs/spice.nix
+    ./configs/zed-editor.nix
   ];
 
   home.pointerCursor = {
@@ -34,7 +35,7 @@
 
   stylix = {
     enable = true;
-    image = ./wallpapers/22.jpg;
+    image = ./wallpapers/26.png;
     polarity = "dark";
     autoEnable = true;
     targets.nixos-icons.enable = true;
