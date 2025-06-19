@@ -20,9 +20,6 @@
       blink-cmp.enable = true;
       nvim-tree.enable = true;
       barbar.enable = true;
-      java.enable = true;
-      dap.enable = true;
-
       # LSP
 
       lsp = {
@@ -36,7 +33,6 @@
           nixd.enable = true;
           clangd.enable = true;
 	  texlab.enable = true;
-	  ts_ls.enable = true;
         };
       };
 
