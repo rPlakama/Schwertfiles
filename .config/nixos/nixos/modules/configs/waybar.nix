@@ -109,72 +109,72 @@
     ];
 
     style = ''
-               * {
-                 font-size: 10px;
-                 min-height: 0;
-               }
-
-               window#waybar {
-         background: alpha(@base00, 0.650000);
-                 color: @base05;
-               }
-
-               tooltip {
-                 background: @base00;
-           border: none;
-                 color: @base05;
-               }
-
-               /* Mode indicator */
-               #mode {
-                 background: @base02;
-                 border-bottom: 3px solid @base05;
-                 color: @base05;
-               }
-
-               /* Workspaces */
-               .modules-left #workspaces button {
-                 border-bottom: 1px solid transparent;
-                 margin-right: 0px;  /* gap entre os botões */
-               }
-
-               .modules-left #workspaces button.focused,
-               .modules-left #workspaces button.active {
-                 border-bottom: 3px solid transparent;
-               }
-
-        #workspaces {
-          background-color: @base00;
-          }
-
-               /* Right modules */
-               #network,
-               #tray,
-               #pulseaudio,
-               #clock,
-               #bluetooth,
-               #battery {
-                 padding: 0 4px;
-                 margin: 0;
-                 background-color: @base00;
-                 color: @base05;
-                 min-width: 2px;
-
-               }
-
-               #battery.charging {
-                 color: @base0A;
-               }
-
-               #pulseaudio.source-muted {
-                 color: @base04;
-               }
-        #custom-leftarrow,
-        #custom-rightarrow {
-          color: @base00;
-          font-size: 18px;
-
+                     * {
+                       font-size: 10px;
+                       min-height: 0;
+                     }
+      	       window#waybar, tooltip {
+          background: alpha(@base00, 0.650000);
+          color: @base05;
       }
+
+
+                     tooltip {
+                       background: @base00;
+                 border: none;
+                       color: @base05;
+                     }
+
+                     /* Mode indicator */
+                     #mode {
+                       background: @base02;
+                       border-bottom: 3px solid @base05;
+                       color: @base05;
+                     }
+
+                     /* Workspaces */
+                     .modules-left #workspaces button {
+                       border-bottom: 1px solid transparent;
+                       margin-right: 0px;  /* gap entre os botões */
+                     }
+
+                     .modules-left #workspaces button.focused,
+                     .modules-left #workspaces button.active {
+                       border-bottom: 3px solid transparent;
+                     }
+
+              #workspaces {
+                background-color: @base00;
+                }
+
+                     /* Right modules */
+                     #network,
+                     #tray,
+                     #pulseaudio,
+                     #clock,
+                     #bluetooth,
+                     #battery {
+                       padding: 0 4px;
+                       margin: 0;
+                       background-color: @base00;
+                       color: @base05;
+                       min-width: 2px;
+
+                     }
+
+                     #battery.charging {
+                       color: @base0A;
+                     }
+
+                     #pulseaudio.source-muted {
+                       color: @base04;
+                     }
+              #custom-leftarrow,
+              #custom-rightarrow {
+                color: @base00;
+                font-size: 18px;
+
+            }
 
     '';
   };

@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   ...
 }: {
   environment.systemPackages = with pkgs; [
@@ -14,14 +15,11 @@
     cargo
     rustc
     unzip
+# LSP's
 
-    # LSP's
     nixd
     clang
     rust-analyzer
-    javascript-typescript-langserver
-    java-language-server
-    typescript
 
     # System
 
@@ -51,14 +49,17 @@
     mpv
     discord
     obsidian
-
+    inputs.quickshell.packages.${system}.default
+    upower
   ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.caskaydia-cove
     noto-fonts
     oswald
+    martian-mono
     unifont
     symbola
+    roboto
   ];
 }

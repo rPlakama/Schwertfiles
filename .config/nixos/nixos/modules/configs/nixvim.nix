@@ -32,17 +32,18 @@
           };
           nixd.enable = true;
           clangd.enable = true;
-	  texlab.enable = true;
+          qmlls.enable = true;
+          texlab.enable = true;
         };
       };
 
       # latex
-        vimtex = { 
-	  enable = true;
-	  settings = {
-	    compiler_method = "tectonic";
-	    };
-	    };
+      vimtex = {
+        enable = true;
+        settings = {
+          compiler_method = "tectonic";
+        };
+      };
 
       # Obsidian
       obsidian.settings = {

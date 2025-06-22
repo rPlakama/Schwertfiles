@@ -6,7 +6,6 @@
   home.stateVersion = "24.11";
   imports = [
     ./configs/fastfetch.nix
-    ./configs/waybar.nix
     ./configs/yazi.nix
     ./configs/fish.nix
     ./configs/starship.nix
@@ -15,8 +14,7 @@
     ./configs/foot.nix
     ./configs/nixvim.nix
     ./configs/spice.nix
-    ./configs/zed-editor.nix
-    ./configs/vscode-editor.nix
+    ./configs/waybar.nix
   ];
 
   home.pointerCursor = {
@@ -35,25 +33,7 @@
   };
 
   stylix = {
-    enable = true;
-    image = ./wallpapers/26.png;
-    polarity = "dark";
-    autoEnable = true;
-    targets.nixos-icons.enable = true;
-    targets.firefox.enable = true;
-    targets.vscode.enable = false;
     targets.spicetify.enable = false;
-    targets.waybar.font = "sansSerif";
-    targets.qt.enable = true;
-    fonts.sizes.terminal = 10;
-    opacity.terminal = 0.65;
-    fonts = {
-      sansSerif = config.stylix.fonts.monospace;
-      emoji = config.stylix.fonts.monospace;
-      monospace = {
-        package = pkgs.nerd-fonts.caskaydia-cove;
-        name = "CaskaydiaCove Nerd Font Mono";
-      };
-    };
+    targets.waybar.enable = true;
   };
 }

@@ -6,7 +6,6 @@
   # Nix Configurations.
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   security.polkit.enable = true;
   hardware = {
     bluetooth = {
@@ -40,6 +39,24 @@
     neovim.vimAlias = true;
   };
 
+  stylix = {
+    enable = true;
+    image = ./wallpapers/22.jpg;
+    polarity = "dark";
+    opacity.terminal = 0.65;
+    targets.qt.enable = true;
+    fonts = {
+      sizes.terminal = 10;
+      sansSerif = config.stylix.fonts.monospace;
+      emoji = config.stylix.fonts.monospace;
+      monospace = {
+        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "CaskaydiaCove Nerd Font Mono";
+      };
+    };
+  };
+  qt.enable = true;
+
   # Shell
 
   users.defaultUserShell = pkgs.fish;
@@ -56,8 +73,8 @@
     gvfs.enable = true;
     udisks2.enable = true;
     tumbler.enable = true;
+    upower.enable = true;
     blueman.enable = true;
-    flatpak.enable = true;
     power-profiles-daemon.enable = true;
   };
 
