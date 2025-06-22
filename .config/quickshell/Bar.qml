@@ -5,28 +5,29 @@ import QtQuick.Layouts
 
 Scope {
 	id: root
-	property real fontSize: 12
-	property string fontFamily: "Arial"
-	property string mainBG: "black"
-	property string secondaryBG: "white"
+	property real fontSize: 10
+	property string fontFamily: "Oswald"
+	property int fontWeight: 50
+	property string mainBG: Qt.rgba(0.0, 0.0, 0.0, 0.75)
+	property string secondaryBG: "dark"
 	property real mainALPHA: 0.75
-	property int heightMAIN: 14
+	property int heightMAIN: 15
 	property int widthMAIN: 1500
 	property int widthRightModules: 120
 	property int modulesCornerMargin: 12 //the margin that sets the distance of the first right module
-	property int modulesRectangleMargin: 0 // Margint to set the distance to the corner of Rectangle against the screen
+	property int modulesRectangleMargin: -20 // Margint to set the distance to the corner of Rectangle against the screen
 	property int marginMAIN: 0
 	property int radiusMain: 1
-	property int radiusSecondary: 5
+	property int radiusSecondary: 3
 	property real textPadding: 20
-	property string textHighlight: "black"
+	property string textHighlight: "white"
 	PanelWindow
 			{
 	anchors { top:true; left: true; right: true; }
 	margins { left: marginMAIN; right: marginMAIN; }
 		
 	implicitHeight: heightMAIN
-	color: "transparent"
+	color: mainBG
 	Rectangle {
             id: rightModules
             height: heightMAIN 
@@ -35,10 +36,10 @@ Scope {
 	    opacity: mainALPHA
 	    anchors.right: parent.right
 	    anchors.rightMargin: modulesRectangleMargin
-	    bottomRightRadius: radiusMain
+	    bottomRightRadius: radiusSecondary
 	    bottomLeftRadius: radiusSecondary
 	    topLeftRadius: radiusSecondary
-	    topRightRadius: radiusMain
+	    topRightRadius: radiusSecondary
 
             RowLayout {
                 anchors.fill: parent 

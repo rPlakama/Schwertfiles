@@ -6,6 +6,8 @@ Text {
 	font.pixelSize: fontSize
 	font.family: fontFamily
 	color: textHighlight
+	font.weight: fontWeight
+
 	
 
 }
