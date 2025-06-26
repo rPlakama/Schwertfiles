@@ -14,6 +14,17 @@
 	"tooltip-format": "{timeTo}\n Capacity: {capacity}%",
 	"tooltip": true
     },
+    "power-profiles-daemon": {
+  "format": "{icon}",
+  "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+  "tooltip": true,
+  "format-icons": {
+    "default": "",
+    "performance": "",
+    "balanced": "",
+    "power-saver": ""
+  }
+},
     "pulseaudio": {
     "format-muted": "󰝟"
     },
