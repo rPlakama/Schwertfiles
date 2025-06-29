@@ -4,7 +4,8 @@
     "modules-right": ["network","bluetooth", "battery", "pulseaudio", "clock", "tray"],
 
     "tray": {
-	"icon-size": 12
+	"icon-size": 12,
+	"spacing": 1
 },
 
     "hyprland/window": {
