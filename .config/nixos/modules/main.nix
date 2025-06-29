@@ -43,13 +43,10 @@
 
   stylix = {
     enable = true;
-    image = ./wallpapers/22.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/chalk.yaml";
     polarity = "dark";
     opacity.terminal = 0.75;
     targets.qt.enable = true;
-    override = {
-    base00 = "000000";
-  };
     fonts = {
       sizes.terminal = 10;
       sansSerif = config.stylix.fonts.monospace;

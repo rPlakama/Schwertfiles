@@ -13,9 +13,10 @@
     ./configs/foot.nix
     ./configs/spice.nix
     ./configs/fuzzel.nix
-    ./configs/nixvim.nix
+    ./configs/helix.nix
+    ./configs/zed-editor.nix
   ];
-
+  # Home Configurations
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
@@ -30,7 +31,7 @@
       package = pkgs.papirus-icon-theme;
     };
   };
-
+  # Stylix
   stylix = {
     enable = true;
     targets.spicetify.enable = false;

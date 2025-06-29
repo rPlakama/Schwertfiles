@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     # Dev
 
@@ -15,12 +11,22 @@
     cargo
     rustc
     unzip
+    p7zip
 
-# LSP's
+    # LSP's
 
     nixd
-    clang
+    clang-tools
     rust-analyzer
+    lua-language-server
+    typescript-language-server
+    jdt-language-server
+    zulu
+    gdb
+
+    # DAP's
+
+    vscode-js-debug
 
     # System
 
@@ -37,7 +43,6 @@
     pavucontrol
     smile
     lxqt.lxqt-policykit
-
 
     # Programs
 
