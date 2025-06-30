@@ -5,6 +5,8 @@ return {
       require('lspconfig').lua_ls.setup({})
       require('lspconfig').nixd.setup({})
       require('lspconfig').ts_ls.setup({})
-     require('lspconfig').java_language_server.setup({}) end,
+      require('lspconfig').java_language_server.setup({}) 
+      require('lspconfig').hyprls.setup({})
+     end,
   },
 }
