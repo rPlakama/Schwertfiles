@@ -11,6 +11,10 @@ window#waybar {
     color: white;
 }
 
+#tray {
+    padding: 0 5px;
+}
+
 tooltip {
   background: rgba(00, 0, 0, 0.5);
   border-radius: 2px;
