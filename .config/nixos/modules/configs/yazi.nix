@@ -3,12 +3,8 @@
     enable = true;
     enableFishIntegration = true;
     settings = {
-      manager = {
+      mgr = {
         show_hidden = true;
-      };
-      theme = {
-        fg = "white";
-        dir = "white";
       };
       opener.edit = [
         {

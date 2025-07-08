@@ -1,17 +1,19 @@
-{pkgs, ...}: {
+{ input, pkgs, ...}: {
+
   environment.systemPackages = with pkgs; [
     # Dev
 
     git
     neovim
-    pnpm
     nodejs_latest
     gcc
     alejandra
     cargo
     rustc
     unzip
+    zip
     p7zip
+    yarn
 
     # LSP's
 
@@ -22,15 +24,18 @@
     typescript-language-server
     jdt-language-server
     zulu
-    gdb
+    hyprls
+    markdown-oxide
 
     # DAP's
 
     vscode-js-debug
+    gdb
 
     # System
 
     wl-clipboard-rs
+    nix-output-monitor
     yadm
     brightnessctl
     swww
@@ -43,6 +48,7 @@
     pavucontrol
     smile
     lxqt.lxqt-policykit
+    qimgv
 
     # Programs
 
@@ -52,11 +58,14 @@
     tectonic
     btop
     dropbox
-    telegram-desktop
+    materialgram
     mpv
+    nyaa
     discord
-    obsidian
     waybar
+    pcalc
+    transmission_4
+    nautilus
   ];
 
   fonts.packages = with pkgs; [

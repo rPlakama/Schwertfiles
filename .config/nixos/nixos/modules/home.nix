@@ -13,7 +13,6 @@
     ./configs/foot.nix
     ./configs/spice.nix
     ./configs/fuzzel.nix
-    ./configs/helix.nix
     ./configs/zed-editor.nix
   ];
   # Home Configurations

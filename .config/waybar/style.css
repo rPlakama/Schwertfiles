@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Oswald, Helvetica, Arial, sans-serif;
+    font-family: Oswald;
     font-size: 10px;
     min-height: 0;
 }
@@ -43,9 +43,19 @@ color: white;
 font-size: 10;
 
 }
+#network,
+#battery {
+	background-color: transparent;
+	padding: 0 4px;
+}
+
+#pulseaudio {
+	background-color: transparent;
+	padding: 0 4px; 
+}
 #clock {
     background-color: transparent;
-    padding: 0 5px;
+    padding: 0 3px;
 
 }
 
@@ -58,16 +68,6 @@ font-size: 10;
 #bluetooth {
 	font-size: 10.5;
 }
-
-#battery,
-#power-profiles-daemon,
-#network {
-	font-size: 15.5;
-	background-color: transparent;
-	padding: 0 5px;
-
-}
-
 @keyframes blink {
     to {
         background-color: transparent;

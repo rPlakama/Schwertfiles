@@ -7,6 +7,7 @@
     ./hardware-configuration.nix
     ./modules/packages.nix
     ./modules/main.nix
+    ./modules/steam.nix
   ];
 
   # Bootloader.
@@ -44,6 +45,7 @@
   console.keyMap = "br-abnt";
 
   #User
+  nix.trustedUsers = [ "root" "@wheel" ];
   users.users.rplakama = {
     isNormalUser = true;
     description = "rPlakama";

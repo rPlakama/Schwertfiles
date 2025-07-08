@@ -13,7 +13,6 @@
     ./configs/foot.nix
     ./configs/spice.nix
     ./configs/fuzzel.nix
-    ./configs/helix.nix
     ./configs/zed-editor.nix
   ];
   # Home Configurations
@@ -32,8 +31,5 @@
     };
   };
   # Stylix
-  stylix = {
-    enable = true;
-    targets.spicetify.enable = false;
-  };
+  stylix.enable = true;
 }

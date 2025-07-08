@@ -11,6 +11,5 @@ in {
       hidePodcasts
       keyboardShortcut
     ];
-    theme = spicePkgs.themes.defaultDynamic;
   };
 }

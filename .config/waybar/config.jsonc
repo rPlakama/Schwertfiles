@@ -1,10 +1,11 @@
 {
     "layer": "top",
     "modules-left": ["hyprland/workspaces"],
-    "modules-right": ["network","bluetooth", "battery", "pulseaudio", "clock", "tray"],
+    "modules-center": [ "clock" ],
+    "modules-right": ["network","battery", "pulseaudio","tray"],
 
     "tray": {
-	"icon-size": 12,
+	"icon-size": 10,
 	"spacing": 1
 },
 
@@ -18,39 +19,20 @@
 	"tooltip-format": "{timeTo}\n Capacity: {capacity}%",
 	"tooltip": true
     },
-    "power-profiles-daemon": {
-  "format": "{icon}",
-  "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-  "tooltip": true,
-  "format-icons": {
-    "default": "",
-    "performance": "",
-    "balanced": "",
-    "power-saver": ""
-  }
-},
     "pulseaudio": {
     "format-muted": "󰝟"
     },
-    "bluetooth": {
-	"format": "",
-	"format-disabled": "󰂲", 
-	"format-connected": "",
-	"tooltip-format": "{controller_alias}\t{controller_address}",
-	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
-},
     "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}",
+        "format": "{:%a, %d. %b  %H:%M}",
 	"tooltip": true,
-	"tooltip-format": "<tt><small>{calendar}</small></tt>"
+	"tooltip-format": "<tt><big>{calendar}</big></tt>"
 
 },
-"network" : {
+"network": {
 "format": "{icon}",
 "format-alt": "{essid} {icon}",
-"format-wifi": "",
-"format-disconnected" : "",
+"format-wifi": "󰖩",
+"format-disconnected" : "󰖪",
 "tooltip-format": "{essid}"
 }
 

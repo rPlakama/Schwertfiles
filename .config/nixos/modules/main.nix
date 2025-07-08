@@ -8,6 +8,8 @@
   nixpkgs.config.allowUnfree = true;
   security.polkit.enable = true;
   qt.enable = true;
+  programs.nautilus-open-any-terminal.enable = true;
+  programs.nautilus-open-any-terminal.terminal = "foot";
 
   hardware = {
     bluetooth = {
@@ -34,12 +36,14 @@
   # Programs.
   programs = {
     hyprlock.enable = true;
-    steam.enable = true;
     neovim.defaultEditor = true;
+    adb.enable = true;
     neovim.enable = true;
     neovim.viAlias = true;
     neovim.vimAlias = true;
   };
+
+  # Stylix
 
   stylix = {
     enable = true;
@@ -63,7 +67,17 @@
   users.defaultUserShell = pkgs.fish;
   programs.fish.enable = true;
 
+  # NH && Others.
+
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/etc/nixos/";
+  };
+
   # Services.
+
   services = {
     displayManager = {
       autoLogin.enable = true;
@@ -74,24 +88,10 @@
     gvfs.enable = true;
     udisks2.enable = true;
     tumbler.enable = true;
+    transmission.enable = true;
+    transmission.package = pkgs.transmission_4;
     upower.enable = true;
     blueman.enable = true;
-    power-profiles-daemon.enable = true;
-  };
-
-  #Thunar
-  programs = {
-    xfconf.enable = true;
-    thunar.enable = true;
-    thunar.plugins = with pkgs.xfce; [
-      thunar-volman
-      thunar-archive-plugin
-      thunar-media-tags-plugin
-    ];
-  };
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
+    tlp.enable = true;
   };
 }
