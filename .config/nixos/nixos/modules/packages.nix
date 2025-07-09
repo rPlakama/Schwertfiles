@@ -1,4 +1,4 @@
-{ input, pkgs, ...}: {
+{  inputs, pkgs, ...}: {
 
   environment.systemPackages = with pkgs; [
     # Dev
@@ -50,6 +50,7 @@
     smile
     lxqt.lxqt-policykit
     qimgv
+    nemo
 
     # Programs
 
@@ -61,12 +62,11 @@
     dropbox
     materialgram
     mpv
-    nyaa
     discord
     waybar
-    pcalc
     transmission_4
-    nautilus
+    inputs.quickshell.packages.x86_64-linux.default
+    
   ];
 
   fonts.packages = with pkgs; [

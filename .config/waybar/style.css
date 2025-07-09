@@ -51,18 +51,11 @@ font-size: 10;
 
 #pulseaudio {
 	background-color: transparent;
-	padding: 0 4px; 
+	padding: 0 4px;
 }
 #clock {
     background-color: transparent;
-    padding: 0 3px;
 
-}
-
-
-#battery.charging {
-    color: green;
-    background-color: transparent;
 }
 
 #bluetooth {
@@ -88,4 +81,5 @@ font-size: 10;
 #pulseaudio.muted {
 	font-weight: bolder;
 	font-size: 15.5;
+	padding: 0 5px;
 }

@@ -10,6 +10,10 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -26,7 +30,7 @@
       modules = [
 
         stylix.nixosModules.stylix
-        home-manager.nixosModules.home-manager
+        home-manager.nixosModules.home-manager 
         ./configuration.nix
 
         {

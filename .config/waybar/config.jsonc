@@ -1,11 +1,12 @@
 {
     "layer": "top",
+    "height": 19,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": [ "clock" ],
     "modules-right": ["network","battery", "pulseaudio","tray"],
 
     "tray": {
-	"icon-size": 10,
+	"icon-size": 11,
 	"spacing": 1
 },
 

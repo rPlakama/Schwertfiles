@@ -90,6 +90,5 @@
     transmission.enable = true;
     transmission.package = pkgs.transmission_4;
     upower.enable = true;
-    tlp.enable = true;
   };
 }
