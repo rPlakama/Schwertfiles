@@ -1,5 +1,8 @@
-{ input, pkgs, ...}: {
-
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     # Dev
 
@@ -14,6 +17,7 @@
     zip
     p7zip
     yarn
+    zulu
 
     # LSP's
 
@@ -23,7 +27,6 @@
     lua-language-server
     typescript-language-server
     jdt-language-server
-    zulu
     hyprls
     markdown-oxide
 
@@ -49,6 +52,7 @@
     smile
     lxqt.lxqt-policykit
     qimgv
+    nemo
 
     # Programs
 
@@ -60,17 +64,17 @@
     dropbox
     materialgram
     mpv
-    nyaa
     discord
     waybar
-    pcalc
     transmission_4
-    nautilus
+    inputs.quickshell.packages.x86_64-linux.default
+    kdePackages.qtdeclarative
   ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.caskaydia-cove
     noto-fonts
     oswald
+    inter
   ];
 }

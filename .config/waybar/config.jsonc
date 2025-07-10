@@ -1,41 +1,55 @@
 {
     "layer": "top",
-    "height": 19,
+    "height": 15,
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": [ "clock" ],
-    "modules-right": ["network","battery", "pulseaudio","tray"],
+    "modules-center": [ "clock", "temperature" ],
+    "modules-right": ["network","battery", "pulseaudio", "power-profiles-daemon", "tray"],
 
     "tray": {
-	"icon-size": 11,
-	"spacing": 1
-},
+        "icon-size": 11,
+        "spacing": 1
+    },
 
     "hyprland/window": {
         "max-length": 50
     },
-	
+    
     "battery": {
         "format": "{icon}",
         "format-icons": ["", "", "", "", ""],
-	"tooltip-format": "{timeTo}\n Capacity: {capacity}%",
-	"tooltip": true
+        "tooltip-format": "{timeTo}\n Capacity: {capacity}%",
+        "tooltip": true
     },
     "pulseaudio": {
-    "format-muted": "󰝟"
+        "format-muted": "󰝟"
     },
     "clock": {
         "format": "{:%a, %d. %b  %H:%M}",
-	"tooltip": true,
-	"tooltip-format": "<tt><big>{calendar}</big></tt>"
+        "tooltip": true,
+        "tooltip-format": "<tt><big>{calendar}</big></tt>"
+    },
 
-},
-"network": {
-"format": "{icon}",
-"format-alt": "{essid} {icon}",
-"format-wifi": "󰖩",
-"format-disconnected" : "󰖪",
-"tooltip-format": "{essid}"
-}
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+        "format": "{temperatureC}°C"
+    },
+    "network": {
+        "format": "{icon}",
+        "format-alt": "{essid} {icon}",
+        "format-wifi": "󰖩",
+        "format-disconnected" : "󰖪",
+        "tooltip-format": "{essid}"
+    },
 
-
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": " ",
+            "performance": " ",
+            "balanced": " ",
+            "power-saver": " "
+        }
+    }
 }

@@ -2,7 +2,6 @@
   description = "System-flake";
 
   inputs = {
-
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     stylix.url = "github:nix-community/stylix";
     home-manager.url = "github:nix-community/home-manager";
@@ -10,6 +9,10 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -24,7 +27,6 @@
       system = "x86_64-linux";
       specialArgs = {inherit inputs;};
       modules = [
-
         stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
         ./configuration.nix

@@ -1,7 +1,6 @@
 -- Telescope binds
 vim.keymap.set("n", "<C-f>", ":Telescope fd hidden=true theme=dropdown<CR>", {  silent = true, desc = "File Search" })
 vim.keymap.set("n", "<M-f>", ":Telescope oldfiles theme=dropdown<CR>", {  silent = true, desc = "Old Search" })
-vim.keymap.set('n', '<C-n>', '<cmd>lua require("telescope").extensions.file_browser.file_browser({ path = vim.fn.expand("%:p:h"), cwd_to_path = true, theme=dropdown})<CR>', { desc = 'File Browser' })
 
 -- Spell binds
 vim.keymap.set("n", "<C-1>", "<cmd>setlocal spell spelllang=pt | echo 'Spell Portuguese(PT)'<CR>", { silent = true, desc = "Português"})
@@ -22,6 +21,8 @@ vim.keymap.set("n", "<M-0>", "<cmd>tabn10<CR>", { silent = true, desc = "Tab 10"
 vim.keymap.set("n", "<M-w>", "<cmd>tabclose<CR>", { silent = true, desc = "Close Tab"})
 vim.keymap.set("n", "<M-t>", "<cmd>tabnew<CR>", { silent = true, desc = "New Tab"})
 
+-- NeoTree
+vim.keymap.set("n", "<C-n>", "<cmd>Neotree ./%:p:h:h<CR>")
 
 
 

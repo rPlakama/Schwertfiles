@@ -8,6 +8,8 @@ return {
       require('lspconfig').java_language_server.setup({}) 
       require('lspconfig').hyprls.setup({})
       require('lspconfig').markdown_oxide.setup({})
+      require('lspconfig').qmlls.setup({})
+
      end,
   },
 }

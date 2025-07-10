@@ -1,12 +1,9 @@
-{ pkgs, ... }: 
-
-{
-
-programs.python = {
+{pkgs, ...}: {
+  programs.python = {
     enable = true;
-    package = pkgs.python3.withPackages (ps: with ps; [
-      cowsay 
-    ]);
+    package = pkgs.python3.withPackages (ps:
+      with ps; [
+        cowsay
+      ]);
   };
-
 }

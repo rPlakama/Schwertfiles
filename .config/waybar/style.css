@@ -2,84 +2,107 @@
     border: none;
     border-radius: 0;
     font-family: Oswald;
-    font-size: 10px;
-    min-height: 0;
+    font-size: 11px;
 }
 
 window#waybar {
-    background: rgba(00, 0, 0, 0.5);
-    color: white;
+    background: alpha(@window_bg_color, 0.65);
+    color: @window_fg_color;
 }
 
 #tray {
     padding: 0 5px;
 }
 
-tooltip {
-  background: rgba(00, 0, 0, 0.5);
+#tooltip {
+  background: @window_bg_color;
   border-radius: 2px;
 }
 tooltip label {
-  color: white;
+  color: @window_fg_color;
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 2px;
     background: transparent;
     color: gray;
-    border-bottom: 3px solid transparent;
     font-size: 10;
+    transition: 0.2s ease-in-out;
 }
 
 #workspaces button.focused {
-    background: #64727D;
+    background: @headerbar_bg_color;
     font-size: 10;
-    border-bottom: 3px solid white;
 }
 
 #workspaces button.active {
-border-bottom: 3px solid transparent;
-color: white;
+color: @window_fg_color;
 font-size: 10;
 
 }
-#network,
-#battery {
-	background-color: transparent;
-	padding: 0 4px;
+
+#workspaces {
+    background-color: @view_bg_color;
+    border-radius: 3px;
+    color: @dark_1;
+    margin-left: 8;
+    padding: 0 2px;
+
 }
 
-#pulseaudio {
-	background-color: transparent;
-	padding: 0 4px;
+#power-profiles-daemon, #pulseaudio, #network, #battery  {
+	background-color: @view_bg_color;
+	padding: 1px 5px 0px;
+
+
 }
+
+#temperature {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#network {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+	
+#temperature, 
 #clock {
-    background-color: transparent;
 
+    background-color: @view_bg_color;
+    padding: 1px 5px 0px;
 }
 
-#bluetooth {
-	font-size: 10.5;
+#clock {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
+
 @keyframes blink {
     to {
         background-color: transparent;
-        color: orange;
+        color: @orange_4;
     }
 }
 
-#battery.warning:not(.charging) {
-    background: transparent;
-    color: red;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+#pulseaudio.muted {
+    font-weight: bolder;
+    font-size: 15.5;
+    padding: 0 5px;
+    color: @window_fg_color;
 }
 
-#pulseaudio.muted {
-	font-weight: bolder;
-	font-size: 15.5;
-	padding: 0 5px;
+#power-profiles-daemon.performance { color: @destructive_bg_color; }
+#power-profiles-daemon {
+    background-color: @view_bg_color;
+    transition: 0.2s ease-in-out;
+    padding: 0 5px;
+    color: @window_fg_color;
+    border-radius: 3;
+    margin-left: 8;
+    font-size: 12;
 }
+
+#power-profiles-daemon.balanced { transition: 0.2s ease-in-out; }
+#power-profiles-daemon.power-saver { transition: 0.2s ease-in-out; color: @green_3}

@@ -12,10 +12,6 @@
   programs.nautilus-open-any-terminal.terminal = "foot";
 
   hardware = {
-    bluetooth = {
-      enable = true;
-      powerOnBoot = false;
-    };
     graphics.enable = true;
   };
   systemd.services = {
@@ -53,7 +49,10 @@
     targets.qt.enable = true;
     fonts = {
       sizes.terminal = 10;
-      sansSerif = config.stylix.fonts.monospace;
+      sansSerif = {
+        package = pkgs.montserrat;
+        name = "Montserrat";
+      };
       emoji = config.stylix.fonts.monospace;
       monospace = {
         package = pkgs.nerd-fonts.caskaydia-cove;
@@ -91,7 +90,5 @@
     transmission.enable = true;
     transmission.package = pkgs.transmission_4;
     upower.enable = true;
-    blueman.enable = true;
-    tlp.enable = true;
   };
 }
