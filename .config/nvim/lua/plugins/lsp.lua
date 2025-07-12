@@ -9,6 +9,7 @@ return {
       require('lspconfig').hyprls.setup({})
       require('lspconfig').markdown_oxide.setup({})
       require('lspconfig').qmlls.setup({})
+      require('lspconfig').cssls.setup({})
 
      end,
   },

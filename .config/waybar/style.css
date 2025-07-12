@@ -1,108 +1,70 @@
+/* Base */
+@import "base16.css";
+
 * {
     border: none;
     border-radius: 0;
-    font-family: Oswald;
-    font-size: 11px;
+    font-family: "Montserrat", "Font Awesome 6 Free";
+    font-size: 10px;
+    font-weight: 900;
 }
 
 window#waybar {
-    background: alpha(@window_bg_color, 0.65);
-    color: @window_fg_color;
+	color: @base07;
+	background-color: alpha (@base00, 0.90);
 }
 
-#tray {
-    padding: 0 5px;
+/* Modules-wise */
+.modules-left {
+	margin-left: 12px;
+}
+.modules-right {
+	margin-right: 12px;
+}
+.modules-center,
+.modules-left,
+.modules-right {
+	background-color: alpha(@base04, 0.10);
+	border-radius: 10px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	background-size: 200px 20px;
+	padding: 0px 7px 0px;
 }
 
-#tooltip {
-  background: @window_bg_color;
-  border-radius: 2px;
+/* General */
+
+#network,
+#battery,
+#clock,
+#power-profile-daemon,
+#pulseaudio {
+	margin-left: 4px;
+	margin-right: 4px;
 }
-tooltip label {
-  color: @window_fg_color;
-}
+
+/* Workspaces Specifics */
 
 #workspaces button {
-    padding: 0 2px;
-    background: transparent;
-    color: gray;
-    font-size: 10;
-    transition: 0.2s ease-in-out;
-}
-
-#workspaces button.focused {
-    background: @headerbar_bg_color;
-    font-size: 10;
+	padding: 0 1px;
+	color: alpha (@base06, 0.50);
+	transition: 0.12s ease-in-out;
 }
 
 #workspaces button.active {
-color: @window_fg_color;
-font-size: 10;
-
+	color: @base07;
 }
 
-#workspaces {
-    background-color: @view_bg_color;
-    border-radius: 3px;
-    color: @dark_1;
-    margin-left: 8;
-    padding: 0 2px;
-
+#workspaces button.urgent {
+	color: @base09;
 }
 
-#power-profiles-daemon, #pulseaudio, #network, #battery  {
-	background-color: @view_bg_color;
-	padding: 1px 5px 0px;
+/* Central Modules Specifics */
 
-
-}
-
+#clock,
+#power-profiles-daemon,
 #temperature {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+	margin-left: 3px;
+	margin-right: 3px;
 }
 
-#network {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-}
-	
-#temperature, 
-#clock {
-
-    background-color: @view_bg_color;
-    padding: 1px 5px 0px;
-}
-
-#clock {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-}
-
-@keyframes blink {
-    to {
-        background-color: transparent;
-        color: @orange_4;
-    }
-}
-
-#pulseaudio.muted {
-    font-weight: bolder;
-    font-size: 15.5;
-    padding: 0 5px;
-    color: @window_fg_color;
-}
-
-#power-profiles-daemon.performance { color: @destructive_bg_color; }
-#power-profiles-daemon {
-    background-color: @view_bg_color;
-    transition: 0.2s ease-in-out;
-    padding: 0 5px;
-    color: @window_fg_color;
-    border-radius: 3;
-    margin-left: 8;
-    font-size: 12;
-}
-
-#power-profiles-daemon.balanced { transition: 0.2s ease-in-out; }
-#power-profiles-daemon.power-saver { transition: 0.2s ease-in-out; color: @green_3}

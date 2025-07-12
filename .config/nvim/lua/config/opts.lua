@@ -2,6 +2,7 @@ require ("plugins.theme")
 
 vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
+vim.o.shortmess = 'I'
 vim.cmd('colorscheme base16-chalk')
 vim.opt.conceallevel = 1
 vim.opt.number = true
