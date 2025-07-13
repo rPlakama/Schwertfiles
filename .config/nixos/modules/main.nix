@@ -8,8 +8,6 @@
   nixpkgs.config.allowUnfree = true;
   security.polkit.enable = true;
   qt.enable = true;
-  programs.nautilus-open-any-terminal.enable = true;
-  programs.nautilus-open-any-terminal.terminal = "foot";
 
   hardware = {
     graphics.enable = true;
@@ -45,7 +43,7 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/chalk.yaml";
     polarity = "dark";
-    opacity.terminal = 0.75;
+    opacity.terminal = 0.95;
     targets.qt.enable = true;
     fonts = {
       sizes.terminal = 10;
@@ -63,8 +61,12 @@
 
   # Shell
 
-  users.defaultUserShell = pkgs.fish;
-  programs.fish.enable = true;
+users.defaultUserShell = pkgs.fish;
+programs.fish.enable = true;
+
+#programs.bash.completion.enable = true;
+#programs.bash.blesh.enable = true;
+#programs.starship.enable = true;
 
   # NH && Others.
 

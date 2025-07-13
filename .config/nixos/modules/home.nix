@@ -10,10 +10,10 @@
     ./configs/fish.nix
     ./configs/starship.nix
     ./configs/mako.nix
-    ./configs/foot.nix
     ./configs/spice.nix
     ./configs/fuzzel.nix
     ./configs/zed-editor.nix
+    ./configs/foot.nix
   ];
   # Home Configurations
   home.pointerCursor = {

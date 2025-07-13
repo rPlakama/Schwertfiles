@@ -17,7 +17,6 @@
     zip
     p7zip
     yarn
-    zulu
 
     # LSP's
 
@@ -29,7 +28,7 @@
     jdt-language-server
     hyprls
     markdown-oxide
-
+    vscode-langservers-extracted
     # DAP's
 
     vscode-js-debug
@@ -38,6 +37,7 @@
     # System
 
     wl-clipboard-rs
+    bat
     nix-output-monitor
     yadm
     brightnessctl
@@ -67,8 +67,6 @@
     discord
     waybar
     transmission_4
-    inputs.quickshell.packages.x86_64-linux.default
-    kdePackages.qtdeclarative
   ];
 
   fonts.packages = with pkgs; [
@@ -76,5 +74,6 @@
     noto-fonts
     oswald
     inter
+    font-awesome_6
   ];
 }
