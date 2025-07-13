@@ -2,7 +2,7 @@
     "layer": "top",
     "height": 5,
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": [ "tray", "clock", "temperature", "power-profiles-daemon", ],
+    "modules-center": [ "tray", "clock", "temperature", "power-profiles-daemon" ],
     "modules-right": ["network","battery", "pulseaudio"],
 
     "tray": {
@@ -18,8 +18,11 @@
         "format": "{icon}",
         "format-icons": ["", "", "", "", ""],
         "tooltip-format": "{timeTo}\n Capacity: {capacity}%",
-        "tooltip": true
-    },
+        "tooltip": true,
+	 "states": {
+        "critical": 15
+    }
+},
 
 "memory": {
     "interval": 30,
@@ -39,7 +42,7 @@
     },
 
     "temperature": {
-        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "format": "{temperatureC}°C",
 	"tooltip-format": "{temperatureC}°C | CPU",
 	"tooltip": true,
@@ -57,10 +60,10 @@
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
         "tooltip": true,
         "format-icons": {
-            "default": " ",
-            "performance": " ",
-            "balanced": " ",
-            "power-saver": " "
+            "default": "",
+            "performance": "󰓅",
+            "balanced": "󰾅",
+            "power-saver": "󰾆"
         }
     },
 "reload_style_on_change": true,

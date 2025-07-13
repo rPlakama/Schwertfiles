@@ -11,7 +11,7 @@
 
 window#waybar {
 	color: @base07;
-	background-color: alpha (@base00, 0.90);
+	background-color: alpha (@base00, 0.95);
 }
 
 /* Modules-wise */
@@ -25,11 +25,11 @@ window#waybar {
 .modules-left,
 .modules-right {
 	background-color: alpha(@base04, 0.10);
-	border-radius: 10px;
+	border-radius: 5px;
 	margin-top: 4px;
 	margin-bottom: 4px;
 	background-size: 200px 20px;
-	padding: 0px 7px 0px;
+	padding: 0px 7px 0px; /*modules width*/
 }
 
 /* General */
@@ -66,5 +66,26 @@ window#waybar {
 #temperature {
 	margin-left: 3px;
 	margin-right: 3px;
+}
+
+#power-profiles-daemon.performance {
+	color: @base08;
+	transition: 0.2s ease-in-out;
+}
+#power-profiles-daemon.balanced {
+	transition: 0.2s ease-in-out;
+}
+#power-profiles-daemon.power-saver {
+	color: @base0B;
+	transition: 0.2s ease-in-out;
+}
+#power-profiles-daemon {
+	font-size: 12px;
+}
+
+/* Right Modules Specifics */
+
+#battery.critical {
+	color: @base0A
 }
 
