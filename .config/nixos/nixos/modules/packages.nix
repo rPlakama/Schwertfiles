@@ -39,6 +39,7 @@
     wl-clipboard-rs
     bat
     nix-output-monitor
+    woeusb-ng
     yadm
     brightnessctl
     swww

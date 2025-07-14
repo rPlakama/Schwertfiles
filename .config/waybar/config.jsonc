@@ -31,7 +31,6 @@
 
     "pulseaudio": {
         "format": "{volume}% {format_source}",
-        "format-muted": "{volume}% {format_source}",
 	"format-source": "ON",
 	"format-source-muted": "OFF",
     },

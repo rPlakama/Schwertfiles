@@ -86,6 +86,9 @@ window#waybar {
 /* Right Modules Specifics */
 
 #battery.critical {
-	color: @base0A
+	color: @base0A;
+}
+#pulseaudio.muted {
+  color: @base08;
 }
 
