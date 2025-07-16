@@ -1,21 +1,11 @@
 {
-  config,
   pkgs,
   ...
 }: {
-  home.stateVersion = "24.11";
-  imports = [
-    ./configs/fastfetch.nix
-    ./configs/yazi.nix
-    ./configs/fish.nix
-    ./configs/starship.nix
-    ./configs/mako.nix
-    ./configs/spice.nix
-    ./configs/fuzzel.nix
-    ./configs/zed-editor.nix
-    ./configs/foot.nix
-  ];
-  # Home Configurations
+  # -- Core Home Manager Settings -- #
+  imports = [ ./home-manager/config ];
+  home.stateVersion = "25.05";
+  # -- Theming & Appearance -- #
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
@@ -30,6 +20,7 @@
       package = pkgs.papirus-icon-theme;
     };
   };
-  # Stylix
+
+  # -- Stylix -- #
   stylix.enable = true;
 }

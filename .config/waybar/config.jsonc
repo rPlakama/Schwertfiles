@@ -6,8 +6,8 @@
     "modules-right": ["network","battery", "pulseaudio"],
 
     "tray": {
-        "icon-size": 11,
-        "spacing": 1
+        "icon-size": 13,
+        "spacing": 3
     },
 
     "hyprland/window": {
@@ -50,6 +50,7 @@
         "format": "{icon}",
         "format-alt": "{essid} {icon}",
         "format-wifi": "󰖩",
+        "format": "󰈀",
         "format-disconnected" : "󰖪",
         "tooltip-format": "{essid}"
     },
