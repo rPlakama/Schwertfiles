@@ -8,8 +8,7 @@
   security.polkit.enable = true;
 
 # -- rPlakama, the man himself -- #
-  users.defaultUserShell = pkgs.fish;
-  programs.fish.enable = true;
+  programs.starship.enable = true;
   nix.settings.trusted-users = ["root" "@wheel"];
   users.users.rplakama = {
     isNormalUser = true;

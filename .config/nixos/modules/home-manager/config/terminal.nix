@@ -4,12 +4,11 @@
 
 # -- Terminal -- # 
 programs.foot.enable = true;
+programs.carapace.enableFishIntegration = true;
+programs.carapace.enableBashIntegration = true;
 # -- Shell -- #
-programs.fish = {
+programs.bash = {
   enable = true;
-  shellInit = ''
-    set -g fish_greeting ""
-    set -g fish_key_bindings fish_vi_key_bindings
-    '';
- };
+  bashrcExtra = "set -o vi";
+  };
 }

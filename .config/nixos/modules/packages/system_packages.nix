@@ -22,6 +22,7 @@ environment.systemPackages = with pkgs; [
   smile          
   swww           
   wl-clip-persist
+  wl-clipboard-rs
 
   # -- System & Hardware Control -- #
   alsa-utils
