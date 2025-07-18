@@ -13,7 +13,7 @@ environment.systemPackages = with pkgs; [
   discord
   tectonic
   materialgram
-  transmission_4
+  qbittorrent
 
   ];
 }

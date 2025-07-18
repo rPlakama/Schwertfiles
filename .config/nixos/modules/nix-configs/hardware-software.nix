@@ -10,9 +10,10 @@
     systemd-udev-settle.enable = false;
     NetworkManager-wait-online.enable = false;
   };
+ systemd.network.enable = true;
  networking = {
    hostName = "Elisheva";
-   wireless.iwd.enable = true;
+   networkmanager.enable = true;
   };
 # -- Boot configuration -- #
  boot.kernelParams = [ "amd_pstate=active" ];

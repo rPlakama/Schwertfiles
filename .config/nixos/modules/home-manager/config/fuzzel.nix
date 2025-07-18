@@ -17,7 +17,7 @@
         width = 0;
       };
       colors = {
-        selection = lib.mkForce "151515ff";
+        selection = lib.mkForce "151718ff";
       };
     };
   };

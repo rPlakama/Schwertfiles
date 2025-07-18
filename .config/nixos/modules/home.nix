@@ -23,4 +23,6 @@
 
   # -- Stylix -- #
   stylix.enable = true;
+  stylix.targets.neovim.enable = true;
+  stylix.targets.neovim.plugin = "base16-nvim";
 }

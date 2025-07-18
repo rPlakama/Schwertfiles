@@ -21,6 +21,7 @@ programs.fastfetch = {
     "TerminalFont"
     "Break"
     "Memory"
+    "Disk"
     "Kernel"
     ];
   };
