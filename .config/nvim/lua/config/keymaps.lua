@@ -1,7 +1,10 @@
+-- Nvim Tree
+vim.keymap.set({ "n", "v"}, "<C-n>", "<cmd>NvimTreeToggle<CR>")
+-- Delete Without Yank
+vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" })
 -- Telescope binds
 vim.keymap.set("n", "<C-f>", ":Telescope fd hidden=true theme=dropdown<CR>", {  silent = true, desc = "File Search" })
 vim.keymap.set("n", "<M-f>", ":Telescope oldfiles theme=dropdown<CR>", {  silent = true, desc = "Old Search" })
-vim.keymap.set('n', '<C-n>', '<cmd>lua require("telescope").extensions.file_browser.file_browser({ path = vim.fn.expand("%:p:h"), cwd_to_path = true, theme=dropdown})<CR>', { desc = 'File Browser' })
 vim.keymap.set("n", "<C-A-f>", "<cmd>Telescope live_grep hidden=true theme=dropdown<CR>")
 
 -- Spell binds
@@ -23,6 +26,30 @@ vim.keymap.set("n", "<M-0>", "<cmd>tabn10<CR>", { silent = true, desc = "Tab 10"
 vim.keymap.set("n", "<M-w>", "<cmd>tabclose<CR>", { silent = true, desc = "Close Tab"})
 vim.keymap.set("n", "<M-t>", "<cmd>tabnew<CR>", { silent = true, desc = "New Tab"})
 
+-- Move lines up/down
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
+-- Better indenting in visual mode
+vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
+vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 
+-- Full Path 
+vim.keymap.set("n", "<leader>pa", function()
+	local path = vim.fn.expand("%:p")
+	vim.fn.setreg("+", path)
+	print("file:", path)
+end)
+
+-- -- Basic autocommands
+local augroup = vim.api.nvim_create_augroup("UserConfig", {})
+-- Hightlight yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = augroup,
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
 

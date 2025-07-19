@@ -12,5 +12,6 @@ return {
       require('lspconfig').cssls.setup({})
 
      end,
+
   },
 }

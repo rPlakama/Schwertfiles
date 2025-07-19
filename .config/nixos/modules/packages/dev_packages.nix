@@ -6,8 +6,8 @@ environment.systemPackages = with pkgs; [
   # -- LSP's -- #
   nixd
   hyprls
-  fish-lsp
   clang-tools
+  bash-language-server
   rust-analyzer
   markdown-oxide
   lua-language-server
@@ -23,8 +23,11 @@ environment.systemPackages = with pkgs; [
   # -- Languages -- #
   lua
   cargo
-  # -- Compiler -- #
+  # -- Compilers -- #
   rustc
   clang
+  # -- General Tools -- #
+  kdePackages.qtdeclarative
+
   ];
 }

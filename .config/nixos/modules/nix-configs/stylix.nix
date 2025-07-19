@@ -3,7 +3,7 @@
 # -- Stylix -- #
   stylix = {
     enable = true;
-    image = ../wallpapers/backgrounds/fl.png;
+    image = ../wallpapers/backgrounds/space.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/chalk.yaml";
     polarity = "dark";
     opacity.terminal = 0.95;
