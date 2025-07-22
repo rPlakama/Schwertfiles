@@ -14,10 +14,11 @@ programs.zoxide.enableFishIntegration = true;
 programs.bash = {
   enable = true;
   bashrcExtra = "set -o vi";
-  profileExtra = ''
-    if uwsm check may-start; then
-    exec uwsm start hyprland-uwsm.desktop
-  fi
-  '';
-  };
+# profileExtra = ''
+#   if uwsm check may-start; then
+#   exec uwsm start hyprland-uwsm.desktop
+# fi
+# '';
+# };
+};
 }

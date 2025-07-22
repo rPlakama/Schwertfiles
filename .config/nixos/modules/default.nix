@@ -7,6 +7,7 @@
     ./nix-configs/services.nix
     ./nix-configs/stylix.nix
     ./nix-configs/users.nix
+    ./nix-configs/systemd.nix
 
     # Package definitions
     ./packages/dev_packages.nix

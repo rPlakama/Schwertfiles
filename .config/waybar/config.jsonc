@@ -7,7 +7,8 @@
 
     "tray": {
         "icon-size": 13,
-        "spacing": 3
+        "spacing": 3,
+        "reverse-direction": true
     },
 
     "hyprland/window": {
@@ -19,14 +20,10 @@
         "format-icons": ["", "", "", "", ""],
         "tooltip-format": "{timeTo}\n Capacity: {capacity}%",
         "tooltip": true,
-	 "states": {
-        "critical": 15
+         "states": {
+        "critical": 15,
+        "warming": 30
     }
-},
-
-"memory": {
-    "interval": 30,
-    "format": "{used:0.1f}G"
 },
 
     "pulseaudio": {
@@ -41,7 +38,7 @@
     },
 
     "temperature": {
-        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
         "format": "{temperatureC}°C",
 	"tooltip-format": "{temperatureC}°C | CPU",
 	"tooltip": true,

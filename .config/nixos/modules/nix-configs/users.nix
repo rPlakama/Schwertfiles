@@ -9,18 +9,18 @@
 # -- rPlakama, the shell  -- #
   programs.starship.enable = true;
   users.users.rplakama.shell = pkgs.fish;
-  programs.bash.enableCompletion = true;
+  programs.bash.completion.enable = true;
   programs.fish = {
   enable = true;
   shellInit = ''
     set -g fish_key_bindings fish_vi_key_bindings
     set -g fish_greeting ""
   '';
-  loginShellInit = ''
-    if uwsm check may-start
-    exec uwsm start hyprland-uwsm.desktop
-end 
-  '';
+   loginShellInit = ''
+     if uwsm check may-start
+     exec uwsm start hyprland-uwsm.desktop
+ end 
+ '';
 };
 
 # -- Holy Autologin -- #

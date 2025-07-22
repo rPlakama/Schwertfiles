@@ -9,8 +9,6 @@
   ./terminal.nix
   ./yazi.nix
   ./zed-editor.nix
-  ./neovim.nix
-  ./waybar.nix
 
   ];
 }

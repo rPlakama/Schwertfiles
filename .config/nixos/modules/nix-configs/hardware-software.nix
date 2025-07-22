@@ -2,6 +2,8 @@
 { pkgs, ... }: 
 
 {
+
+
 # -- Services that interact with the hardware -- #
  services.power-profiles-daemon.enable = true;
  services.gvfs.enable = true;

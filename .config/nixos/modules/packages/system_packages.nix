@@ -9,7 +9,6 @@ environment.systemPackages = with pkgs; [
   fd
   ripgrep
   # -- File & Archive Management -- #
-  nemo
   p7zip
   unzip
   zip

@@ -7,12 +7,12 @@ environment.systemPackages = with pkgs; [
   btop
   pandoc
   waybar
-  quickshell
   firefox
   zathura
   dropbox
   discord
   tectonic
+  obs-studio
   materialgram
   qbittorrent
 

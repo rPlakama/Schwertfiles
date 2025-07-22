@@ -26,8 +26,6 @@ environment.systemPackages = with pkgs; [
   # -- Compilers -- #
   rustc
   clang
-  # -- General Tools -- #
-  kdePackages.qtdeclarative
 
   ];
 }

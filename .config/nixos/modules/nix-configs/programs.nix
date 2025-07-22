@@ -3,11 +3,11 @@
 # -- For programs that need to be enabled -- #
 
 # -- Hyprland -- #
-  programs.hyprland = {
-  enable = true;
-  withUWSM = true;
-  };
-  programs.hyprlock.enable = true;
+ programs.hyprland = {
+ enable = true;
+ withUWSM = true;
+ };
+ programs.hyprlock.enable = true;
 
 # -- NeoVim -- #
   programs.neovim.enable = true;
