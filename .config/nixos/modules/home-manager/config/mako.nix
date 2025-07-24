@@ -1,6 +1,5 @@
-{ ... }: { 
-
-# -- Configuration Of Mako -- #
+{...}: {
+  # -- Configuration Of Mako -- #
   services.mako = {
     enable = true;
     settings = {
@@ -11,4 +10,3 @@
     };
   };
 }
-

@@ -1,6 +1,9 @@
-{ pkgs, config, ... }: {
-
-# -- Stylix -- #
+{
+  pkgs,
+  config,
+  ...
+}: {
+  # -- Stylix -- #
   stylix = {
     enable = true;
     image = ../wallpapers/backgrounds/fl.png;
@@ -23,8 +26,8 @@
     };
 
     override = {
-       base0D = config.stylix.generated.palette.base0D;
-       base0E = config.stylix.generated.palette.base0E; 
+      base0D = config.stylix.generated.palette.base0D;
+      base0E = config.stylix.generated.palette.base0E;
     };
   };
 }

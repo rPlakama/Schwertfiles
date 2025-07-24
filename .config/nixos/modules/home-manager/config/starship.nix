@@ -1,184 +1,183 @@
 {...}: {
+  # -- Shell Decoration -- #
+  programs.starship = {
+    enable = true;
+    enableBashIntegration = true;
+    settings = {
+      add_newline = true;
+      format = " $username$directory$git_branch$git_commit$git_state$git_status$c$elixir$elm$golang$gradle$haskell$java$julia$nodejs$nim$rust$scala$docker_context$jobs$cmd_duration$character";
 
-# -- Shell Decoration -- #
-programs.starship = {
-  enable = true;
-  enableBashIntegration = true;
-  settings = {
-    add_newline = true;
-    format = " $username$directory$git_branch$git_commit$git_state$git_status$c$elixir$elm$golang$gradle$haskell$java$julia$nodejs$nim$rust$scala$docker_context$jobs$cmd_duration$character";
+      shell = {
+        disabled = true;
+        fish_indicator = "";
+        nu_indicator = ">";
+        bash_indicator = "󱆃";
+      };
 
-    shell = {
-      disabled = true;
-      fish_indicator = "";
-      nu_indicator = ">";
-      bash_indicator = "󱆃";
-    };
+      character = {
+        success_symbol = "";
+        error_symbol = "";
+        vimcmd_symbol = "";
+        vimcmd_visual_symbol = "";
+      };
 
-    character = {
-      success_symbol = "";
-      error_symbol = "";
-      vimcmd_symbol = "";
-      vimcmd_visual_symbol = "";
-    };
+      username = {
+        show_always = true;
+      };
 
-    username = {
-      show_always = true;
-    };
+      aws = {
+        symbol = "  ";
+      };
 
-    aws = {
-      symbol = "  ";
-    };
+      buf = {
+        symbol = "  ";
+      };
 
-    buf = {
-      symbol = "  ";
-    };
+      bun = {
+        symbol = " ";
+      };
 
-    bun = {
-      symbol = " ";
-    };
+      c = {
+        symbol = " ";
+      };
 
-    c = {
-      symbol = " ";
-    };
+      cpp = {
+        symbol = " ";
+      };
 
-    cpp = {
-      symbol = " ";
-    };
+      cmake = {
+        symbol = " ";
+      };
 
-    cmake = {
-      symbol = " ";
-    };
+      conda = {
+        symbol = " ";
+      };
 
-    conda = {
-      symbol = " ";
-    };
+      crystal = {
+        symbol = " ";
+      };
 
-    crystal = {
-      symbol = " ";
-    };
+      dart = {
+        symbol = " ";
+      };
 
-    dart = {
-      symbol = " ";
-    };
+      deno = {
+        symbol = " ";
+      };
 
-    deno = {
-      symbol = " ";
-    };
+      directory = {
+        read_only = " 󰀼 ";
+      };
 
-    directory = {
-      read_only = " 󰀼 ";
-    };
+      docker_context = {
+        symbol = " ";
+      };
 
-    docker_context = {
-      symbol = " ";
-    };
+      elixir = {
+        symbol = " ";
+      };
 
-    elixir = {
-      symbol = " ";
-    };
+      elm = {
+        symbol = " ";
+      };
 
-    elm = {
-      symbol = " ";
-    };
+      fennel = {
+        symbol = " ";
+      };
 
-    fennel = {
-      symbol = " ";
-    };
+      fossil_branch = {
+        symbol = " ";
+      };
 
-    fossil_branch = {
-      symbol = " ";
-    };
+      gcloud = {
+        symbol = "  ";
+      };
 
-    gcloud = {
-      symbol = "  ";
-    };
+      git_branch = {
+        symbol = " ";
+      };
 
-    git_branch = {
-      symbol = " ";
-    };
+      git_commit = {
+        tag_symbol = "  ";
+      };
 
-    git_commit = {
-      tag_symbol = "  ";
-    };
+      golang = {
+        symbol = " ";
+      };
 
-    golang = {
-      symbol = " ";
-    };
+      guix_shell = {
+        symbol = " ";
+      };
 
-    guix_shell = {
-      symbol = " ";
-    };
+      haskell = {
+        symbol = " ";
+      };
 
-    haskell = {
-      symbol = " ";
-    };
+      haxe = {
+        symbol = " ";
+      };
 
-    haxe = {
-      symbol = " ";
-    };
+      hg_branch = {
+        symbol = " ";
+      };
 
-    hg_branch = {
-      symbol = " ";
-    };
+      hostname = {
+        ssh_symbol = " ";
+      };
 
-    hostname = {
-      ssh_symbol = " ";
-    };
+      java = {
+        symbol = " ";
+      };
 
-    java = {
-      symbol = " ";
-    };
+      julia = {
+        symbol = " ";
+      };
 
-    julia = {
-      symbol = " ";
-    };
+      kotlin = {
+        symbol = " ";
+      };
 
-    kotlin = {
-      symbol = " ";
-    };
+      lua = {
+        symbol = " ";
+      };
 
-    lua = {
-      symbol = " ";
-    };
+      memory_usage = {};
 
-    memory_usage = {};
+      nix_shell = {
+        symbol = " ";
+      };
 
-    nix_shell = {
-      symbol = " ";
-    };
+      nodejs = {
+        symbol = " ";
+      };
 
-    nodejs = {
-      symbol = " ";
-    };
+      ocaml = {
+        symbol = " ";
+      };
 
-    ocaml = {
-      symbol = " ";
-    };
+      python = {
+        symbol = " ";
+      };
 
-    python = {
-      symbol = " ";
-    };
+      rust = {
+        symbol = "";
+      };
 
-    rust = {
-      symbol = "";
-    };
+      scala = {
+        symbol = " ";
+      };
 
-    scala = {
-      symbol = " ";
-    };
+      swift = {
+        symbol = " ";
+      };
 
-    swift = {
-      symbol = " ";
-    };
+      zig = {
+        symbol = " ";
+      };
 
-    zig = {
-      symbol = " ";
-    };
-
-    gradle = {
-      symbol = " ";
+      gradle = {
+        symbol = " ";
+      };
     };
   };
-};
 }

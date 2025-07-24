@@ -1,8 +1,5 @@
-
-{ ... }: 
-
-{
-# -- zed-editor -- #
+{...}: {
+  # -- zed-editor -- #
   programs.zed-editor = {
     enable = true;
     userSettings = {

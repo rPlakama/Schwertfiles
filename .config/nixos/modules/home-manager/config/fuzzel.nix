@@ -1,7 +1,9 @@
-{ lib, pkgs, ... }: 
-
 {
-# -- Fuzzel -- #
+  lib,
+  pkgs,
+  ...
+}: {
+  # -- Fuzzel -- #
   programs.fuzzel = {
     enable = true;
     settings = {

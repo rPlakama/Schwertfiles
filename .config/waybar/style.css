@@ -4,18 +4,17 @@
 * {
     font-family: "Montserrat", "Font Awesome 6 Free";
     font-weight: 800;
-    border: none;
+
 }
 
 window#waybar {
 	color: @base07;
-	background-color: alpha (@base00, 0.85);
+	background-color: alpha (@base00, 0.35);
 }
 
 tooltip {
-  font-size: 10px;
+    font-size: 8px;
     background-color: alpha (@base00, 0.95);
-
 }
 
 /* Modules-wise */
@@ -28,13 +27,11 @@ tooltip {
 .modules-center,
 .modules-left,
 .modules-right {
-	background-color: alpha (@base02, 0.7);
   font-size: 10px;
 	border-radius: 5px;
-	margin-top: 4px;
-	margin-bottom: 4px;
 	background-size: 200px 20px;
 	padding: 0px 7px 0px; /*modules width*/
+
 }
 
 /* General */
@@ -54,7 +51,7 @@ tooltip {
 	padding: 0 1px;
 	color: alpha (@base06, 0.30);
   border: solid;
-  font-size: 10px;
+  font-size: 11px;
   transition: 0.1s cubic-bezier(0.20,0.35,1,1);
   border-bottom-width: 1px;
   border-radius: 0px;
@@ -110,7 +107,21 @@ tooltip {
 #battery.warming {
   color: @base0A;
 }
+#battery.safe {
+  color: @base0B;
+}
+
+#battery.charging {
+  color: @base0D;
+}
+
 #pulseaudio.muted {
   color: @base08;
+}
+
+
+#tray {
+  transition: 0.1s cubic-bezier(0.20,0.35,1,1.0);
+  padding: 0px 5px;
 }
 

@@ -1,9 +1,6 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   # -- Core Home Manager Settings -- #
-  imports = [ ./home-manager/config ];
+  imports = [./home-manager/config];
   home.stateVersion = "25.05";
   # -- Theming & Appearance -- #
   home.pointerCursor = {
@@ -23,6 +20,4 @@
 
   # -- Stylix -- #
   stylix.enable = true;
-
 }
-  
