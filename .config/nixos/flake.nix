@@ -6,7 +6,6 @@
     stylix.url = "github:nix-community/stylix";
     home-manager.url = "github:nix-community/home-manager";
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -15,7 +14,6 @@
     nixpkgs,
     home-manager,
     stylix,
-    spicetify-nix,
     ...
   } @ inputs: {
     nixosConfigurations."Elisheva" = nixpkgs.lib.nixosSystem {
@@ -34,7 +32,6 @@
           home-manager.users.rplakama = {
             imports = [
               ./modules/home.nix
-              spicetify-nix.homeManagerModules.spicetify
             ];
           };
         }
