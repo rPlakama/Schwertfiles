@@ -6,7 +6,6 @@
   # -- Stylix -- #
   stylix = {
     enable = true;
-    image = ../wallpapers/backgrounds/fl.png;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/chalk.yaml";
     polarity = "dark";
     opacity.terminal = 0.95;
@@ -23,11 +22,6 @@
         package = pkgs.nerd-fonts.caskaydia-cove;
         name = "CaskaydiaCove Nerd Font Mono";
       };
-    };
-
-    override = {
-      base0D = config.stylix.generated.palette.base0D;
-      base0E = config.stylix.generated.palette.base0E;
     };
   };
 }

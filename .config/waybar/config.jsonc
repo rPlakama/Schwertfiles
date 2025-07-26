@@ -2,8 +2,8 @@
   "layer": "top",
   "height": 5,
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["tray", "clock", "temperature", "power-profiles-daemon"],
-  "modules-right": ["network", "battery", "pulseaudio"],
+  "modules-center": [ "battery", "power-profiles-daemon", "temperature", "tray"],
+  "modules-right": ["clock", "network", "pulseaudio" ],
 
   "tray": {
     "icon-size": 12,
@@ -16,12 +16,10 @@
   },
 
   "battery": {
-    "format": "{icon}",
-    "format-icons": ["", "", "", "", ""],
-    "tooltip-format": "{timeTo}\n Capacity: {capacity}%",
+    "format": "BAT {capacity}%",
+    "tooltip-format": "{timeTo}",
     "tooltip": true,
     "states": {
-      "safe": 99,
       "critical": 15,
       "warming": 30,
     },
@@ -45,12 +43,12 @@
     "tooltip": false,
   },
   "network": {
-    "format": "{icon}",
+    "format": "{essid}",
     "format-alt": "{essid} {icon}",
-    "format-wifi": "󰖩",
-    "format": "󰈀",
-    "format-disconnected": "󰖪",
-    "tooltip-format": "{essid}",
+    "format-wifi": "{essid}",
+    "format": "ETHERNET",
+    "format-disconnected": "NO WIFI",
+    "tooltip-format": " NAME: {ifname} \n SIGNAL STRENGHT: {signalStrength} \n FREQUENCY: {frequency}GHZ \n ",
   },
 
   "power-profiles-daemon": {
@@ -59,9 +57,9 @@
     "tooltip": true,
     "format-icons": {
       "default": "",
-      "performance": "󰓅",
-      "balanced": "󰾅",
-      "power-saver": "󰾆",
+      "performance": "HIGH",
+      "balanced": "MEDIUM",
+      "power-saver": "LOW",
     },
   },
   "reload_style_on_change": true,

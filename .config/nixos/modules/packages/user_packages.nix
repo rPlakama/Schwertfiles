@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   # -- User Programs -- #
-  services.flatpak.enable = true;
   environment.systemPackages = with pkgs; [
     mpv
     btop
@@ -14,6 +13,5 @@
     tectonic
     obs-studio
     materialgram
-    qbittorrent
   ];
 }

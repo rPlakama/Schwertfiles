@@ -2,7 +2,7 @@
   imports = [
     # System-level configurations
     ./nix-configs/hardware-software.nix
-    ./nix-configs/programs.nix
+    ./nix-configs/programs-services.nix
     ./nix-configs/stylix.nix
     ./nix-configs/users.nix
 
