@@ -4,8 +4,8 @@
     mpv
     btop
     pandoc
-    spotify
     waybar
+    spotify
     firefox
     zathura
     dropbox

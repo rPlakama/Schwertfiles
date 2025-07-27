@@ -9,7 +9,7 @@
 
 window#waybar {
 	color: @base07;
-	background-color: alpha (@baseback, 0.75);
+	background-color: @base00
 }
 
 tooltip {

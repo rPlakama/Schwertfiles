@@ -5,7 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     stylix.url = "github:nix-community/stylix";
     home-manager.url = "github:nix-community/home-manager";
-
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
   };
@@ -13,6 +13,7 @@
   outputs = {
     nixpkgs,
     home-manager,
+    nix-flatpak,
     stylix,
     ...
   } @ inputs: {
@@ -21,6 +22,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         stylix.nixosModules.stylix
+        nix-flatpak.nixosModules.nix-flatpak
         home-manager.nixosModules.home-manager
         ./configuration.nix
 

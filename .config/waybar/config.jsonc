@@ -47,7 +47,7 @@
     "format-alt": "{essid} {icon}",
     "format-wifi": "{essid}",
     "format": "ETHERNET",
-    "format-disconnected": "NO WIFI",
+    "format-disconnected": "NO CONNECTION",
     "tooltip-format": " NAME: {ifname} \n SIGNAL STRENGHT: {signalStrength} \n FREQUENCY: {frequency}GHZ \n ",
   },
 

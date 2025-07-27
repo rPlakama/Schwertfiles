@@ -10,8 +10,7 @@ return {
       require('lspconfig').hyprls.setup({})
       require('lspconfig').markdown_oxide.setup({})
       require('lspconfig').cssls.setup({})
-
-
+      require('lspconfig').texlab.setup({})
      end,
 
   },

@@ -4,6 +4,7 @@
     # -- LSP's -- #
     nixd
     hyprls
+    texlab
     clang-tools
     bash-language-server
     rust-analyzer
@@ -20,6 +21,7 @@
     lldb
     # -- Languages -- #
     lua
+    texliveTeTeX
     cargo
     # -- Compilers -- #
     rustc

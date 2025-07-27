@@ -8,7 +8,6 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/chalk.yaml";
     polarity = "dark";
-    opacity.terminal = 0.95;
     targets.qt.enable = true;
 
     fonts = {
