@@ -23,7 +23,7 @@ vim.keymap.set("n", "<M-7>", "<cmd>tabn7<CR>", { silent = true, desc = "Tab 7"})
 vim.keymap.set("n", "<M-8>", "<cmd>tabn8<CR>", { silent = true, desc = "Tab 8"})
 vim.keymap.set("n", "<M-9>", "<cmd>tabn9<CR>", { silent = true, desc = "Tab 9"})
 vim.keymap.set("n", "<M-0>", "<cmd>tabn10<CR>", { silent = true, desc = "Tab 10"})
-vim.keymap.set("n", "<M-w>", "<cmd>tabclose<CR>", { silent = true, desc = "Close Tab"})
+vim.keymap.set("n", "<M-w>", "<cmd>BufferDelete<CR>", { silent = true, desc = "Close Tab"})
 vim.keymap.set("n", "<M-t>", "<cmd>tabnew<CR>", { silent = true, desc = "New Tab"})
 
 -- Move lines up/down

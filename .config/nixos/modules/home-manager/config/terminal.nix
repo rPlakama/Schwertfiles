@@ -4,7 +4,6 @@
   programs.foot.enable = true;
   programs.carapace.enableFishIntegration = true;
   programs.carapace.enableBashIntegration = true;
-  programs.carapace.enableNushellIntegration = true;
   # -- Shell -- #
   programs.zoxide.enableBashIntegration = true;
   programs.zoxide.enableFishIntegration = true;

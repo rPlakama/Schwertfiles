@@ -6,15 +6,6 @@ return {
 {
   "nvim-lualine/lualine.nvim",
   opts = {
-    always_show_tabline = true,
-    tabline = {
-      lualine_a = {},
-      lualine_b = {},
-      lualine_c = {{ "tabs", mode = 2, modified_icon = "●", unmodified_icon = " " }},
-      lualine_x = {},
-      lualine_y = {},
-      lualine_z = {}
-    }
   }
 },
   
