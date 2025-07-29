@@ -18,9 +18,9 @@
         radius = 8;
         width = 0;
       };
-     colors = {
-       selection = lib.mkForce "151515ff";
-     };
+      colors = {
+        selection = lib.mkForce "151515ff";
+      };
     };
   };
 }

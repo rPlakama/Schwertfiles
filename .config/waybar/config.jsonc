@@ -6,7 +6,7 @@
   "modules-right": ["clock", "network", "pulseaudio" ],
 
   "tray": {
-    "icon-size": 12,
+    "icon-size": 11,
     "spacing": 3,
     "reverse-direction": true,
   },

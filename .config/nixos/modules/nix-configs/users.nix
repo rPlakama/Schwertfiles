@@ -16,12 +16,12 @@
     shellInit = ''
       set -g fish_key_bindings fish_vi_key_bindings
       set -g fish_greeting ""
-    ''; 
+    '';
     loginShellInit = ''
-      if uwsm check may-start
-    exec uwsm start hyprland-uwsm.desktop
-    end
-    ''; 
+        if uwsm check may-start
+      exec uwsm start hyprland-uwsm.desktop
+      end
+    '';
   };
   # -- Holy Autologin -- #
   systemd.services."getty@tty1" = {

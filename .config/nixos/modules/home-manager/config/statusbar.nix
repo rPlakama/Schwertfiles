@@ -1,0 +1,84 @@
+{...}: {
+  programs.waybar = {
+    enable = true;
+    # -- Config -- #
+    settings = {
+      mainBar = {
+        layer = "top";
+        height = 5;
+        modules-left = ["hyprland/workspaces"];
+        modules-center = ["tray" "clock"];
+        modules-right = ["network" "battery" "pulseaudio"];
+
+        tray = {
+          icon-size = 13;
+          spacing = 3;
+          reverse-direction = true;
+        };
+
+        "hyprland/window" = {
+          max-length = 50;
+        };
+
+        battery = {
+          format = "{icon}";
+          format-icons = ["" "" "" "" ""];
+          tooltip-format = "{timeTo}\n Capacity: {capacity}%";
+          tooltip = true;
+          states = {
+            critical = 15;
+          };
+        };
+
+        memory = {
+          interval = 30;
+          format = "{used:0.1f}G";
+        };
+
+        pulseaudio = {
+          format = "{volume}% {format_source}";
+          format-source = "ON";
+          format-source-muted = "OFF";
+        };
+
+        clock = {
+          format = "{:%a, %d. %b  %H:%M}";
+          tooltip = true;
+          tooltip-format = "<tt><big>{calendar}</big></tt>";
+        };
+
+        temperature = {
+          hwmon-path = "/sys/class/hwmon/hwmon1/temp1_input";
+          format = "{temperatureC}°C";
+          tooltip = false;
+        };
+
+        network = {
+          format = "󰈀";
+          format-alt = "󰖩 {essid} {icon}";
+          format-wifi = "󰖩";
+          format-disconnected = "󰖪";
+          tooltip-format = "{essid}";
+        };
+
+        "power-profiles-daemon" = {
+          format = "{icon}";
+          tooltip-format = "Power profile: {profile}\nDriver: {driver}";
+          tooltip = true;
+          format-icons = {
+            default = "";
+            performance = "󰓅";
+            balanced = "󰾅";
+            power-saver = "󰾆";
+          };
+        };
+      };
+    };
+
+    style = ''
+      * {
+        font-size: 10px;
+        }
+    '';
+  };
+}

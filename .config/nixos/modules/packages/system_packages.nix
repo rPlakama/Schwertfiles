@@ -6,6 +6,7 @@
     du-dust
     eza
     fd
+    fzf
     ripgrep
     # -- File & Archive Management -- #
     p7zip
