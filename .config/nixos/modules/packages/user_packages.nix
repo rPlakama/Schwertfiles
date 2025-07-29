@@ -15,6 +15,7 @@
     obsidian
     xournalpp
     obs-studio
+    qbittorrent
     materialgram
   ];
 }

@@ -19,6 +19,7 @@
     qimgv
     smile
     swww
+    libnotify
     wl-clip-persist
     wl-clipboard-rs
 

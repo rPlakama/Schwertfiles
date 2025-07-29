@@ -4,8 +4,10 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     stylix.url = "github:nix-community/stylix";
+
     home-manager.url = "github:nix-community/home-manager";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix.inputs.nixpkgs.follows = "nixpkgs";
   };

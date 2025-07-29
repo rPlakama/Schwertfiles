@@ -8,10 +8,10 @@
 
   # -- Systemd -- #
 
-  systemd.services = {
-    systemd-udev-settle.enable = false;
-    NetworkManager-wait-online.enable = false;
-  };
+ #systemd.services = {
+ #  systemd-udev-settle.enable = false;
+ #  NetworkManager-wait-online.enable = false;
+ #};
 
   systemd.network.enable = true;
   networking = {
