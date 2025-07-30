@@ -27,6 +27,7 @@
     # -- System & Hardware Control -- #
     alsa-utils
     brightnessctl
+    playerctl
     lxqt.lxqt-policykit
     pavucontrol
 

@@ -4,7 +4,7 @@ vim.keymap.set({ "n", "v"}, "<C-n>", "<cmd>NvimTreeToggle<CR>")
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" })
 -- Telescope binds
 vim.keymap.set("n", "<C-f>", "<cmd>FzfLua files<CR>", {  silent = true, desc = "File Search" })
-vim.keymap.set("n", "<C-M-t>", "<cmd> FzfLua buffers<CR>", { silent = true, desc = "Buffers"})
+vim.keymap.set("n", "<C-M-f>", "<cmd> FzfLua buffers<CR>", { silent = true, desc = "Buffers"})
 -- Spell binds
 vim.keymap.set("n", "<C-1>", "<cmd>setlocal spell spelllang=pt | echo 'Spell Portuguese(PT)'<CR>", { silent = true, desc = "Português"})
 vim.keymap.set("n", "<C-2>", "<cmd>setlocal spell spelllang=en_us | echo 'Spell English(US)'<CR>", { silent = true, desc = "Português"})
@@ -27,12 +27,9 @@ vim.keymap.set("n", "<M-t>", "<cmd>tabnew<CR>", { silent = true, desc = "New Tab
 -- Move lines up/down
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
 vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
-vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
-vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
-
 -- Better indenting in visual mode
-vim.keymap.set("v", "<", "<gv", { desc = "Indent left and reselect" })
-vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
+vim.keymap.set("v", "h", "<gv", { desc = "Indent left and reselect" })
+vim.keymap.set("v", "l", ">gv", { desc = "Indent right and reselect" })
 
 -- Full Path 
 vim.keymap.set("n", "<leader>pa", function()

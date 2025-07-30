@@ -19,8 +19,6 @@
   };
   # -- Nix-Flatpak -- #
   services.flatpak.enable = true;
-  services.flatpak.packages = [
-  ];
   # -- General  -- #
   programs.steam.enable = true;
   # -- Extras -- #

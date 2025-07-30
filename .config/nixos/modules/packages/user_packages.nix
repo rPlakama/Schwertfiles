@@ -12,8 +12,6 @@
     dropbox
     discord
     tectonic
-    obsidian
-    xournalpp
     obs-studio
     qbittorrent
     materialgram
