@@ -3,8 +3,8 @@ vim.keymap.set({ "n", "v"}, "<C-n>", "<cmd>NvimTreeToggle<CR>")
 -- Delete Without Yank
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" })
 -- Telescope binds
-vim.keymap.set("n", "<C-f>", "<cmd>FzfLua files<CR>", {  silent = true, desc = "File Search" })
-vim.keymap.set("n", "<C-M-f>", "<cmd> FzfLua buffers<CR>", { silent = true, desc = "Buffers"})
+vim.keymap.set("n", "f", "<cmd>FzfLua files<CR>", {  silent = true, desc = "Find" })
+vim.keymap.set("n", "<M-f>", "<cmd> FzfLua buffers<CR>", { silent = true, desc = "Buffers"})
 -- Spell binds
 vim.keymap.set("n", "<C-1>", "<cmd>setlocal spell spelllang=pt | echo 'Spell Portuguese(PT)'<CR>", { silent = true, desc = "Português"})
 vim.keymap.set("n", "<C-2>", "<cmd>setlocal spell spelllang=en_us | echo 'Spell English(US)'<CR>", { silent = true, desc = "Português"})

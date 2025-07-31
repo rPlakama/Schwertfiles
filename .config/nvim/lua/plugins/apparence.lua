@@ -1,9 +1,5 @@
 return {
 {
-  "karb94/neoscroll.nvim",
-  opts = {},
-},
-{
   "nvim-lualine/lualine.nvim",
   opts = {
     always_show_tabline = false,
