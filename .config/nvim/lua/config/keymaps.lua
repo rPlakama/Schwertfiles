@@ -28,8 +28,8 @@ vim.keymap.set("n", "<M-t>", "<cmd>tabnew<CR>", { silent = true, desc = "New Tab
 vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
 vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
 -- Better indenting in visual mode
-vim.keymap.set("v", "h", "<gv", { desc = "Indent left and reselect" })
-vim.keymap.set("v", "l", ">gv", { desc = "Indent right and reselect" })
+vim.keymap.set("v", "<M-h>", "<gv", { desc = "Indent left and reselect" })
+vim.keymap.set("v", "<M-l>", ">gv", { desc = "Indent right and reselect" })
 
 -- Full Path 
 vim.keymap.set("n", "<leader>pa", function()

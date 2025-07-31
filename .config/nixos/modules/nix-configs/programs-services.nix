@@ -17,10 +17,10 @@
     enable = true;
     flake = "/etc/nixos/";
   };
-  # -- Nix-Flatpak -- #
+
+   # -- General -- #
   services.flatpak.enable = true;
-  # -- General  -- #
+  services.lact.enable = true;
   programs.steam.enable = true;
-  # -- Extras -- #
   programs.adb.enable = true;
 }

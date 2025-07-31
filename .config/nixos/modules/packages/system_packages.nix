@@ -13,7 +13,7 @@
     unzip
     zip
     yazi
-    ripdrag #\\ Yazi extra depedencie
+    ripdrag 
     # -- Desktop & Wayland Integration -- #
     fuzzel
     hyprshot

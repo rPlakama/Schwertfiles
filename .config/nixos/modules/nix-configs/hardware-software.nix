@@ -15,6 +15,7 @@
  # -- Boot configuration -- #
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelModules = ["ryzen_smu"];
   boot.kernelParams = ["amd_pstate=active"];
   boot.loader = {
     systemd-boot.enable = true;
@@ -27,5 +28,6 @@
   hardware.enableAllFirmware = true;
   hardware.enableRedistributableFirmware = true;
   hardware.cpu.amd.updateMicrocode = true;
+  hardware.amdgpu.overdrive.enable = true;
 
 }
