@@ -1,3 +1,4 @@
 return { 
-	{ "RRethy/base16-nvim" }
+  { "RRethy/base16-nvim" },
+  { "xiyaowong/transparent.nvim" }
 }

@@ -1,9 +1,10 @@
 {
   "layer": "top",
   "height": 5,
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": [ "battery", "power-profiles-daemon", "temperature", "tray"],
-  "modules-right": ["clock", "network", "pulseaudio" ],
+  "position": "bottom",
+  "modules-left": ["clock", "network", "pulseaudio"],
+  "modules-center": [ "hyprland/workspaces" ],
+  "modules-right": ["tray", "battery", "power-profiles-daemon"],
 
   "tray": {
     "icon-size": 11,
@@ -26,7 +27,7 @@
   },
 
   "pulseaudio": {
-    "format": " {icon} {volume}% {format_source}",
+    "format": "{volume}% {format_source}",
     "format-source": "ON",
     "format-source-muted": "OFF",
   },
