@@ -1,13 +1,13 @@
 {
   "layer": "top",
-  "height": 5,
+  "height": 0,
   "position": "bottom",
   "modules-left": ["clock", "network", "pulseaudio"],
-  "modules-center": [ "hyprland/workspaces" ],
+  "modules-center": [ "hyprland/workspaces"],
   "modules-right": ["tray", "battery", "temperature", "power-profiles-daemon"],
 
   "tray": {
-    "icon-size": 11,
+    "icon-size": 10,
     "spacing": 3,
     "reverse-direction": true,
   },

@@ -9,7 +9,7 @@
 
 window#waybar {
 	color: @base07;
-	background-color: alpha (@base00, 1);
+	background-color: alpha (@base00, .7);
 	border-bottom: solid;
 }
 
@@ -48,10 +48,7 @@ tooltip {
 #workspaces button {
   padding: 0 1px;
   color: alpha (@base06, 0.30);
-  transition: 0.09s cubic-bezier(0.20,0.35,1,1);
   padding: 0px 1px 0px;
-
-
 }
 
 #workspaces button.active {
@@ -83,10 +80,6 @@ tooltip {
 }
 #power-profiles-daemon.power-saver {
 	color: alpha (@base0D, 0.9)
-}
-  #power-profiles-daemon {
-  transition: 0.1s cubic-bezier(0.20,0.35,1,1.0);
-
 }
 
 /* Right Modules Specifics */
