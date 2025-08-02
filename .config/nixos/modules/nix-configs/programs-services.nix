@@ -20,7 +20,8 @@
 
    # -- General -- #
   services.flatpak.enable = true;
-  services.lact.enable = true;
   programs.steam.enable = true;
   programs.adb.enable = true;
+
+
 }

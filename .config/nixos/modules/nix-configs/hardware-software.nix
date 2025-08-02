@@ -1,5 +1,5 @@
 # -- May  you check you hardware anything -- #
-{pkgs, ...}: {
+{ pkgs, ...}: {
  # -- Services that interact with the hardware -- #
 
   services.gvfs.enable = true;
@@ -15,8 +15,8 @@
  # -- Boot configuration -- #
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelModules = ["ryzen_smu"];
   boot.kernelParams = ["amd_pstate=active"];
+  boot.kernelModules = ["msr"];
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
@@ -26,8 +26,14 @@
  # -- Hardware -- #
 
   hardware.enableAllFirmware = true;
-  hardware.enableRedistributableFirmware = true;
-  hardware.cpu.amd.updateMicrocode = true;
-  hardware.amdgpu.overdrive.enable = true;
-
+  hardware.cpu.amd.ryzen-smu.enable = true;
+  systemd.services.ryzenadj-undervolt = {
+    description = " Ryzen undervolt on boot";
+    wantedBy = [ "multi-user.target" ];
+    after = [ "sysinit.target" ]; 
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.ryzenadj}/bin/ryzenadj  --set-coall=10 --slow-time=5000 --fast-limit=8000 --tctl-temp=90";
+    };
+  };
 }

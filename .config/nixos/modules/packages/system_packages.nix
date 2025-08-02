@@ -26,10 +26,13 @@
 
     # -- System & Hardware Control -- #
     alsa-utils
+    zenmonitor
     brightnessctl
     playerctl
+    ryzenadj
     lxqt.lxqt-policykit
     pavucontrol
+    stress-ng
 
     # -- Development & Dotfiles -- #
     git
