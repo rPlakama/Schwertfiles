@@ -4,7 +4,7 @@
   "position": "bottom",
   "modules-left": ["clock", "network", "pulseaudio"],
   "modules-center": [ "hyprland/workspaces" ],
-  "modules-right": ["tray", "battery", "power-profiles-daemon"],
+  "modules-right": ["tray", "battery", "temperature", "power-profiles-daemon"],
 
   "tray": {
     "icon-size": 11,

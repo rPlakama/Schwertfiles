@@ -71,6 +71,10 @@ tooltip {
 	margin-right: 3px;
 }
 
+#temperature {
+  color: @base0E;
+}
+
 #power-profiles-daemon.performance {
 	color: @base08;
 }
