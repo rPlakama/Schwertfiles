@@ -18,10 +18,6 @@
     flake = "/etc/nixos/";
   };
 
-   # -- General -- #
-  services.flatpak.enable = true;
-  programs.steam.enable = true;
-  programs.adb.enable = true;
 
 
 }

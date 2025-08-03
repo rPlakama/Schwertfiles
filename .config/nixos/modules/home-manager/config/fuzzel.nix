@@ -10,7 +10,7 @@
       main = {
         terminal = "${pkgs.foot}/bin/foot -e";
         lines = 3;
-        icons-enabled = true;
+        icons-enabled = false;
         anchor = "center";
         width = 10;
       };

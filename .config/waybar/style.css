@@ -8,9 +8,10 @@
 }
 
 window#waybar {
-	color: @base07;
-	background-color: alpha (@base00, .7);
-	border-bottom: solid;
+    color: @base07;
+    background-color: alpha (@base00, .7);
+    border-bottom: solid 1px @base01;
+    border-top: solid 1px @base01;
 }
 
 tooltip {

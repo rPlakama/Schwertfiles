@@ -1,30 +1,41 @@
-{pkgs, ...}: {
-  # -- LSP's, Formatters, Debuggers, Languages & ETC. -- #
+{ pkgs, ... }: {
+
   environment.systemPackages = with pkgs; [
-    # -- LSP's -- #
-    nixd
-    hyprls
-    texlab
-    clang-tools
-    bash-language-server
+    # RUST
     rust-analyzer
-    markdown-oxide
+    cargo
+    rustc
+
+    # C/C++
+    clang-tools
+    clang
+
+    # LUA
     lua-language-server
-    vscode-langservers-extracted
-    # -- Formatters -- #
-    shfmt
-    prettier
-    alejandra
     luaformatter
-    # -- Debuggers -- #
+    lua
+
+    # NIX
+    nixd
+    alejandra
+
+    # MARKDOWN
+    markdown-oxide
+
+    # BASH
+    bash-language-server
+    shfmt
+
+    # TYPST
+    typst
+    tinymist
+
+    # MULTIPLE
+    vscode-langservers-extracted
+    prettier
     gdb
     lldb
-    # -- Languages -- #
-    lua
-    texliveTeTeX
-    cargo
-    # -- Compilers -- #
-    rustc
-    clang
+    hyprls
   ];
 }
+

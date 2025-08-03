@@ -11,6 +11,7 @@ return {
       require('lspconfig').markdown_oxide.setup({})
       require('lspconfig').cssls.setup({})
       require('lspconfig').texlab.setup({})
+      require('lspconfig').tinymist.setup({})
      end,
 
   },

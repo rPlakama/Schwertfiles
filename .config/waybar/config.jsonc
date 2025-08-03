@@ -2,9 +2,13 @@
   "layer": "top",
   "height": 0,
   "position": "bottom",
-  "modules-left": ["clock", "network", "pulseaudio"],
-  "modules-center": [ "hyprland/workspaces"],
-  "modules-right": ["tray", "battery", "temperature", "power-profiles-daemon"],
+  "modules-left": ["clock", "custom/separrator", "network", "custom/separrator", "pulseaudio"],
+  "modules-center": [  "hyprland/workspaces" ],
+  "modules-right": ["tray", "custom/separrator", "battery", "custom/separrator", "temperature", "custom/separrator", "power-profiles-daemon"],
+
+  "custom/separrator": {
+    "format": "|"
+  },
 
   "tray": {
     "icon-size": 10,
@@ -14,6 +18,10 @@
 
   "hyprland/window": {
     "max-length": 50,
+  },
+
+  "custom/corner-right": {
+    "format": "  "
   },
 
   "battery": {
