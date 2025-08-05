@@ -2,21 +2,33 @@
 @import "base16.css";
 
 * {
-    font-family: "Montserrat", "Font Awesome 6 Free";
-    font-weight: 700;
-    font-size: 9px;
+	font-family: "Montserrat", "Font Awesome 6 Free";
+	font-weight: 700;
+	font-size: 9px;
 }
 
 window#waybar {
-    color: @base07;
-    background-color: alpha (@base00, .7);
-    border-bottom: solid 1px @base01;
-    border-top: solid 1px @base01;
+	color: @base07;
+	background: transparent;
+	border-bottom: solid 4px alpha(@base01, 0.3);
+	border-top: solid 4px alpha(@base01, 0.3);
+}
+
+.modules-right {
+	border-top-left-radius: 12px;
+	margin: 0;
+	border: 1px solid transparent;
+}
+
+.modules-left {
+	border-top-right-radius: 12px;
+	margin: 0;
+	border: 1px solid transparent;
 }
 
 tooltip {
-    background-color: alpha (@base00, 0.95);
-  }
+	background-color: alpha (@base00, 0.75);
+}
 
 /* Modules-wise */
 
@@ -24,14 +36,16 @@ tooltip {
 .modules-left,
 .modules-center,
 .modules-right {
-  background-size: 200px 20px;
-  padding: 0px 4px 0px; /*modules width*/
+	background-size: 200px 20px;
+	padding: 0px 4px 0px;
+	/*modules width*/
 }
 
 .modules-center {
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
 }
+
 /* General */
 
 #network,
@@ -47,13 +61,16 @@ tooltip {
 /* Workspaces Specifics */
 
 #workspaces button {
-  padding: 0 1px;
-  color: alpha (@base06, 0.30);
-  padding: 0px 1px 0px;
+	padding: 0 1px;
+	color: alpha (@base06, 0.30);
+	padding: 0px 0px 0px;
+	border-radius: 0px;
+	transition: 0.05s ease-in
 }
 
 #workspaces button.active {
-  color: @base07;
+	color: @base07;
+	padding: 0px 4px 0px;
 }
 
 #workspaces button.urgent {
@@ -70,15 +87,17 @@ tooltip {
 }
 
 #temperature {
-  color: @base0E;
+	color: @base0E;
 }
 
 #power-profiles-daemon.performance {
 	color: @base08;
 }
+
 #power-profiles-daemon.balanced {
-  color: @base0C;
+	color: @base0C;
 }
+
 #power-profiles-daemon.power-saver {
 	color: alpha (@base0D, 0.9)
 }
@@ -88,18 +107,19 @@ tooltip {
 #battery.critical {
 	color: @base08;
 }
+
 #battery.warming {
-  color: @base0A;
+	color: @base0A;
 }
 
 #battery {
-  color: @base0B;
+	color: @base0B;
 }
 
 #battery.charging {
-  color: @base0D;
+	color: @base0D;
 }
 
 #pulseaudio.muted {
-  color: @base08;
+	color: @base08;
 }

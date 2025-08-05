@@ -17,18 +17,19 @@
       set -g fish_key_bindings fish_vi_key_bindings
       set -g fish_greeting ""
     '';
-    loginShellInit = ''
-        if uwsm check may-start
-      exec uwsm start hyprland-uwsm.desktop
-      end
-    '';
+#  loginShellInit = ''
+#  hyprland 
+#  '';
+ };
+
+  # -- rPlakama -- #
+  services.displayManager.ly = {
+    enable = true;
+    settings = { 
+    user = "rplakama";
+    };
   };
-  # -- Holy Autologin -- #
-  systemd.services."getty@tty1" = {
-    overrideStrategy = "asDropin";
-    serviceConfig.ExecStart = ["" "@${pkgs.util-linux}/sbin/agetty agetty --login-program ${config.services.getty.loginProgram} --autologin rplakama --noclear --keep-baud %I 115200,38400,9600 $TERM"];
-  };
-  # -- The man himself... -- #
+  # services.getty.autologinUser = "rplakama";
   nix.settings.trusted-users = ["networkmanager" "root" "@wheel"];
   users.users.rplakama = {
     isNormalUser = true;

@@ -1,3 +1,6 @@
+vim.opt.mouse = ''
+-- LSP
+vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 -- Nvim Tree
 vim.keymap.set({ "n", "v"}, "<C-n>", "<cmd>NvimTreeToggle<CR>")
 -- Delete Without Yank

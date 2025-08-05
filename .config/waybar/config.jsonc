@@ -2,12 +2,12 @@
   "layer": "top",
   "height": 0,
   "position": "bottom",
-  "modules-left": ["clock", "custom/separrator", "network", "custom/separrator", "pulseaudio"],
+  "modules-left": ["clock", "custom/separrator", "network", "custom/separrator", "pulseaudio", "custom/corner-right"],
   "modules-center": [  "hyprland/workspaces" ],
-  "modules-right": ["tray", "custom/separrator", "battery", "custom/separrator", "temperature", "custom/separrator", "power-profiles-daemon"],
+  "modules-right": ["custom/corner-left","tray", "custom/separrator", "battery", "custom/separrator", "temperature", "custom/separrator", "power-profiles-daemon"],
 
   "custom/separrator": {
-    "format": "|"
+    "format": "|",
   },
 
   "tray": {
@@ -15,6 +15,15 @@
     "spacing": 3,
     "reverse-direction": true,
   },
+  
+    "custom/corner-left": {
+      "format": " ",
+      "tooltip": false
+    },
+    "custom/corner-right": {
+      "format": " ",
+      "tooltip": false
+    },
 
   "hyprland/window": {
     "max-length": 50,

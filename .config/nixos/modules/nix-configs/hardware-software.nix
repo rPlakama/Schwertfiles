@@ -1,5 +1,5 @@
 # -- May  you check you hardware anything -- #
-{ pkgs, ...}: {
+{  override, pkgs, ...}: {
  # -- Services that interact with the hardware -- #
 
   services.gvfs.enable = true;
@@ -13,9 +13,19 @@
   };
 
  # -- Boot configuration -- #
-
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelParams = ["amd_pstate=active"];
+  boot.kernelPatches = [ 
+    {
+        name = "crashdump-config";
+        patch = null;
+        extraConfig = ''
+	X86_NATIVE_CPU y
+      ''; 
+    } 
+  ];
+  boot.kernelParams = [
+  "amd_pstate=active"
+  ];
   boot.kernelModules = ["msr"];
   boot.loader = {
     systemd-boot.enable = true;
