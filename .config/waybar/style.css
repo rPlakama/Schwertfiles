@@ -9,9 +9,7 @@
 
 window#waybar {
 	color: @base07;
-	background: transparent;
-	border-bottom: solid 4px alpha(@base01, 0.3);
-	border-top: solid 4px alpha(@base01, 0.3);
+	background: alpha (@base00, .7)
 }
 
 .modules-right {
@@ -65,12 +63,10 @@ tooltip {
 	color: alpha (@base06, 0.30);
 	padding: 0px 0px 0px;
 	border-radius: 0px;
-	transition: 0.05s ease-in
 }
 
 #workspaces button.active {
 	color: @base07;
-	padding: 0px 4px 0px;
 }
 
 #workspaces button.urgent {

@@ -25,6 +25,7 @@
   ];
   boot.kernelParams = [
   "amd_pstate=active"
+  "preempt=full"
   ];
   boot.kernelModules = ["msr"];
   boot.loader = {

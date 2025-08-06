@@ -1,7 +1,6 @@
 require ("plugins.theme")
 
 -- Base Configuration --
-
 vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
 vim.o.shortmess = 'I'

@@ -3,8 +3,8 @@
   "height": 0,
   "position": "bottom",
   "modules-left": ["clock", "custom/separrator", "network", "custom/separrator", "pulseaudio", "custom/corner-right"],
-  "modules-center": [  "hyprland/workspaces" ],
-  "modules-right": ["custom/corner-left","tray", "custom/separrator", "battery", "custom/separrator", "temperature", "custom/separrator", "power-profiles-daemon"],
+  "modules-center": [  "tray","hyprland/workspaces" ],
+  "modules-right": ["battery", "custom/separrator", "temperature", "custom/separrator", "power-profiles-daemon"],
 
   "custom/separrator": {
     "format": "|",
