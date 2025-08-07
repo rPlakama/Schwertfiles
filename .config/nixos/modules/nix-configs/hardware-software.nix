@@ -5,7 +5,7 @@
   services.gvfs.enable = true;
   services.udisks2.enable = true;
   services.power-profiles-daemon.enable = true;
-
+  services.blueman.enable = true;
   systemd.network.enable = true;
   networking = {
     hostName = "Elisheva";
@@ -36,6 +36,10 @@
 
  # -- Hardware -- #
 
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
+  };
   hardware.enableAllFirmware = true;
   hardware.cpu.amd.ryzen-smu.enable = true;
   systemd.services.ryzenadj-undervolt = {

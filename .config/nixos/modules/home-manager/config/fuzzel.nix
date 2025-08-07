@@ -9,13 +9,13 @@
     settings = {
       main = {
         terminal = "${pkgs.foot}/bin/foot -e";
-        lines = 3;
+        lines = 1;
         icons-enabled = false;
-        anchor = "center";
-        width = 10;
+        anchor = "top";
+        width = 85;
       };
       border = {
-        radius = 8;
+        radius = 5;
         width = 0;
       };
       colors = {
