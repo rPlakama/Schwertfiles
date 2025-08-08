@@ -4,13 +4,11 @@
     # -- Core CLI Utilities -- #
     bat
     du-dust
-    eza
     fd
     fzf
     ripgrep
     # -- File & Archive Management -- #
     p7zip
-    unzip
     zip
     yazi
     ripdrag 
@@ -25,8 +23,6 @@
     wl-clipboard-rs
 
     # -- System & Hardware Control -- #
-    alsa-utils
-    zenmonitor
     brightnessctl
     playerctl
     ryzenadj

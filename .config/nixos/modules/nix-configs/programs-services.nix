@@ -1,7 +1,6 @@
 {pkgs, ...}: {
-  # -- Services / Programs -- #
 
-  # -- Hyprland -- #
+  # -- General  -- #
   programs = {
     hyprlock.enable = true;
     hyprland = {
@@ -18,7 +17,7 @@
     enable = true;
     flake = "/etc/nixos/";
   };
-
-
+  # -- Steam -- #
+  programs.steam.enable = true;
 
 }

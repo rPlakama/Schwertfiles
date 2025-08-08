@@ -3,15 +3,15 @@
   environment.systemPackages = with pkgs; [
     mpv
     btop
+    gemini-cli
+    tidal-dl
     pandoc
     waybar
     lutgen
-    spotify
-    firefox
+    pandoc
     zathura
     dropbox
-    discord
-    tectonic
+    firefox
     obs-studio
     qbittorrent
     materialgram

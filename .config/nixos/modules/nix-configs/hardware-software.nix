@@ -1,12 +1,12 @@
 # -- May  you check you hardware anything -- #
-{  override, pkgs, ...}: {
+{  pkgs, ...}: {
  # -- Services that interact with the hardware -- #
 
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
+  services.devmon.enable = true;
   services.power-profiles-daemon.enable = true;
   services.blueman.enable = true;
   systemd.network.enable = true;
+
   networking = {
     hostName = "Elisheva";
     networkmanager.enable = true;
