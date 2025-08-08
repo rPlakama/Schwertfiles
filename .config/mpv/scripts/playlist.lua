@@ -3,4 +3,3 @@ local function on_playlist_change()
 end
 
 mp.observe_property("playlist-pos", "number", on_playlist_change)
-
