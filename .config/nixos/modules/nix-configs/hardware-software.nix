@@ -3,6 +3,8 @@
  # -- Services that interact with the hardware -- #
 
   services.devmon.enable = true;
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
   services.power-profiles-daemon.enable = true;
   services.blueman.enable = true;
   systemd.network.enable = true;

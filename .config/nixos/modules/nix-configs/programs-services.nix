@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{ pkgs, ...}: {
 
   # -- General  -- #
   programs = {
@@ -8,16 +8,13 @@
     };
   };
 
-  # -- NeoVim -- #
+  # -- General -- #
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
-
-  # -- NH -- #
+  programs.steam.enable = false;
+  programs.localsend.enable = true;
   programs.nh = {
     enable = true;
     flake = "/etc/nixos/";
   };
-  # -- Steam -- #
-  programs.steam.enable = true;
-
 }
