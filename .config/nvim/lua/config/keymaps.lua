@@ -7,7 +7,7 @@ vim.keymap.set({ "n", "v"}, "<C-n>", "<cmd>Yazi<CR>")
 vim.keymap.set("n", "<C-f>", "<cmd>FzfLua files<CR>", {  silent = true, desc = "Find" })
 vim.keymap.set("n", "<M-f>", "<cmd> FzfLua buffers<CR>", { silent = true, desc = "Buffers"})
 -- Spell binds
-vim.keymap.set("n", "<C-1>", "<cmd>setlocal spell spelllang=pt | echo 'Spell Portuguese(PT)'<CR>", { silent = true, desc = "Português"})
+vim.keymap.set("n", "<C-1>", "<cmd>setlocal spell spelllang=pt | echo 'Spell Brazilian(BR)'<CR>", { silent = true, desc = "Português"})
 vim.keymap.set("n", "<C-2>", "<cmd>setlocal spell spelllang=en_us | echo 'Spell English(US)'<CR>", { silent = true, desc = "Português"})
 vim.keymap.set("n", "<C-3>", "<cmd>setlocal nospell  | echo 'Spell Disabled'<CR>", { silent = true, desc = "Off"})
 
