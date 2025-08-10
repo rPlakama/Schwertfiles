@@ -2,7 +2,7 @@
   "base16-nvim": { "branch": "master", "commit": "45416f9c7a1ce25c9efb789fbbf96bce9e826d60" },
   "blink.cmp": { "branch": "main", "commit": "bae4bae0eedd1fa55f34b685862e94a222d5c6f8" },
   "friendly-snippets": { "branch": "main", "commit": "572f5660cf05f8cd8834e096d7b4c921ba18e175" },
-  "fzf-lua": { "branch": "main", "commit": "edf3524164c0878e64968cb1d4a24ba695b1ee12" },
+  "fzf-lua": { "branch": "main", "commit": "504b45d6cedec32d6f0ddeb82f3d7117a94b622b" },
   "indent-blankline.nvim": { "branch": "master", "commit": "005b56001b2cb30bfa61b7986bc50657816ba4ba" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lazydev.nvim": { "branch": "main", "commit": "2367a6c0a01eb9edb0464731cc0fb61ed9ab9d2c" },
