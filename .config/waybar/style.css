@@ -9,18 +9,19 @@
 
 window#waybar {
 	color: @base07;
-	border-radius: 4px;
-	background: alpha (@base00, .98);
+	border-radius: 2px;
+	background: alpha (@base00, .55);
+	border: solid;
+	border-width: 1px;
+	border-color: alpha (@base02, 0.6)
 }
 
 .modules-right {
-	border-top-left-radius: 12px;
 	margin: 0;
 	border: 1px solid transparent;
 }
 
 .modules-left {
-	border-top-right-radius: 12px;
 	margin: 0;
 	border: 1px solid transparent;
 }
@@ -40,17 +41,13 @@ tooltip {
 	/*modules width*/
 }
 
-.modules-center {
-	border-top-right-radius: 3px;
-	border-top-left-radius: 3px;
-}
-
 /* General */
 
 #network,
 #battery,
 #tray,
 #clock,
+#memory,
 #power-profile-daemon,
 #pulseaudio {
 	margin-left: 4px;

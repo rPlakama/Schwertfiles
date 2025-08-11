@@ -11,7 +11,7 @@
         terminal = "${pkgs.foot}/bin/foot -e";
         lines = 1;
         icons-enabled = false;
-        anchor = "top";
+        anchor = "bottom";
         width = 85;
       };
       border = {
@@ -19,7 +19,7 @@
         width = 0;
       };
       colors = {
-        selection = lib.mkForce "151515ff";
+        selection = lib.mkForce "#151515ff";
       };
     };
   };

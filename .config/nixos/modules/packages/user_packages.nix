@@ -9,7 +9,6 @@
     waybar
     lutgen
     pandoc
-    zathura
     dropbox
     firefox
     obs-studio

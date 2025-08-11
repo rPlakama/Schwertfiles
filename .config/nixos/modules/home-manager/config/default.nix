@@ -7,5 +7,6 @@
     ./terminal.nix
     ./yazi.nix
     ./zed-editor.nix
+    ./zathura.nix
   ];
 }

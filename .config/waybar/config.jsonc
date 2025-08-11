@@ -1,11 +1,14 @@
 {
   "layer": "top",
   "height": 28,
-  "position": "bottom",
-  "margin": "0 3 3 3",
+  "position": "top",
+  "margin-top": 3,
+  "margin-bottom": 0,
+  "margin-right": 4,
+  "margin-left": 4,
   "modules-left": [ "network", "custom/separrator", "pulseaudio", "custom/separrator", "hyprland/workspaces" ],
-  "modules-center": ["clock"],
-  "modules-right": ["tray", "custom/separrator", "battery", "custom/separrator", "power-profiles-daemon"],
+  "modules-center": ["memory", "custom/separrator", "clock", "tray"],
+  "modules-right": [ "battery", "custom/separrator", "power-profiles-daemon" ],
 
 
   "custom/separrator": {
@@ -15,8 +18,14 @@
   "tray": {
     "icon-size": 10,
     "spacing": 3,
-    "reverse-direction": true,
+    "reverse-direction": true
   },
+
+
+"memory": {
+    "interval": 30,
+    "format": "{used:0.1f}G"
+},
   
     "custom/corner-left": {
       "format": " ",
@@ -36,7 +45,7 @@
   },
 
   "battery": {
-    "format": "BAT {capacity}%",
+    "format": "{capacity}%",
     "tooltip-format": "{timeTo}",
     "tooltip": true,
     "states": {
