@@ -6,7 +6,6 @@
     gemini-cli
     tidal-dl
     pandoc
-    waybar
     lutgen
     pandoc
     dropbox
