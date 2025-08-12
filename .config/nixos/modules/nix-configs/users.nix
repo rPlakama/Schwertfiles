@@ -7,6 +7,7 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
   security.polkit.enable = true;
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   # -- rPlakama, the shell  -- #
   programs.starship.enable = true;
   users.users.rplakama.shell = pkgs.fish;

@@ -20,4 +20,6 @@
 
   # -- Stylix -- #
   stylix.enable = true;
+  stylix.targets.waybar.enable = false;
+
 }

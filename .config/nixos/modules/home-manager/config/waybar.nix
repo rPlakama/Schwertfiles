@@ -1,117 +1,173 @@
-{ ... }: 
-
-{
+{ ... }: {
   programs.waybar = {
     enable = true;
-# -- Config -- #
     settings = {
-      mainBar = {
-        layer = "top";
-        height = 5;
-        modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "tray" "clock" "temperature" "power-profiles-daemon" ];
-        modules-right = [ "network" "battery" "pulseaudio" ];
+    mainBar = {
 
-        tray = {
-          icon-size = 13;
-          spacing = 3;
+      layer = "top";
+      position = "top";
+      height = 0;
+
+      margin-top = 3;
+      margin-bottom = 0;
+      margin-right = 4;
+      margin-left = 4;
+
+      modules-left = [
+        "network"
+        "custom/separrator"
+        "pulseaudio"
+        "custom/separrator"
+        "hyprland/workspaces"
+      ];
+
+      modules-center = [
+        "memory"
+        "custom/separrator"
+        "clock"
+        "tray"
+      ];
+
+      modules-right = [
+        "battery"
+        "custom/separrator"
+        "power-profiles-daemon"
+      ];
+
+      "custom/separrator" = {
+        format = "|";
+      };
+
+      "tray" = {
+        icon-size = 10;
+        spacing = 3;
+        reverse-direction = true;
+      };
+
+      "memory" = {
+        interval = 30;
+        format = "{used:0.1f}G";
+      };
+
+      "hyprland/window" = {
+        max-length = 50;
+      };
+
+      "battery" = {
+        format = "{capacity}%";
+        tooltip-format = "{timeTo}";
+        tooltip = true;
+        states = {
+          critical = 15;
+          warming = 30;
         };
+      };
 
-        "hyprland/window" = {
-          max-length = 50;
+      "pulseaudio" = {
+        format = "{volume}% {format_source}";
+        format-source = "ON";
+        format-source-muted = "OFF";
+      };
+
+      "clock" = {
+        format = "{:%a, %d. %b  %H:%M}";
+        tooltip = true;
+        tooltip-format = "<tt><big>{calendar}</big></tt>";
+      };
+
+      "temperature" = {
+        "hwmon-path" = "/sys/class/hwmon/hwmon2/temp1_input";
+        format = "{temperatureC}°C";
+        tooltip-format = "{temperatureC}°C | CPU";
+        tooltip = false;
+      };
+
+      "network" = {
+        format = "{essid}";
+        format-alt = "{essid} {icon}";
+        format-wifi = "{essid}";
+        format-disconnected = "NO CONNECTION";
+        tooltip-format = " NAME: {ifname} \n SIGNAL STRENGHT: {signalStrength} \n FREQUENCY: {frequency}GHZ \n ";
+      };
+
+      "power-profiles-daemon" = {
+        format = "{icon}";
+        tooltip-format = "Power profile: {profile}\nDriver: {driver}";
+        tooltip = true;
+        format-icons = {
+          "default" = "";
+          "performance" = "HIGH";
+          "balanced" = "MEDIUM";
+          "power-saver" = "LOW";
         };
-
-        battery = {
-          format = "{icon}";
-          format-icons = [ "" "" "" "" "" ];
-          tooltip-format = "{timeTo}\n Capacity: {capacity}%";
-          tooltip = true;
-          states = {
-            critical = 15;
-          };
-        };
-
-        memory = {
-          interval = 30;
-          format = "{used:0.1f}G";
-        };
-
-        pulseaudio = {
-          format = "{volume}% {format_source}";
-          format-source = "ON";
-          format-source-muted = "OFF";
-        };
-
-        clock = {
-          format = "{:%a, %d. %b  %H:%M}";
-          tooltip = true;
-          tooltip-format = "<tt><big>{calendar}</big></tt>";
-        };
-
-        temperature = {
-          hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
-          format = "{temperatureC}°C";
-          tooltip-format = "{temperatureC}°C | CPU";
-          tooltip = true;
-        };
-
-        network = {
-          format = "󰈀";
-          format-alt = "{essid} {icon}";
-          format-wifi = "󰖩";
-          format-disconnected = "󰖪";
-          tooltip-format = "{essid}";
-        };
-
-        "power-profiles-daemon" = {
-          format = "{icon}";
-          tooltip-format = "Power profile: {profile}\nDriver: {driver}";
-          tooltip = true;
-          format-icons = {
-            default = "";
-            performance = "󰓅";
-            balanced = "󰾅";
-            power-saver = "󰾆";
-          };
-        };
-
-        reload_style_on_change = true;
       };
     };
-# -- Style -- #
+  };
+    
     style = ''
+      /* Base */
+      @define-color baseback #000000;
+      @define-color base00 #151515;
+      @define-color base01 #202020;
+      @define-color base02 #303030;
+      @define-color base03 #505050;
+      @define-color base04 #b0b0b0;
+      @define-color base05 #d0d0d0;
+      @define-color base06 #e0e0e0;
+      @define-color base07 #f5f5f5;
+      @define-color base08 #fb9fb1;
+      @define-color base09 #eda987;
+      @define-color base0A #ddb26f;
+      @define-color base0B #acc267;
+      @define-color base0C #12cfc0;
+      @define-color base0D #6fc2ef;
+      @define-color base0E #e1a3ee;
+      @define-color base0F #deaf8f; 
+
       * {
-        border: none;
-        border-radius: 0;
         font-family: "Montserrat", "Font Awesome 6 Free";
-        font-size: 10px;
-        font-weight: 900;
+        font-weight: 700;
+        font-size: 9px;
       }
 
       window#waybar {
+        color: @base07;
+        border-radius: 2px;
+        background: alpha(@base00, .55);
+        border: solid;
+        border-width: 1px;
+        border-color: alpha(@base02, 0.6);
+      }
+
+      .modules-right {
+        margin: 0;
+        border: 1px solid transparent;
+      }
+
+      .modules-left {
+        margin: 0;
+        border: 1px solid transparent;
+      }
+
+      tooltip {
+        background-color: alpha(@base00, 0.75);
       }
 
       /* Modules-wise */
-      .modules-left {
-        margin-left: 12px;
-      }
-      .modules-right {
-        margin-right: 12px;
-      }
-      .modules-center,
       .modules-left,
+      .modules-center,
       .modules-right {
-        border-radius: 5px;
-        margin-top: 4px;
-        margin-bottom: 4px;
         background-size: 200px 20px;
-        padding: 0px 7px 0px; /*modules width*/
+        padding: 0px 4px 0px;
+        /*modules width*/
       }
 
       /* General */
       #network,
       #battery,
+      #tray,
       #clock,
+      #memory,
       #power-profile-daemon,
       #pulseaudio {
         margin-left: 4px;
@@ -121,13 +177,18 @@
       /* Workspaces Specifics */
       #workspaces button {
         padding: 0 1px;
-        transition: 0.12s ease-in-out;
+        color: alpha(@base06, 0.30);
+        padding: 0px 0px 0px;
+        border-radius: 0px;
+        transition: .04s ease-in;
       }
 
       #workspaces button.active {
+        color: @base07;
       }
 
       #workspaces button.urgent {
+        color: @base09;
       }
 
       /* Central Modules Specifics */
@@ -138,26 +199,42 @@
         margin-right: 3px;
       }
 
+      #temperature {
+        color: @base0E;
+      }
+
       #power-profiles-daemon.performance {
-        transition: 0.2s ease-in-out;
+        color: @base08;
       }
+
       #power-profiles-daemon.balanced {
-        transition: 0.2s ease-in-out;
+        color: @base0C;
       }
+
       #power-profiles-daemon.power-saver {
-        transition: 0.2s ease-in-out;
-      }
-      #power-profiles-daemon {
-        font-size: 12px;
+        color: alpha(@base0D, 0.9);
       }
 
       /* Right Modules Specifics */
       #battery.critical {
+        color: @base08;
       }
+
+      #battery.warming {
+        color: @base0A;
+      }
+
+      #battery {
+        color: @base0B;
+      }
+
+      #battery.charging {
+        color: @base0D;
+      }
+
       #pulseaudio.muted {
+        color: @base08;
       }
     '';
   };
 }
-
-

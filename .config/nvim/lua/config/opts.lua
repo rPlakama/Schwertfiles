@@ -4,7 +4,7 @@ require ("plugins.theme")
 vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
 vim.o.shortmess = 'I'
-vim.opt.conceallevel = 1
+vim.opt.conceallevel = 0
 vim.opt.number = true
 vim.opt.relativenumber = false;
 vim.opt.scrolloff = 999

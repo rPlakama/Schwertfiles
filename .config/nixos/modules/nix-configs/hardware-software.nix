@@ -8,6 +8,7 @@
   services.power-profiles-daemon.enable = true;
   services.blueman.enable = true;
   systemd.network.enable = true;
+  services.fstrim.enable = true;
 
   networking = {
     hostName = "Elisheva";
