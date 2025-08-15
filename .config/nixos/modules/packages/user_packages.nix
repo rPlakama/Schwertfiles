@@ -3,14 +3,15 @@
   environment.systemPackages = with pkgs; [
     mpv
     btop
-    gemini-cli
-    tidal-dl
     pandoc
     lutgen
     pandoc
     dropbox
     firefox
+    obsidian
+    tidal-dl
     obs-studio
+    gemini-cli
     qbittorrent
     materialgram
   ];

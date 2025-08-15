@@ -47,6 +47,7 @@
       "memory" = {
         interval = 30;
         format = "{used:0.1f}G";
+	tooltip = false;
       };
 
       "hyprland/window" = {

@@ -28,6 +28,7 @@
     ryzenadj
     lxqt.lxqt-policykit
     pavucontrol
+    easyeffects
     stress-ng
 
     # -- Development & Dotfiles -- #

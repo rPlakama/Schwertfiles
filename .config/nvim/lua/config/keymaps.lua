@@ -4,8 +4,8 @@ vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 -- Nvim Tree
 vim.keymap.set({ "n", "v" }, "<C-n>", "<cmd>Yazi<CR>")
 -- Telescope binds
-vim.keymap.set("n", "<leader>f", "<cmd>FzfLua files<CR>", { silent = true, desc = "Find" })
-vim.keymap.set("n", "<M-f>", "<cmd> FzfLua buffers<CR>", { silent = true, desc = "Buffers" })
+vim.keymap.set("n", "ff", "<cmd>FzfLua files<CR>", { silent = true, desc = "Find" })
+vim.keymap.set("n", "ft", "<cmd> FzfLua buffers<CR>", { silent = true, desc = "Buffers" })
 -- Spell binds
 vim.keymap.set("n", "<C-1>", "<cmd>setlocal spell spelllang=pt | echo 'Spell Portuguese(PT)'<CR>",
 	{ silent = true, desc = "Português" })

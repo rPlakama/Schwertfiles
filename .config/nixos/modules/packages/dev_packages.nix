@@ -1,11 +1,6 @@
 { pkgs, ... }: {
 
   environment.systemPackages = with pkgs; [
-    # RUST
-    rust-analyzer
-    cargo
-    rustc
-
     # C/C++
     clang-tools
     clang
@@ -19,6 +14,13 @@
     nixd
     alejandra
 
+    # FISH
+    fish-lsp
+
+    # NodeJS
+    nodejs
+    yarn
+  
     # MARKDOWN
     markdown-oxide
 
@@ -36,6 +38,7 @@
     gdb
     lldb
     hyprls
+    direnv
   ];
 }
 
