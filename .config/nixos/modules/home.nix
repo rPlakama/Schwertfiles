@@ -8,7 +8,7 @@
     x11.enable = true;
     package = pkgs.volantes-cursors;
     name = "volantes_light_cursors";
-    size = 22;
+    size = 24;
   };
   gtk = {
     enable = true;

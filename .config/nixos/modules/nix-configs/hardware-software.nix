@@ -8,7 +8,6 @@
   services.power-profiles-daemon.enable = true;
   services.blueman.enable = true;
   systemd.network.enable = true;
-  services.fstrim.enable = true;
 
   networking = {
     hostName = "Elisheva";
@@ -17,20 +16,9 @@
 
  # -- Boot configuration -- #
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelPatches = [ 
-    {
-        name = "crashdump-config";
-        patch = null;
-        extraConfig = ''
-	X86_NATIVE_CPU y
-      ''; 
-    } 
-  ];
   boot.kernelParams = [
   "amd_pstate=active"
-  "preempt=full"
   ];
-  boot.kernelModules = ["msr"];
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;

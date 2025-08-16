@@ -120,7 +120,7 @@
       @define-color base09 #eda987;
       @define-color base0A #ddb26f;
       @define-color base0B #acc267;
-      @define-color base0C #12cfc0;
+      @define-color base0C #10cfc0;
       @define-color base0D #6fc2ef;
       @define-color base0E #e1a3ee;
       @define-color base0F #deaf8f; 
@@ -128,15 +128,15 @@
       * {
         font-family: "Montserrat", "Font Awesome 6 Free";
         font-weight: 700;
-        font-size: 9px;
+        font-size: 10px;
       }
 
       window#waybar {
         color: @base07;
         border-radius: 2px;
-        background: alpha(@base00, .55);
+        background: alpha(@base00, 1);
         border: solid;
-        border-width: 1px;
+        border-width: 0px;
         border-color: alpha(@base02, 0.6);
       }
 
