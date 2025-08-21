@@ -8,5 +8,6 @@
     ./yazi.nix
     ./zathura.nix
     ./waybar.nix
+    ./vscode.nix
   ];
 }

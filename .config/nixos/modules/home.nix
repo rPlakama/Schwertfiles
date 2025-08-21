@@ -21,5 +21,6 @@
   # -- Stylix -- #
   stylix.enable = true;
   stylix.targets.waybar.enable = false;
+  stylix.targets.vscode.enable = false;
 
 }

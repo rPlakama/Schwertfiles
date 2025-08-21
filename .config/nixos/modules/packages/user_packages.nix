@@ -8,10 +8,8 @@
     pandoc
     dropbox
     firefox
-    obsidian
     tidal-dl
     obs-studio
-    gemini-cli
     qbittorrent
     materialgram
   ];

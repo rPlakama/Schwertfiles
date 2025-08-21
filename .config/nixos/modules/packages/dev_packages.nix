@@ -20,9 +20,17 @@
     # NodeJS
     nodejs
     yarn
+
+    # Webdev
+    typescript-language-server
+
   
     # MARKDOWN
     markdown-oxide
+
+    # JAVA
+    zulu24
+    jdt-language-server
 
     # BASH
     bash-language-server

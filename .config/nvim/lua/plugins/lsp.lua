@@ -12,6 +12,8 @@ return {
       require('lspconfig').cssls.setup({})
       require('lspconfig').texlab.setup({})
       require('lspconfig').tinymist.setup({})
+      require('lspconfig').jdtls.setup({})
+      require('lspconfig').clangd.setup({})
      end,
 
   },
