@@ -17,20 +17,11 @@
     # FISH
     fish-lsp
 
-    # NodeJS
-    nodejs
-    yarn
-
     # Webdev
     typescript-language-server
-
   
     # MARKDOWN
     markdown-oxide
-
-    # JAVA
-    zulu24
-    jdt-language-server
 
     # BASH
     bash-language-server
@@ -42,6 +33,7 @@
 
     # MULTIPLE
     vscode-langservers-extracted
+    devenv
     prettier
     gdb
     lldb

@@ -23,6 +23,12 @@ vim.opt.cursorline = true
 vim.cmd('colorscheme base16-chalk')
 vim.opt.title = false
 
+vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "SignColumn", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "FoldColumn", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "LineNr", { bg = "NONE" })
+
 -- Indentation --
 
 vim.opt.shiftwidth = 2

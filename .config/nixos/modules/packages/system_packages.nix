@@ -9,7 +9,6 @@
     ripgrep
     # -- File & Archive Management -- #
     p7zip
-    zip
     yazi
     ripdrag 
     # -- Desktop & Wayland Integration -- #
@@ -19,17 +18,13 @@
     smile
     swww
     libnotify
-    wl-clip-persist
     wl-clipboard-rs
 
     # -- System & Hardware Control -- #
     brightnessctl
-    playerctl
     ryzenadj
     lxqt.lxqt-policykit
     pavucontrol
-    easyeffects
-    stress-ng
 
     # -- Development & Dotfiles -- #
     git
