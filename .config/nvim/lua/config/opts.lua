@@ -19,7 +19,7 @@ vim.opt.winborder = "rounded"
 vim.opt.relativenumber = true;
 vim.opt.scrolloff = 999
 vim.opt.fillchars = { eob = '+' }
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 vim.cmd('colorscheme base16-chalk')
 vim.opt.title = false
 
@@ -51,6 +51,6 @@ vim.g.netrw_liststyle= 3
 -- ETC --
 vim.opt.backup = false
 vim.opt.undofile = true
-vim.opt.undodir = vim.fn.expand("~./vim/undodir")
+vim.opt.undodir = vim.fn.expand("./vim/undodir")
 vim.opt.swapfile = false
 vim.opt.autoread = true

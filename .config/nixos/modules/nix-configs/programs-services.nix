@@ -1,10 +1,9 @@
-{ pkgs, ...}: {
-
+{pkgs, ...}: {
   # -- General  -- #
   programs = {
     hyprlock.enable = true;
     hyprland = {
-    enable = true;
+      enable = true;
     };
   };
 

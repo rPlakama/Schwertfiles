@@ -3,9 +3,8 @@ vim.opt.mouse = ''
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 -- Nvim Tree
 vim.keymap.set({ "n", "v" }, "<C-n>", "<cmd>Yazi<CR>")
--- Telescope binds
-vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua files<CR>", { silent = true, desc = "Find" })
-vim.keymap.set("n", "<leader>ft", "<cmd> FzfLua buffers<CR>", { silent = true, desc = "Buffers" })
+-- Fzf binds
+vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua <CR>", { silent = true, desc = "FzfLua ― The Goat" })
 -- Spell binds
 vim.keymap.set("n", "<C-1>", "<cmd>setlocal spell spelllang=pt | echo 'Spell Portuguese(PT)'<CR>",
 	{ silent = true, desc = "Português" })

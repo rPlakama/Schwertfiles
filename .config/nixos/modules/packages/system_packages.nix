@@ -10,7 +10,7 @@
     # -- File & Archive Management -- #
     p7zip
     yazi
-    ripdrag 
+    ripdrag
     # -- Desktop & Wayland Integration -- #
     fuzzel
     hyprshot

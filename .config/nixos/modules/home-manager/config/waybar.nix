@@ -1,110 +1,109 @@
-{ ... }: {
+{...}: {
   programs.waybar = {
     enable = true;
     settings = {
-    mainBar = {
+      mainBar = {
+        layer = "top";
+        position = "top";
+        height = 0;
 
-      layer = "top";
-      position = "top";
-      height = 0;
+        margin-top = 3;
+        margin-bottom = 0;
+        margin-right = 4;
+        margin-left = 4;
 
-      margin-top = 3;
-      margin-bottom = 0;
-      margin-right = 4;
-      margin-left = 4;
+        modules-left = [
+          "network"
+          "custom/separrator"
+          "pulseaudio"
+          "custom/separrator"
+          "hyprland/workspaces"
+        ];
 
-      modules-left = [
-        "network"
-        "custom/separrator"
-        "pulseaudio"
-        "custom/separrator"
-        "hyprland/workspaces"
-      ];
+        modules-center = [
+          "memory"
+          "custom/separrator"
+          "clock"
+          "tray"
+        ];
 
-      modules-center = [
-        "memory"
-        "custom/separrator"
-        "clock"
-        "tray"
-      ];
+        modules-right = [
+          "battery"
+          "custom/separrator"
+          "power-profiles-daemon"
+        ];
 
-      modules-right = [
-        "battery"
-        "custom/separrator"
-        "power-profiles-daemon"
-      ];
-
-      "custom/separrator" = {
-        format = "|";
-      };
-
-      "tray" = {
-        icon-size = 10;
-        spacing = 3;
-        reverse-direction = true;
-      };
-
-      "memory" = {
-        interval = 30;
-        format = "{used:0.1f}G";
-	tooltip = false;
-      };
-
-      "hyprland/window" = {
-        max-length = 50;
-      };
-
-      "battery" = {
-        format = "{capacity}%";
-        tooltip-format = "{timeTo}";
-        tooltip = true;
-        states = {
-          critical = 15;
-          warming = 30;
+        "custom/separrator" = {
+          format = "|";
         };
-      };
 
-      "pulseaudio" = {
-        format = "{volume}% {format_source}";
-        format-source = "ON";
-        format-source-muted = "OFF";
-      };
+        "tray" = {
+          icon-size = 10;
+          spacing = 3;
+          reverse-direction = true;
+        };
 
-      "clock" = {
-        format = "{:%a, %d. %b  %H:%M}";
-        tooltip = true;
-        tooltip-format = "<tt><big>{calendar}</big></tt>";
-      };
+        "memory" = {
+          interval = 30;
+          format = "{used:0.1f}G";
+          tooltip = false;
+        };
 
-      "temperature" = {
-        "hwmon-path" = "/sys/class/hwmon/hwmon2/temp1_input";
-        format = "{temperatureC}°C";
-        tooltip-format = "{temperatureC}°C | CPU";
-        tooltip = false;
-      };
+        "hyprland/window" = {
+          max-length = 50;
+        };
 
-      "network" = {
-        format = "{essid}";
-        format-alt = "{essid} {icon}";
-        format-wifi = "{essid}";
-        format-disconnected = "NO CONNECTION";
-        tooltip-format = " NAME: {ifname} \n SIGNAL STRENGHT: {signalStrength} \n FREQUENCY: {frequency}GHZ \n ";
-      };
+        "battery" = {
+          format = "{capacity}%";
+          tooltip-format = "{timeTo}";
+          tooltip = true;
+          states = {
+            critical = 15;
+            warming = 30;
+          };
+        };
 
-      "power-profiles-daemon" = {
-        format = "{icon}";
-        tooltip-format = "Power profile: {profile}\nDriver: {driver}";
-        tooltip = true;
-        format-icons = {
-          "default" = "";
-          "performance" = "HIGH";
-          "balanced" = "MEDIUM";
-          "power-saver" = "LOW";
+        "pulseaudio" = {
+          format = "{volume}% {format_source}";
+          format-source = "ON";
+          format-source-muted = "OFF";
+        };
+
+        "clock" = {
+          format = "{:%a, %d. %b  %H:%M}";
+          tooltip = true;
+          tooltip-format = "<tt><big>{calendar}</big></tt>";
+        };
+
+        "temperature" = {
+          "hwmon-path" = "/sys/class/hwmon/hwmon2/temp1_input";
+          format = "{temperatureC}°C";
+          tooltip-format = "{temperatureC}°C | CPU";
+          tooltip = false;
+        };
+
+        "network" = {
+          format = "{essid}";
+          format-alt = "{essid} {icon}";
+          format-wifi = "{essid}";
+          format-disconnected = "NO CONNECTION";
+          tooltip-format = " NAME: {ifname} \n SIGNAL STRENGHT: {signalStrength} \n FREQUENCY: {frequency}GHZ \n ";
+        };
+
+        "power-profiles-daemon" = {
+          format = "{icon}";
+          tooltip-format = "Power profile: {profile}\nDriver: {driver}";
+          tooltip = true;
+          format-icons = {
+            "default" = "";
+            "performance" = "HIGH";
+            "balanced" = "MEDIUM";
+            "power-saver" = "LOW";
+          };
         };
       };
     };
-  };
-    
+
     style = ''
       /* Base */
       @define-color baseback #000000;
@@ -123,7 +122,7 @@
       @define-color base0C #10cfc0;
       @define-color base0D #6fc2ef;
       @define-color base0E #e1a3ee;
-      @define-color base0F #deaf8f; 
+      @define-color base0F #deaf8f;
 
       * {
         font-family: "Montserrat", "Font Awesome 6 Free";

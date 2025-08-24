@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   # -- General Nix Settings -- #
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
@@ -17,13 +14,13 @@
       set -g fish_key_bindings fish_vi_key_bindings
       set -g fish_greeting ""
     '';
- };
+  };
 
   # -- rPlakama -- #
   services.displayManager.ly = {
     enable = true;
-    settings = { 
-    user = "rplakama";
+    settings = {
+      user = "rplakama";
     };
   };
   # services.getty.autologinUser = "rplakama";
