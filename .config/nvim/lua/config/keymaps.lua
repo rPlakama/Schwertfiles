@@ -1,3 +1,6 @@
+-- Spell Suggestion
+vim.keymap.set({ "n", "v"}, "z=", "<cmd>Fzf spell_suggest<CR>")
+
 vim.opt.mouse = ''
 -- LSP
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)

@@ -7,10 +7,10 @@
         position = "top";
         height = 0;
 
-        margin-top = 3;
+        margin-top = 1;
         margin-bottom = 0;
-        margin-right = 4;
-        margin-left = 4;
+        margin-right = 1;
+        margin-left = 1;
 
         modules-left = [
           "network"
@@ -133,9 +133,9 @@
       window#waybar {
         color: @base07;
         border-radius: 2px;
-        background: alpha(@base00, .70);
+        background: alpha(@base00, .80);
         border: solid;
-        border-width: 2px;
+        border-width: 1px;
         border-color: alpha(@base02, 0.6);
       }
 

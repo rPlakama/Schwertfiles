@@ -1,7 +1,6 @@
-require ("plugins.theme")
-
 -- Base Configuration --
 vim.opt.clipboard = "unnamedplus"
+vim.cmd("colorscheme base16-chalk")
 vim.opt.termguicolors = true
 vim.o.shortmess = 'I'
 vim.opt.conceallevel = 0
@@ -20,8 +19,7 @@ vim.opt.relativenumber = true;
 vim.opt.scrolloff = 999
 vim.opt.fillchars = { eob = '+' }
 vim.opt.cursorline = false
-vim.cmd('colorscheme base16-chalk')
-vim.opt.title = false
+vim.opt.title = true
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
