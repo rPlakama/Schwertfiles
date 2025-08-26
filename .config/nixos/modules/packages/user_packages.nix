@@ -5,7 +5,6 @@
     btop
     pandoc
     lutgen
-    pandoc
     dropbox
     firefox
     tidal-dl

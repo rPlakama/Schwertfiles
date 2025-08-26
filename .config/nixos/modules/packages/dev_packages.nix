@@ -6,15 +6,8 @@
     nixd
     alejandra
 
-    # FISH
-    fish-lsp
-
     # MARKDOWN
     markdown-oxide
-
-    # BASH
-    bash-language-server
-    shfmt
 
     # TYPST
     typst
@@ -23,6 +16,5 @@
     # MULTIPLE
     devenv
     hyprls
-    direnv
   ];
 }

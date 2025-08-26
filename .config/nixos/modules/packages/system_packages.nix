@@ -15,7 +15,6 @@
     fuzzel
     hyprshot
     qimgv
-    smile
     swww
     libnotify
     wl-clipboard-rs
@@ -23,7 +22,6 @@
     # -- System & Hardware Control -- #
     brightnessctl
     ryzenadj
-    lxqt.lxqt-policykit
     pavucontrol
 
     # -- Development & Dotfiles -- #
