@@ -17,6 +17,7 @@
     qimgv
     swww
     libnotify
+    wl-clip-persist
     wl-clipboard-rs
 
     # -- System & Hardware Control -- #
