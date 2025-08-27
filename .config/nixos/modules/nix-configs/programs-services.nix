@@ -10,6 +10,7 @@
   # -- General -- #
   programs.neovim.enable = true;
   programs.neovim.defaultEditor = true;
+  programs.steam.enable = false;
   programs.localsend.enable = true;
   programs.nh = {
     enable = true;
