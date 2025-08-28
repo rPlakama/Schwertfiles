@@ -2,17 +2,24 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
+      local servers = {
+        "nixd",
+        "lua_ls",
+        "ts_ls",
+        "html",
+        "java_language_server",
+        "hyprls",
+        "markdown_oxide",
+        "tinymist",
+        "jdtls",
+        "clangd",
+      }
 
-      require('lspconfig').lua_ls.setup({})
-      require('lspconfig').nixd.setup({})
-      require('lspconfig').ts_ls.setup({})
-      require('lspconfig').java_language_server.setup({})
-      require('lspconfig').hyprls.setup({})
-      require('lspconfig').markdown_oxide.setup({})
-      require('lspconfig').tinymist.setup({})
-      require('lspconfig').jdtls.setup({})
-      require('lspconfig').clangd.setup({})
-     end,
+      local lspconfig = require("lspconfig")
 
+      for _, server_name in ipairs(servers) do
+        lspconfig[server_name].setup({})
+      end
+    end,
   },
 }

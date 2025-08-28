@@ -1,6 +1,7 @@
 -- Spell Suggestion
 vim.keymap.set({ "n", "v"}, "z=", "<cmd>Fzf spell_suggest<CR>")
 
+-- Mouse
 vim.opt.mouse = ''
 -- LSP
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
@@ -38,10 +39,13 @@ vim.keymap.set("v", "<M-l>", ">gv", { desc = "Indent right and reselect" })
 
 -- Full Path
 vim.keymap.set("n", "<leader>pa", function()
-	local path = vim.fn.expand("%:p")
+	local path = vim.fn.expand("%:p:h")
 	vim.fn.setreg("+", path)
-	print("file:", path)
+	print("Current Location:", path)
 end)
+
+-- CD to path
+vim.keymap.set("n", "<leader>cd", "<cmd>cd %:p:h<CR>", { silent = true, desc = "Jump to Current Directory."})
 
 -- -- Basic autocommands
 local augroup = vim.api.nvim_create_augroup("UserConfig", {})
