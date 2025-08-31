@@ -1,7 +1,7 @@
 {
   imports = [
     ./fastfetch.nix
-    ./fuzzel.nix
+    ./anyrun.nix
     ./mako.nix
     ./starship.nix
     ./terminal.nix

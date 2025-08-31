@@ -1,6 +1,3 @@
--- Spell Suggestion
-vim.keymap.set({ "n", "v"}, "z=", "<cmd>Fzf spell_suggest<CR>")
-
 -- Mouse
 vim.opt.mouse = ''
 -- LSP
@@ -9,6 +6,12 @@ vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.keymap.set({ "n", "v" }, "<C-n>", "<cmd>Yazi<CR>")
 -- Fzf binds
 vim.keymap.set("n", "<leader>ff", "<cmd>FzfLua <CR>", { silent = true, desc = "FzfLua ― The Goat" })
+vim.keymap.set("n", "<leader>fs", "<cmd> FzfLua files <CR>", { silent = true, desc = "FzfLua files search" })
+vim.keymap.set("n", "<leader>fa", "<cmd> FzfLua buffers <CR>", { silent = true, desc = "Fzf buffers search" })
+vim.keymap.set("n", "<leader>fg", "<cmd> FzfLua live_grep <CR>", { silent = true, desc = "Fzf Live Grep"})
+vim.keymap.set("n", "<leader>fr", "<cmd> FzfLua oldfiles <CR>", { silent = true, desc = "Fzf oldfiles"})
+
+vim.keymap.set({ "n", "v"}, "z=", "<cmd>Fzf spell_suggest<CR>", { silent = true, desc = "FzfLua spell suggestion" })
 -- Spell binds
 vim.keymap.set("n", "<C-1>", "<cmd>setlocal spell spelllang=pt | echo 'Spell Portuguese(PT)'<CR>",
 	{ silent = true, desc = "Português" })
@@ -31,8 +34,8 @@ vim.keymap.set("n", "<M-w>", "<cmd>tabclose <CR>", { silent = true, desc = "Clos
 vim.keymap.set("n", "<M-t>", "<cmd>tabnew<CR>", { silent = true, desc = "New Tab" })
 
 -- Move lines up/down
-vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move line down" })
-vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
+vim.keymap.set("n", "<C-A-j>", ":m .+1<CR>==", { desc = "Move line down" })
+vim.keymap.set("n", "<C-A-k>", ":m .-2<CR>==", { desc = "Move line up" })
 -- Better indenting in visual mode
 vim.keymap.set("v", "<M-h>", "<gv", { desc = "Indent left and reselect" })
 vim.keymap.set("v", "<M-l>", ">gv", { desc = "Indent right and reselect" })

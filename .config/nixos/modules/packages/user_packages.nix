@@ -3,7 +3,6 @@
   environment.systemPackages = with pkgs; [
     mpv
     btop
-    pandoc
     lutgen
     dropbox
     firefox

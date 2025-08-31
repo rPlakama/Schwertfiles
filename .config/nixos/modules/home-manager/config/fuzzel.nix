@@ -12,7 +12,7 @@
         lines = 1;
         icons-enabled = false;
         anchor = "bottom";
-        width = 85;
+        width = 120;
       };
       border = {
         radius = 5;

@@ -133,7 +133,7 @@
       window#waybar {
         color: @base07;
         border-radius: 2px;
-        background: alpha(@base00, .80);
+        background: alpha(@base00, 1);
         border: solid;
         border-width: 1px;
         border-color: alpha(@base02, 0.6);
