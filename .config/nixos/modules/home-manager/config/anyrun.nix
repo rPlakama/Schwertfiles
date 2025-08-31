@@ -5,7 +5,7 @@
     config = {
       x = { fraction = 0.5; };
       y = { fraction = 0.0; };
-      width = { fraction = 0.5; };
+      width = { fraction = 0.75; };
       hideIcons = false;
       ignoreExclusiveZones = false;
       layer = "overlay";
@@ -18,6 +18,8 @@
       plugins = [
         "${pkgs.anyrun}/lib/libapplications.so"
         "${pkgs.anyrun}/lib/libsymbols.so"
+
+
       ];
     };
     extraCss = ''
@@ -27,14 +29,25 @@
       border-radius: 2px;
     }
 
-#entry {
-background: #151515;
-}
+    #entry {
+      background: #151515;
+      }
 
     #window {
       border-color: #151515;
       background: #151515;
     }
   '';
+  
+    extraConfigFiles."applications.ron".text = ''
+Config(
+  desktop_actions: true,
+  max_entries: 5,
+  terminal: Some(Terminal(
+    command: "foot",
+    args: "-e {}",
+  )),
+)
+    '';
   };
 }

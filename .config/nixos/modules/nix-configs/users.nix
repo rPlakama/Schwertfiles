@@ -8,6 +8,11 @@
   programs.starship.enable = true;
   users.users.rplakama.shell = pkgs.fish;
   programs.bash.completion.enable = true;
+
+  environment.shellAliases = {
+    cdf = "cd /; fzf-cd-widget";
+  };
+
   programs.fish = {
     enable = true;
     shellInit = ''
@@ -15,7 +20,6 @@
       set -g fish_greeting ""
     '';
   };
-
   # -- rPlakama -- #
   services.displayManager.ly = {
     enable = true;
