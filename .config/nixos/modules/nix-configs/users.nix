@@ -10,7 +10,7 @@
   programs.bash.completion.enable = true;
 
   environment.shellAliases = {
-    cdf = "cd /; fzf-cd-widget";
+    cdf = "fzf-cd-widget";
   };
 
   programs.fish = {

@@ -150,7 +150,9 @@
       }
 
       tooltip {
-        background-color: alpha(@base00, 0.75);
+        background-color: alpha(@base00, 0.95);
+	border: 1px solid transparent;
+	border-radius: 2px;
       }
 
       /* Modules-wise */
