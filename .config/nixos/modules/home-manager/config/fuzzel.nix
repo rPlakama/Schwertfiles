@@ -11,6 +11,7 @@
         terminal = "${pkgs.foot}/bin/foot -e";
         icons-enabled = false;
         anchor = "top";
+	lines = 7;
       };
       border = {
 	selection-radius = 2;

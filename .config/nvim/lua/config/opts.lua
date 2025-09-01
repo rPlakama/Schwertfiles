@@ -14,7 +14,7 @@ vim.wo.linebreak = true
 -- Apparence --
 
 vim.opt.number = true
-vim.opt.winborder = "rounded"
+vim.opt.winborder = "solid"
 vim.opt.relativenumber = true;
 vim.opt.scrolloff = 999
 vim.opt.fillchars = { eob = '+' }
