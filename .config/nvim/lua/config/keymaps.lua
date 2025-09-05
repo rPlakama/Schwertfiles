@@ -2,7 +2,6 @@
 vim.opt.mouse = ''
 -- LSP
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
-
 -- Nvim Tree
 vim.keymap.set({ "n", "v" }, "<C-n>", "<cmd>Yazi<CR>")
 -- Fzf binds
@@ -11,6 +10,7 @@ vim.keymap.set("n", "<leader>fs", "<cmd> FzfLua files <CR>", { silent = true, de
 vim.keymap.set("n", "<leader>fa", "<cmd> FzfLua buffers <CR>", { silent = true, desc = "Fzf buffers search" })
 vim.keymap.set("n", "<leader>fg", "<cmd> FzfLua live_grep <CR>", { silent = true, desc = "Fzf Live Grep"})
 vim.keymap.set("n", "<leader>fr", "<cmd> FzfLua oldfiles <CR>", { silent = true, desc = "Fzf oldfiles"})
+
 
 vim.keymap.set({ "n", "v"}, "z=", "<cmd>Fzf spell_suggest<CR>", { silent = true, desc = "FzfLua spell suggestion" })
 -- Spell binds
