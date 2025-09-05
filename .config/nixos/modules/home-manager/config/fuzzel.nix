@@ -9,16 +9,18 @@
     settings = {
       main = {
         terminal = "${pkgs.foot}/bin/foot -e";
+        lines = 1;
         icons-enabled = false;
-        anchor = "top";
-	lines = 7;
+        anchor = "bottom";
+        width = 85;
       };
       border = {
-	selection-radius = 2;
-        radius = 2;
+        radius = 5;
         width = 0;
       };
-      colors.selection = lib.mkForce "#151515ff";
+      colors = {
+        selection = lib.mkForce "#151515ff";
+      };
     };
   };
 }

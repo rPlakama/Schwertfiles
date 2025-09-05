@@ -11,18 +11,21 @@ Scope {
         PanelWindow {
             required property var modelData
             screen: modelData
-	    color: "#D9151515"
+            color: "#D9151515" //MainBackground
 
             anchors {
                 top: true
                 left: true
                 right: true
             }
+            implicitHeight: 30
 
-	    implicitHeight: 30
             //Main_bar
             RightComponents {
                 anchors.right: parent
+            }
+            CenterComponents {
+                anchors.centerIn: parent
             }
         }
     }

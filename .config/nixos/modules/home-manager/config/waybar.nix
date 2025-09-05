@@ -133,7 +133,7 @@
       window#waybar {
         color: @base07;
         border-radius: 2px;
-        background: alpha(@base00, 1);
+        background: alpha(@base00, .80);
         border: solid;
         border-width: 1px;
         border-color: alpha(@base02, 0.6);
@@ -150,9 +150,7 @@
       }
 
       tooltip {
-        background-color: alpha(@base00, 0.95);
-	border: 1px solid transparent;
-	border-radius: 2px;
+        background-color: alpha(@base00, 0.75);
       }
 
       /* Modules-wise */

@@ -1,4 +1,4 @@
-{ inputs, pkgs, ...}: {
+{pkgs, ...}: {
   # -- Core Home Manager Settings -- #
   imports = [./home-manager/config];
   home.stateVersion = "25.05";
