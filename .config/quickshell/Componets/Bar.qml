@@ -34,14 +34,17 @@ Scope {
                 width: parent.width
                 height: parent.height
                 radius: 2
-            }
 
-            //Main_bar
-            RightComponents {
-                anchors.right: parent
-            }
-            CenterComponents {
-                anchors.centerIn: parent
+                //Main_bar
+                RightComponents {
+                    anchors.left: parent.left
+                }
+                LeftComponents {
+                    anchors.right: parent.right
+                }
+                CenterComponents {
+                    anchors.centerIn: parent
+                }
             }
         }
     }
