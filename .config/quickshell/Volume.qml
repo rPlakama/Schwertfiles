@@ -2,7 +2,6 @@ import QtQuick
 import QtQuick.Layouts
 import Quickshell
 import Quickshell.Services.Pipewire
-import Quickshell.Widgets
 
 Scope {
     id: root
@@ -25,40 +24,33 @@ Scope {
 
     Timer {
         id: hideTimer
-        interval: 1000
+        interval: 1500
         onTriggered: root.shouldShowOsd = false
     }
-
-    // The OSD window will be created and destroyed based on shouldShowOsd.
-    // PanelWindow.visible could be set instead of using a loader, but using
-    // a loader will reduce the memory overhead when the window isn't open.
     LazyLoader {
         active: root.shouldShowOsd
 
         PanelWindow {
-            // Since the panel's screen is unset, it will be picked by the compositor
-            // when the window is created. Most compositors pick the current active monitor.
+            anchors.top: true
 
-            anchors.bottom: true
-            margins.bottom: screen.height / 1.09
+            margins.top: 5
             exclusiveZone: 0
 
             implicitWidth: 400
-            implicitHeight: 50
+            implicitHeight: 30
             color: "transparent"
 
-            // An empty click mask prevents the window from blocking mouse events.
             mask: Region {}
 
             Rectangle {
                 anchors.fill: parent
+                color: "#D9151515"
                 radius: 5
-                color: "#80000000"
 
                 RowLayout {
                     anchors {
                         fill: parent
-                        leftMargin: 10
+                        leftMargin: 15
                         rightMargin: 15
                     }
 
@@ -67,8 +59,8 @@ Scope {
                         Layout.fillWidth: true
 
                         implicitHeight: 10
-                        radius: 2
                         color: Pipewire.defaultAudioSink?.audio.muted ? "#50FF0000" : "#50ffffff"
+                        radius: 2
 
                         Rectangle {
                             anchors {
@@ -78,7 +70,7 @@ Scope {
                             }
 
                             implicitWidth: parent.width * (Pipewire.defaultAudioSink?.audio.volume ?? 0)
-                            radius: 2
+                            radius: parent.radius
                         }
                     }
                 }

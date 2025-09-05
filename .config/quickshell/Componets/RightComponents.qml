@@ -2,23 +2,12 @@ import QtQuick
 import "."
 
 Rectangle {
-    id: root
-    implicitHeight: 30
-    radius: 5
-    implicitWidth: 300
+
     color: "transparent"
-
-        Clock {
-        id: clock 
-    }
-
-    Rectangle {
-
-      radius: parent.radius
-      color: "transparent"
+    implicitWidth: 30 //The Size of the bagulho
+    //Do-not-make-height-to-be-centered
+    Workspaces_Geometric {
+        id: workspaces
         anchors.centerIn: parent
-        implicitHeight: parent.implicitHeight - 10
-	implicitWidth: parent.implicitWidth - 10
-	//Write-modules-bellow
     }
 }

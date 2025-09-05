@@ -19,9 +19,11 @@ Rectangle {
         implicitWidth: parent.implicitWidth - 10
         //Write-modules-bellow
         Text {
-	  text: Qt.formatDateTime(clockComponent.date, "ddd dd, hh:mm. MMM")
+            text: Qt.formatDateTime(clockComponent.date, "ddd, dd. MMM hh:mm")
             color: "#f5f5f5"
-            anchors.centerIn: parent
+	    anchors.centerIn: parent
+	    font.weight: fontGlobalWeight
+	    font.pointSize: fontGlobalSize
         }
     }
 }
