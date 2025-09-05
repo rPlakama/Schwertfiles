@@ -2,7 +2,6 @@
   # -- hyprland  -- #
   programs.hyprlock.enable = true;
   programs.hyprland.enable = true;
-  services.hypridle.enable = true;
 
   # -- General -- #
   programs.neovim.enable = true;

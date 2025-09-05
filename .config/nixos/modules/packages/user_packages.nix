@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # -- User Programs -- #
   environment.systemPackages = with pkgs; [
     mpv
@@ -8,6 +9,7 @@
     firefox
     tidal-dl
     obs-studio
+    quickshell
     qbittorrent
     materialgram
   ];
