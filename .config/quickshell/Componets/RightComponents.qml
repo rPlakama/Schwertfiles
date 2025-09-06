@@ -2,9 +2,11 @@ import QtQuick
 import "."
 
 Row {
-    anchors.centerIn: parent.left
+    anchors.right: parent.right
+    anchors.rightMargin: 10
     spacing: 5
-    Workspaces_Geometric {
-        id: workspaces
+
+    Battery {
+        id: batterylevel
     }
 }

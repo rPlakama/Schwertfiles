@@ -26,6 +26,11 @@ Rectangle {
                     anchors.centerIn: parent
                     text: modelData.id
                     color: isFocused ? focusedColor : unfocusedColor
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: 90
+                        }
+                    }
                     font.pointSize: fontGlobalSize
                     font.weight: fontGlobalWeight
                 }

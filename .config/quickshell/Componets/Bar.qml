@@ -30,20 +30,20 @@ Scope {
                 left: 2
             }
             Rectangle {
-                color: "#D9151515" //MainBackground
+                color: "#151515" //MainBackground
                 width: parent.width
                 height: parent.height
                 radius: 2
 
                 //Main_bar
-                RightComponents {
+                LeftComponents {
                     anchors.left: parent.left
                 }
-                LeftComponents {
+                RightComponents {
                     anchors.right: parent.right
                 }
                 CenterComponents {
-                    anchors.centerIn: parent
+                    anchors.horizontalCenter: parent.horizontalCenter
                 }
             }
         }

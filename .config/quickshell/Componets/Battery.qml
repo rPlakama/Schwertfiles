@@ -9,7 +9,7 @@ Rectangle {
     height: 30
     width: 30
     Text {
-        text: (percentage * 100) + "%"
+        text: Qt.locale().toString(percentage * 100, 'f', 0) + "%"
         anchors.centerIn: parent
         color: "white"
         font.pointSize: fontGlobalSize

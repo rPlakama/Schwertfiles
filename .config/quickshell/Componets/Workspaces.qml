@@ -27,7 +27,6 @@ RowLayout {
             // Use the modelData from the repeater to get info for each workspace
             readonly property bool isActive: modelData.focused
             readonly property bool isUrgent: modelData.urgent
-	    property int fontSizeFocused: isActive ? 18 : 15
 
             width: 30
             height: 30
