@@ -1,7 +1,5 @@
 import QtQuick
-import Quickshell
 import Quickshell.Services.UPower
-import "."
 
 Rectangle {
     property real percentage: UPower.displayDevice.percentage
