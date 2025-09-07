@@ -28,8 +28,8 @@ Scope {
         interval: 1000
         onTriggered: {
             if (loader.item) {
-                loader.item.fadeOut()
-                deactivateTimer.start()
+                loader.item.fadeOut();
+                deactivateTimer.start();
             }
         }
     }
