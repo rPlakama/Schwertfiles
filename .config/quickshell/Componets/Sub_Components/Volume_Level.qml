@@ -1,15 +1,24 @@
 import QtQuick
 import Quickshell.Services.Pipewire
-import "../*"
+import "../"
 
 Rectangle {
-    Text { // volume module
-        id: volumeText
+    //Definition of the module size. Important! Seek Workspaces_Geometric for more complementary commentaries.
+    width: 20
+    height: 30
+    color: "transparent"
+
+    Text {
+        // volume module, receive from Pipewire.
+        anchors.centerIn: parent
         text: Qt.locale().toString(Pipewire.defaultAudioSink.audio.volume * 100, 'f', 0) + "%"
-        color: "white"
+        color: Pipewire.defaultAudioSink?.audio.muted ? "#50ffffff" : "white"
+
         font.pointSize: fontGlobalSize
-        anchors.left: parent.left
-        anchors.leftMargin: 10
-        anchors.verticalCenter: parent.verticalCenter
+        Behavior on color {
+            ColorAnimation {
+                duration: 100
+            }
+        }
     }
 }

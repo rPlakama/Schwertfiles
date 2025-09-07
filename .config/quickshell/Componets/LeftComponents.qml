@@ -1,36 +1,27 @@
-import Quickshell.Services.Pipewire
 import QtQuick
+import QtQuick.Layouts
 import "."
-import "./Sub_Components/*"
+import "./Sub_Components"
 
 Rectangle {
-    color: "transparent"
-    width: 300 // Margin of the shit ty sh twin
+    //The leftCompoents total size
+    color: "transparent" // Debug paramenter
     height: 30
-
-    Volume_Level {
-        id: volumeLevel
-    }
-
-    Text { // volume module
-        id: volumeText
-        text: Qt.locale().toString(Pipewire.defaultAudioSink.audio.volume * 100, 'f', 0) + "%"
-        color: "white"
-        font.pointSize: fontGlobalSize
-        anchors.left: parent.left
-        anchors.leftMargin: 10
-        anchors.verticalCenter: parent.verticalCenter
-    }
+    width: 300
 
     Rectangle {
-        // Head of Workspaces_Geometric Module
-        anchors.leftMargin: 10
-        anchors.left: volumeText.right
-        height: workspaces.height
-        width: workspaces.width
+        //Main-Head
+        //It comes after the Rectangle, it defines the stuff >>Inside<< the module. Also, it can be used for the color or extra layers. Good to have, but can be removed.
+        width: parent.width - (parent.width * 0.10)
+        color: "transparent" //Debug paramenter
+        height: parent.height
+        anchors.centerIn: parent
+        RowLayout {
 
-        Workspaces_Geometric {
-            id: workspaces
+            spacing: 2 //Spacing of the modules
+
+            Volume_Level {}
+            Workspaces_Geometric {}
         }
     }
 }
