@@ -1,4 +1,3 @@
-import Quickshell
 import QtQuick
 import "."
 
@@ -18,12 +17,18 @@ Rectangle {
         implicitHeight: parent.implicitHeight - 10
         implicitWidth: parent.implicitWidth - 10
         //Write-modules-bellow
-        Text {
-            text: Qt.formatDateTime(clockComponent.date, "ddd, dd. MMM hh:mm")
-            color: "#f5f5f5"
-	    anchors.centerIn: parent
-	    font.weight: fontGlobalWeight
-	    font.pointSize: fontGlobalSize
+        Rectangle {
+            width: parent.width / 2
+            height: parent.height / 2
+            color: "transparent"
+            anchors.centerIn: parent
+            Text {
+                color: "#f5f5f5"
+                anchors.centerIn: parent
+                font.weight: fontGlobalWeight
+                font.pointSize: fontGlobalSize
+                text: Qt.formatDateTime(clockComponent.date, "dddd hh:mm · dd MMMM")
+            }
         }
     }
 }

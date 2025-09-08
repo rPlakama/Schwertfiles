@@ -17,7 +17,8 @@ Scope {
             color: "transparent"
 
             anchors {
-                top: true
+                top: false
+                bottom: true
                 left: true
                 right: true
             }

@@ -3,7 +3,7 @@ import QtQuick
 import QtQuick.Layouts
 
 Rectangle {
-    // A more suitable size for the container
+
     width: 150
     height: 30
     color: "transparent"
@@ -14,7 +14,7 @@ Rectangle {
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
         anchors.leftMargin: 10
-        spacing: 5
+        spacing: 14
 
         Repeater {
             model: Hyprland.workspaces
@@ -31,15 +31,33 @@ Rectangle {
                 property color focusedColor: "white"
                 property color unfocusedColor: "gray"
 
-                width: 8
-                height: 8
-                radius: 4
                 visible: modelData.id
+                Rectangle {
 
-                color: isUrgent ? colorUrgent : (isSpecial ? colorSpecial : (isFocused ? focusedColor : unfocusedColor))
+                    color: colorSpecial
+                    width: 8
+                    height: 8
+                    radius: 4
+                    anchors.centerIn: parent
+                    visible: modelData.id <= 0
+                }
+
                 Behavior on color {
                     ColorAnimation {
                         duration: 100
+                    }
+                }
+                Text {
+                    text: modelData.id
+                    visible: modelData.id > 0
+                    anchors.centerIn: parent
+                    color: isUrgent ? colorUrgent : (isSpecial ? colorSpecial : (isFocused ? focusedColor : unfocusedColor))
+                    //Eu sei que você vai esquecer, rPlakama. Basicamente: Se é urgente? Vai ser cor de urgente, se não for urgente, vai ser especial, e se não for especial, vai voltar para o IsFocused e não focused. E se não for nenhum desses dai? DESISTA DOS SEUS SONHOS, E MORRA!
+
+                    Behavior on color {
+                        ColorAnimation {
+                            duration: 100
+                        }
                     }
                 }
             }
