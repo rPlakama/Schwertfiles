@@ -25,6 +25,7 @@ Rectangle {
                 readonly property bool isFocused: modelData.focused
                 readonly property bool isUrgent: modelData.urgent
                 readonly property bool isSpecial: modelData.id <= 0
+                readonly property bool isSpecialFocused: modelData.focused <= 0
 
                 property color colorSpecial: "#6fc2ef"
                 property color colorUrgent: "#eda987"
@@ -34,7 +35,7 @@ Rectangle {
                 visible: modelData.id
                 Rectangle {
 
-                    color: colorSpecial
+                    color: isSpecialFocused ? colorSpecial : unfocusedColor
                     width: 8
                     height: 8
                     radius: 4

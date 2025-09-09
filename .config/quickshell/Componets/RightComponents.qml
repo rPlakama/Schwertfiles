@@ -18,9 +18,9 @@ Rectangle {
             Battery {
                 id: batterylevel
             }
-           //Tray {
-           //    id: tray
-           //}
+            Tray {
+                id: tray
+            }
         }
     }
 }

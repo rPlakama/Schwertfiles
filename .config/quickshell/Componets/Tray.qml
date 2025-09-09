@@ -1,101 +1,46 @@
-import Quickshell
-import Quickshell.Widgets
 import QtQuick
+import Quickshell
 import QtQuick.Layouts
 import Quickshell.Services.SystemTray
-import QtQuick.Effects
+import Quickshell.Widgets
+import "."
 
-import ".."
+Rectangle {
+    id: trayContainer
 
-ColumnLayout {
-    id: sysTrayCol
+    width: trayIconsLayout.implicitWidth + (visible ? 8 : 0)
+    visible: trayIconsLayout.implicitWidth > 0
 
-    // Accept window reference from parent component
-    property var panelWindow: null
+    height: 30
+    color: "transparent"
+    radius: 8
+    clip: true
 
-    // Monitor for tray item changes to ensure proper cleanup
-    property var currentItems: []
-
-    function updateItems() {
-        currentItems = [];
-        for (var i = 0; i < SystemTray.items.length; i++) {
-            currentItems.push(SystemTray.items[i]);
+    Behavior on width {
+        NumberAnimation {
+            duration: 200
         }
     }
 
-    Component.onCompleted: {
-        console.log("SystemTray items count:", SystemTray.items.length);
-        console.log("Panel window from parent:", panelWindow);
-        var foundWindow = findWindow();
-        console.log("Found window:", foundWindow);
-        updateItems();
-    }
+    RowLayout {
+        id: trayIconsLayout
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: parent.left
+        anchors.leftMargin: 4
+        anchors.right: parent.right
+        anchors.rightMargin: 4
+        spacing: 8
 
-    // Monitor changes to the SystemTray.items model
-    Connections {
-        target: SystemTray
-        function onItemsChanged() {
-            console.log("SystemTray items changed, new count:", SystemTray.items.length);
-            updateItems();
-        }
-    }
-
-    Repeater {
-        id: sysTray
-        model: SystemTray.items
-
-        delegate: MouseArea {
-            id: trayItem
-            property SystemTrayItem item: modelData
-
-            Component.onCompleted: {
-                console.log("Tray item created:", item ? item.title : "null", "icon:", item ? item.icon : "null");
-            }
-
-            Component.onDestruction: {
-                console.log("Tray item destroyed:", item ? item.title : "null");
-            }
-
-            Layout.preferredWidth: 24
-            Layout.preferredHeight: 24
-            Layout.alignment: Qt.AlignHCenter
-
-            acceptedButtons: Qt.LeftButton | Qt.RightButton
-
-            onClicked: function (mouse) {
-                if (!trayItem.item)
-                    return;
-                if (mouse.button === Qt.LeftButton) {
-                    trayItem.item.activate();
-                } else if (mouse.button === Qt.RightButton) {
-                    if (trayItem.item.hasMenu) {
-                        console.log("Displaying context menu for:", trayItem.item.title);
-                        var windowToUse = sysTrayCol.panelWindow || sysTrayCol.findWindow();
-                        console.log("Window to use:", windowToUse, "type:", typeof windowToUse);
-                        if (windowToUse) {
-                            // Convert to global coordinates
-                            var globalPos = trayItem.mapToGlobal(trayItem.width, 0);
-                            trayItem.item.display(windowToUse, globalPos.x, globalPos.y);
-                        } else {
-                            console.log("No valid window found for context menu");
-                        }
-                    }
-                }
-            }
-
+        Repeater {
+            model: SystemTray.items
             IconImage {
                 id: trayIcon
-                source: trayItem.item ? trayItem.item.icon : ""
-                anchors.centerIn: parent
-                width: 20
-                height: 20
-                opacity: mouse.hovered ? 1 : 0.7
-            }
+                Layout.preferredWidth: 22
+                Layout.preferredHeight: 22
 
-            HoverHandler {
-                id: mouse
-                acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad
-                cursorShape: Qt.PointingHandCursor
+                source: modelData.icon
+
+                visible: checkedIconPath
             }
         }
     }

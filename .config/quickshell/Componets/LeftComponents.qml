@@ -18,7 +18,7 @@ Rectangle {
         anchors.centerIn: parent
         RowLayout {
 
-            spacing: 2 //Spacing of the modules
+            spacing: 10
 
             Volume_Level {}
             Workspaces_Geometric {}

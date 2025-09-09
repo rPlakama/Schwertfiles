@@ -14,7 +14,8 @@ Rectangle {
         text: Qt.locale().toString(Pipewire.defaultAudioSink.audio.volume * 100, 'f', 0) + "%"
         color: Pipewire.defaultAudioSink?.audio.muted ? "#50ffffff" : "white"
 
-        font.pointSize: fontGlobalSize
+	font.pointSize: fontGlobalSize
+	    
         Behavior on color {
             ColorAnimation {
                 duration: 100
