@@ -1,0 +1,87 @@
+[
+  {
+    "battery": {
+      "format": "{capacity}%",
+      "states": {
+        "critical": 15,
+        "warming": 30
+      },
+      "tooltip": true,
+      "tooltip-format": "{timeTo}"
+    },
+    "clock": {
+      "format": "{:%A %H:%M · %d %B }",
+      "tooltip": true,
+      "tooltip-format": "<tt><big>{calendar}</big></tt>"
+    },
+    "custom/separrator": {
+      "format": "|"
+    },
+    "hyprland/window": {
+      "max-length": 50
+    },
+    "layer": "top",
+    "margin-bottom": 0,
+    "margin-left": 1,
+    "margin-right": 1,
+    "margin-top": 1,
+    "memory": {
+      "format": "{used:0.1f}G",
+      "interval": 30,
+      "tooltip": false
+    },
+    "modules-center": [
+      "memory",
+      "custom/separrator",
+      "clock"
+    ],
+    "modules-left": [
+      "network",
+      "custom/separrator",
+      "pulseaudio",
+      "custom/separrator",
+      "hyprland/workspaces"
+    ],
+    "modules-right": [
+      "battery",
+      "custom/separrator",
+      "power-profiles-daemon",
+      "tray"
+    ],
+    "network": {
+      "format": "{essid}",
+      "format-alt": "{essid} {icon}",
+      "format-disconnected": "NO CONNECTION",
+      "format-wifi": "{essid}",
+      "tooltip-format": " NAME: {ifname} \n SIGNAL STRENGHT: {signalStrength} \n FREQUENCY: {frequency}GHZ \n "
+    },
+    "position": "top",
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "format-icons": {
+        "balanced": "MEDIUM",
+        "default": "",
+        "performance": "HIGH",
+        "power-saver": "LOW"
+      },
+      "tooltip": true,
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}"
+    },
+    "pulseaudio": {
+      "format": "{volume}% {format_source}",
+      "format-source": "ON",
+      "format-source-muted": "OFF"
+    },
+    "temperature": {
+      "format": "{temperatureC}°C",
+      "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+      "tooltip": false,
+      "tooltip-format": "{temperatureC}°C | CPU"
+    },
+    "tray": {
+      "icon-size": 13,
+      "reverse-direction": true,
+      "spacing": 4
+    }
+  }
+]

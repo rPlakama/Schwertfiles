@@ -1,1 +1,118 @@
-/nix/store/bdvm4p2r6la433xhgdwz68sbfcbdynp6-home-manager-files/.config/waybar/style.css
+      /* Base */
+      @define-color baseback #000000;
+      @define-color base00 #151515;
+      @define-color base01 #202020;
+      @define-color base02 #303030;
+      @define-color base03 #505050;
+      @define-color base04 #b0b0b0;
+      @define-color base05 #d0d0d0;
+      @define-color base06 #e0e0e0;
+      @define-color base07 #f5f5f5;
+      @define-color base08 #fb9fb1;
+      @define-color base09 #eda987;
+      @define-color base0A #ddb26f;
+      @define-color base0B #acc267;
+      @define-color base0C #10cfc0;
+      @define-color base0D #6fc2ef;
+      @define-color base0E #e1a3ee;
+      @define-color base0F #deaf8f;
+
+      * {
+        font-family: "Montserrat", "Font Awesome 6 Free";
+        font-weight: 500;
+        font-size: 10pt;
+      }
+
+      window#waybar {
+        background-color: #000000;
+        color: @base07;
+        border-radius: 2px;
+        background: alpha(@base00, 1);
+        border: transparent;
+        border-width: 1px;
+        border-color: alpha(@base02, 0.0);
+      }
+
+      .modules-right {
+        margin: 0;
+        border: 1px solid transparent;
+      }
+
+      .modules-left {
+        margin: 0;
+        border: 1px solid transparent;
+      }
+
+      tooltip {
+        background-color: alpha(@base00, 0.95);
+	border: 1px solid transparent;
+	border-radius: 2px;
+      }
+
+      /* Modules-wise */
+      .modules-left,
+      .modules-center,
+      .modules-right {
+        padding: 0px 4px 0px;
+        /*modules width*/
+      }
+
+      /* General */
+      #network,
+      #battery,
+      #tray,
+      #clock,
+      #memory,
+      #power-profile-daemon,
+      #pulseaudio {
+        margin-left: 4px;
+        margin-right: 4px;
+      }
+
+      /* Workspaces Specifics */
+      #workspaces button {
+        padding: 0 1px;
+        color: alpha(@base06, 0.30);
+        padding: 0px 0px 0px;
+        border-radius: 0px;
+        transition: .1s ease-in;
+      }
+
+      #workspaces button.active {
+        color: @base07;
+      }
+
+      #workspaces button.urgent {
+        color: @base09;
+      }
+
+      /* Central Modules Specifics */
+      #clock,
+      #power-profiles-daemon,
+      #temperature {
+        margin-left: 3px;
+        margin-right: 3px;
+      }
+
+      #temperature {
+        color: @base0E;
+      }
+
+      /* Right Modules Specifics */
+      #battery.critical {
+        color: @base08;
+      }
+
+      #battery.warming {
+        color: @base0A;
+      }
+
+      #battery.charging {
+        color: @base0D;
+      }
+
+      #pulseaudio.muted {
+        color: @base03;
+	transition: .1s ease-in;
+
+      }
