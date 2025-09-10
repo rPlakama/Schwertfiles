@@ -8,17 +8,17 @@
       format = "$username$directory$git_branch$git_commit$git_state$git_status$c$elixir$elm$golang$gradle$haskell$java$julia$nodejs$nim$rust$scala$docker_context$jobs$cmd_duration$character";
 
       shell = {
-        disabled = true;
-        fish_indicator = "";
-        nu_indicator = ">";
-        bash_indicator = "󱆃";
+        disabled = false;
+        fish_indicator = " ";
+        nu_indicator = " >";
+        bash_indicator = " 󱆃";
       };
 
       character = {
         success_symbol = "";
         error_symbol = "";
         vimcmd_symbol = "";
-        vimcmd_visual_symbol = "";
+        vimcmd_visual_symbol = " ";
       };
 
       username = {
@@ -160,7 +160,7 @@
       };
 
       rust = {
-        symbol = "";
+        symbol = " ";
       };
 
       scala = {

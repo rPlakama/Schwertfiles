@@ -20,6 +20,9 @@
     "hyprland/window": {
       "max-length": 50
     },
+    "hyprland/workspaces": {
+      "tooltip": false
+    },
     "layer": "top",
     "margin-bottom": 0,
     "margin-left": 1,

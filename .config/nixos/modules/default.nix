@@ -5,7 +5,7 @@
     ./nix-configs/programs-services.nix
     ./nix-configs/stylix.nix
     ./nix-configs/users.nix
-    ./nix-configs/desktop.nix
+    ./nix-configs/services.nix
 
     # Package definitions
     ./packages/dev_packages.nix

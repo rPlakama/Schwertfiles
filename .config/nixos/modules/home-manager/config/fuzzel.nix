@@ -2,25 +2,30 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   # -- Fuzzel -- #
+  programs.tofi = {
+    enable = true;
+    settings = {
+      terminal = "foot";
+    };
+  };
   programs.fuzzel = {
     enable = true;
     settings = {
       main = {
         terminal = "${pkgs.foot}/bin/foot -e";
-        lines = 1;
         icons-enabled = false;
-        anchor = "bottom";
-        width = 85;
+        anchor = "top";
+        lines = 7;
       };
       border = {
-        radius = 5;
+        selection-radius = 2;
+        radius = 1;
         width = 0;
       };
-      colors = {
-        selection = lib.mkForce "#151515ff";
-      };
+      colors.selection = lib.mkForce "#151515ff";
     };
   };
 }

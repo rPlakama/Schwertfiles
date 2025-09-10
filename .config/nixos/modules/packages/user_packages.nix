@@ -1,9 +1,11 @@
-{pkgs, ...}: {
+{ inputs, pkgs, ... }:
+{
   # -- User Programs -- #
   environment.systemPackages = with pkgs; [
+    ags
     mpv
+    waybar
     btop
-    pandoc
     lutgen
     dropbox
     firefox

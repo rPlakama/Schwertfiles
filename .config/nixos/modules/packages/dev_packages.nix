@@ -4,8 +4,7 @@
     lua-language-server
     # NIX
     nixd
-    alejandra
-
+    nixfmt
     # MARKDOWN
     markdown-oxide
 

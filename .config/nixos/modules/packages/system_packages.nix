@@ -35,6 +35,7 @@
   # -- Font's -- #
   fonts.packages = with pkgs; [
     nerd-fonts.caskaydia-cove
+    garamond-libre
     oswald
     font-awesome_6
   ];
