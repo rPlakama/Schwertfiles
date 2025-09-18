@@ -1,9 +1,14 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # -- General Nix Settings -- #
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nixpkgs.config.allowUnfree = true;
   security.polkit.enable = true;
   security.sudo-rs.enable = true;
+  services.gnome.gnome-keyring.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   # -- rPlakama, the shell  -- #
   programs.starship.enable = true;
@@ -11,7 +16,8 @@
   programs.bash.completion.enable = true;
 
   environment.shellAliases = {
-    cdf = "fzf-cd-widget";
+    cdf = ''cd ~; cd "$(fd --hidden -t d | fzf )"'';
+    y = ''yazi'';
   };
 
   programs.fish = {
@@ -29,10 +35,14 @@
     };
   };
   # services.getty.autologinUser = "rplakama";
-  nix.settings.trusted-users = ["networkmanager" "root" "@wheel"];
+  nix.settings.trusted-users = [
+    "networkmanager"
+    "root"
+    "@wheel"
+  ];
   users.users.rplakama = {
     isNormalUser = true;
     description = "I like sharkgirls.";
-    extraGroups = ["wheel"];
+    extraGroups = [ "wheel" ];
   };
 }

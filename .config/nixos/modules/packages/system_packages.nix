@@ -19,6 +19,7 @@
     libnotify
     wl-clip-persist
     wl-clipboard-rs
+    hyprpolkitagent
 
     # -- System & Hardware Control -- #
     brightnessctl

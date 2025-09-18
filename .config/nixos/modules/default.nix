@@ -6,6 +6,7 @@
     ./nix-configs/stylix.nix
     ./nix-configs/users.nix
     ./nix-configs/services.nix
+    ./nix-configs/mysql.nix
 
     # Package definitions
     ./packages/dev_packages.nix

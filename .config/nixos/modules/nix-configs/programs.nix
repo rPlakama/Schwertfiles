@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   # -- For programs that need to be enabled -- #
 
   # -- Hyprland -- #
@@ -21,4 +22,5 @@
   programs.steam.enable = true;
   # -- Extras -- #
   programs.adb.enable = true;
+
 }

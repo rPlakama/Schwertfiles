@@ -4,6 +4,7 @@ vim.lsp.enable({
 	"nixd",
 	"gopls",
 	"lua_ls",
+	"sqls",
 	"ts_ls",
 	"hyprls",
 	"sqls",
@@ -42,15 +43,15 @@ vim.lsp.config("rust_analyzer", {
 	},
 })
 -- MySQL
-vim.lsp.config("sqls", {
-	settings = {
-		["sqls"] = {
-			formatter = {
-				command = "sql-formatter"
-			},
-		},
-	},
-})
+-- vim.lsp.config("sqls", {
+--         settings = {
+--       	  ["sqls"] = {
+--       		  formatter = {
+--       			  command = "sql-formatter"
+--       		  },
+--       	  },
+--         },
+-- })
 -- html
 vim.lsp.config("html", {
 	settings = {

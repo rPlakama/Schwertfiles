@@ -10,6 +10,11 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    ignis = {
+      url = "github:ignis-sh/ignis";
+      inputs.nixpkgs.follows = "nixpkgs"; 
+    };
+
   };
 
   outputs =
@@ -25,7 +30,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           stylix.nixosModules.stylix
-
           home-manager.nixosModules.home-manager
           ./configuration.nix
 
