@@ -16,7 +16,7 @@
   programs.bash.completion.enable = true;
 
   environment.shellAliases = {
-    cdf = ''cd ~; cd "$(fd --hidden -t d | fzf )"'';
+    cdf = ''cd /; cd "$(fd --hidden -t d | fzf )"'';
     y = ''yazi'';
   };
 

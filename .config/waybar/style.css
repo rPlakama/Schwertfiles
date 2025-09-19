@@ -27,7 +27,7 @@
       	background-color: #000000;
       	color: @base07;
       	border-radius: 2px;
-      	background: alpha(@base00, 1);
+      	background: alpha(@base00, .95);
       	border: transparent;
       	border-width: 1px;
       	border-color: alpha(@base02, 0.0);
