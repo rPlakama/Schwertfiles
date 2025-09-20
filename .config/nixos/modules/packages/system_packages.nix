@@ -1,10 +1,12 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # -- Utils for Systm -- #
   environment.systemPackages = with pkgs; [
     # -- Core CLI Utilities -- #
     bat
     du-dust
     fd
+    tree
     fzf
     ripgrep
     # -- File & Archive Management -- #
@@ -19,8 +21,7 @@
     libnotify
     wl-clip-persist
     wl-clipboard-rs
-    hyprpolkitagent
-
+    polkit_gnome
     # -- System & Hardware Control -- #
     brightnessctl
     ryzenadj

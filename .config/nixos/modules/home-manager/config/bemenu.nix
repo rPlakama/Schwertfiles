@@ -1,3 +1,0 @@
-{...}: {
-  programs.bemenu.enable = true;
-}

@@ -1,0 +1,7 @@
+{ ... }:
+
+{
+
+  systemd.network.enable = true;
+
+}
