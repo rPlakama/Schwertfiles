@@ -12,6 +12,7 @@
     # TYPST
     typst
     tinymist
+    typstyle
 
     # MULTIPLE
     devenv

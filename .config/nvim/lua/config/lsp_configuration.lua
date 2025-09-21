@@ -72,3 +72,13 @@ vim.lsp.config("cssls", {
 		},
 	},
 })
+
+vim.lsp.config("tinymist", {
+	settings = {
+		["tinymist"] = {
+			formatter = {
+				command = "typstyle"
+			},
+		},
+	},
+})
