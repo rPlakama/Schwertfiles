@@ -24,9 +24,8 @@
       }
 
       window#waybar {
-      	background-color: #131313;
+      	background-color: alpha(@base00, 1.0);
       	color: @base07;
-	border-radius: 2px;
       }
 
       .modules-left,

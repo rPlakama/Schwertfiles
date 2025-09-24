@@ -35,16 +35,15 @@
       "tooltip": false
     },
     "modules-center": [
-      "memory",
-      "custom/separrator",
+     // "memory",
       "clock"
     ],
     "modules-left": [
       "network",
       "custom/separrator",
-      "pulseaudio",
-      "custom/separrator",
-      "hyprland/workspaces"
+      "pulseaudio"
+     // "custom/separrator",
+      //"hyprland/workspaces"
     ],
     "modules-right": [
       "battery",
