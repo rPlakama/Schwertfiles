@@ -22,7 +22,7 @@
     wl-clip-persist
     wl-clipboard-rs
     polkit_gnome
-    steam-run
+
     # -- System & Hardware Control -- #
     brightnessctl
     ryzenadj

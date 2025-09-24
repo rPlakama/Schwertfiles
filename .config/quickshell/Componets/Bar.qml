@@ -39,14 +39,14 @@ Scope {
                 //Main_bar
                 LeftComponents {
                     anchors.left: parent.left
-		  }
+                }
 
                 RightComponents {
                     anchors.right: parent.right
                 }
                 CenterComponents {
                     anchors.horizontalCenter: parent.horizontalCenter
-		  }
+                }
             }
         }
     }

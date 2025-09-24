@@ -21,6 +21,7 @@ Rectangle {
     }
 
     RowLayout {
+
         id: trayIconsLayout
         anchors.verticalCenter: parent.verticalCenter
         anchors.left: parent.left
@@ -33,8 +34,9 @@ Rectangle {
             model: SystemTray.items
             IconImage {
                 id: trayIcon
-                Layout.preferredWidth: 22
-                Layout.preferredHeight: 22
+                //Size of Icon
+                Layout.preferredWidth: 20
+                Layout.preferredHeight: 20
 
                 source: modelData.icon
 
