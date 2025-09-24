@@ -16,6 +16,7 @@
 
     # MULTIPLE
     devenv
+    xwayland-satellite
     hyprls
   ];
 }

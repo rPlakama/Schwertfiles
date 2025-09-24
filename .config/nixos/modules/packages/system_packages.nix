@@ -15,6 +15,7 @@
     ripdrag
     # -- Desktop & Wayland Integration -- #
     fuzzel
+    swayidle
     hyprshot
     qimgv
     swww
