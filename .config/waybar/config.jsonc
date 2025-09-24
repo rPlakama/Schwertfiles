@@ -23,8 +23,8 @@
     "hyprland/workspaces": {
       "tooltip": false
     },
-    "layer": "top",
-    "margin-bottom": 0,
+    "layer": "overlay",
+    "margin-bottom": 3,
     "margin-left": 3,
     "margin-right": 3,
     "margin-top": 3,
@@ -58,7 +58,7 @@
       "format-wifi": "{essid}",
       "tooltip-format": " NAME: {ifname} \n SIGNAL STRENGHT: {signalStrength} \n FREQUENCY: {frequency}GHZ \n "
     },
-    "position": "top",
+    "position": "bottom",
     "power-profiles-daemon": {
       "format": "{icon}",
       "format-icons": {

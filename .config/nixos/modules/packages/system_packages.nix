@@ -16,6 +16,7 @@
     # -- Desktop & Wayland Integration -- #
     fuzzel
     swayidle
+    hyprlock
     hyprshot
     qimgv
     swww
