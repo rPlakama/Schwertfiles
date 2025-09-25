@@ -3,9 +3,10 @@
   # -- User Programs -- #
   environment.systemPackages = with pkgs; [
     mpv
-    waybar
     btop
+    waybar
     lutgen
+    discord
     dropbox
     firefox
     tidal-dl
