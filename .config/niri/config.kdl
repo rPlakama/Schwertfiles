@@ -1,4 +1,3 @@
-// This config is in the KDL format: https://kdl.dev
 // https://yalter.github.io/niri/Configuration:-Input
 input {
     keyboard {
@@ -15,7 +14,7 @@ input {
         // drag false
         // drag-lock
         // natural-scroll
-        // accel-speed 0.2
+        accel-speed 0.2
         accel-profile "flat"
         scroll-method "two-finger"
  // disabled-on-external-mouse
@@ -60,7 +59,6 @@ output "eDP-1" {
     scale 1.5
 }
 layout {
-    // Set gaps around windows in logical pixels.
     gaps 6
     center-focused-column "on-overflow"
     preset-column-widths {
@@ -75,14 +73,15 @@ layout {
         off
     }
     border {
-      off
-      active-color "#555555ff"
-      inactive-color "#151515ff"
+        active-color "#10cfc0ff"
+        inactive-color "#151515ff"
+        width 1.55
     }
     shadow {
         on
-        spread 30
-        softness 50
+        spread 4
+        softness 10
+        draw-behind-window true
     }
     struts {
         left 0
@@ -104,47 +103,31 @@ animations {
         curve "cubic-bezier" 1 0 1 0
         duration-ms 50
     }
-
     window-open {
         curve "cubic-bezier" 0 1 0.1 1
-        duration-ms 50
+        duration-ms 150
     }
     slowdown 1.5
     workspace-switch {
-      duration-ms 50
-	        curve "cubic-bezier" 0 1 0.1 1
-
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001 stiffness=2050 epsilon=0.0001
     }
     window-movement {
-        duration-ms 50
-        curve "ease-out-expo"
+        spring damping-ratio=1.9 stiffness=2950 epsilon=0.0001
     }
     overview-open-close {
-        duration-ms 50
-        curve "cubic-bezier" 0 1 0.1 1
+        spring damping-ratio=0.8 stiffness=1850 epsilon=0.0001
     }
     horizontal-view-movement {
-        duration-ms 50
-        curve "cubic-bezier" 0 1 0.1 1
+        spring damping-ratio=1.2 stiffness=3050 epsilon=0.0001
     }
 }
 window-rule {
     clip-to-geometry true
-    geometry-corner-radius 5
-}
-window-rule {
-    match app-id="foot$" title="btop"
-    default-column-width {
-        proportion 0.95
-    }
+    geometry-corner-radius 7
 }
 window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
     open-floating true
-}
-window-rule {
-    match is-focused=false
-    opacity 0.95
 }
 /-window-rule {
 match app-id=r#"^org\.keepassxc\.KeePassXC$"#
