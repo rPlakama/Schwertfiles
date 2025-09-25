@@ -3,6 +3,7 @@
 vim.lsp.enable({
 	"nixd",
 	"gopls",
+	"fish_lsp",
 	"lua_ls",
 	"sqls",
 	"ts_ls",
@@ -78,6 +79,16 @@ vim.lsp.config("tinymist", {
 		["tinymist"] = {
 			formatter = {
 				command = "typstyle"
+			},
+		},
+	},
+})
+
+vim.lsp.config("fish_lsp", {
+	settings = {
+		["fish_lsp"] = {
+			formatter = {
+				command = "fish_indent"
 			},
 		},
 	},

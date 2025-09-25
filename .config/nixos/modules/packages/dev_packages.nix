@@ -14,9 +14,7 @@
     tinymist
     typstyle
 
-    # MULTIPLE
-    devenv
-    xwayland-satellite
-    hyprls
+    # FISH
+    fish-lsp
   ];
 }

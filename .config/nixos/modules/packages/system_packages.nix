@@ -17,9 +17,9 @@
     fuzzel
     swayidle
     hyprlock
-    hyprshot
     qimgv
     swww
+    xwayland-satellite
     libnotify
     wl-clip-persist
     wl-clipboard-rs

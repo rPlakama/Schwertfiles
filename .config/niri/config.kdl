@@ -62,7 +62,7 @@ output "eDP-1" {
 layout {
     // Set gaps around windows in logical pixels.
     gaps 6
-    center-focused-column "always"
+    center-focused-column "on-overflow"
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
@@ -91,9 +91,7 @@ layout {
 }
 spawn-at-startup "swww-daemon"
 spawn-at-startup "waybar"
-config-notification {
-    disable-failed
-}
+spawn-sh-at-startup "~/.config/niri/scripts/swayidle.fish"
 hotkey-overlay {
     skip-at-startup
 }
@@ -106,20 +104,20 @@ animations {
     }
     slowdown 1.5
     workspace-switch {
-        duration-ms 150
-        curve "ease-out-expo"
+        duration-ms 300
+        curve "cubic-bezier" 0 1 0.1 1
     }
     window-movement {
         duration-ms 150
         curve "ease-out-expo"
     }
     overview-open-close {
-        duration-ms 150
-        curve "ease-out-expo"
+        duration-ms 250
+        curve "cubic-bezier" 0 1 0.1 1
     }
     horizontal-view-movement {
-        duration-ms 150
-        curve "ease-out-expo"
+        duration-ms 300
+        curve "cubic-bezier" 0 1 0.1 1
     }
 }
 window-rule {
@@ -127,11 +125,11 @@ window-rule {
     geometry-corner-radius 5
 }
 window-rule {
-  match app-id="foot$" title="btop"
-      default-column-width { proportion 0.95; }
-
-  }
-
+    match app-id="foot$" title="btop"
+    default-column-width {
+        proportion 0.95
+    }
+}
 window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
     open-floating true
