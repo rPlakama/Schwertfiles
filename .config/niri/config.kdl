@@ -83,7 +83,7 @@ layout {
     }
     shadow {
         on
-        spread 10
+        spread 5
         softness 5
         draw-behind-window true
     }
@@ -111,7 +111,8 @@ animations {
     }
     slowdown 1.5
     workspace-switch {
-        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001 stiffness=2050 epsilon=0.0001
+	        spring damping-ratio=1.8 stiffness=2850 epsilon=0.0001
+
     }
     window-movement {
         spring damping-ratio=1.8 stiffness=2850 epsilon=0.0001
@@ -125,7 +126,7 @@ animations {
 }
 window-rule {
     clip-to-geometry true
-    geometry-corner-radius 7
+    geometry-corner-radius 0
 }
 window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
