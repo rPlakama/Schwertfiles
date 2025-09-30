@@ -4,9 +4,7 @@
   environment.systemPackages = with pkgs; [
     # -- Core CLI Utilities -- #
     bat
-    du-dust
     fd
-    tree
     fzf
     ripgrep
     # -- File & Archive Management -- #
@@ -17,10 +15,8 @@
     fuzzel
     swayidle
     hyprlock
-    qimgv
     swww
     xwayland-satellite
-    libnotify
     wl-clip-persist
     wl-clipboard-rs
     polkit_gnome

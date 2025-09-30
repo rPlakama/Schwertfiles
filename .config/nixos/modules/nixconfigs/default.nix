@@ -9,6 +9,7 @@
     ./nixsettings.nix
     ./networking.nix
     ./environment.nix 
+    ./xdg.nix
 
   ];
 

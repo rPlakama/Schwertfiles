@@ -110,6 +110,9 @@
       #pulseaudio.muted {
       	color: @base03;
       }
+      #pulseaudio.source-muted {
+	color: @base03;
+      }
 
       #pulseaudio {
       	transition: .15s ease-in;
