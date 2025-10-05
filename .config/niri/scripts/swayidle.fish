@@ -8,7 +8,6 @@ end
 echo "Starting swayidle daemon..."
 
 swayidle -w \
-    timeout 120 hyprlock \
     timeout 300 'systemctl suspend' \
     resume 'niri msg output * dpms on' \
     before-sleep hyprlock

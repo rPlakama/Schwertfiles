@@ -5,6 +5,7 @@
     # -- Core CLI Utilities -- #
     bat
     fd
+    eza
     fzf
     ripgrep
     # -- File & Archive Management -- #

@@ -7,6 +7,7 @@
     shellAliases = {
       cdf = ''cd /; cd "$(fd --hidden -t d | fzf )"'';
       y = ''yazi'';
+      ls = ''eza'';
     };
   };
 

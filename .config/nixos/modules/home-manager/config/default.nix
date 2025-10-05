@@ -9,5 +9,6 @@
     ./yazi.nix
     ./zathura.nix
     ./vscode.nix
+    ./nushell.nix
   ];
 }

@@ -15,7 +15,8 @@
     tinymist
     typstyle
 
-    # FISH
+    # Others
     fish-lsp
+    gcc
   ];
 }
