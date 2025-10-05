@@ -1,4 +1,5 @@
 // https://yalter.github.io/niri/Configuration:-Input
+
 input {
       workspace-auto-back-and-forth
     keyboard {
@@ -19,13 +20,15 @@ input {
     accel-speed -0.5
   }
   }
+  overview {
+    workspace-shadow {
+      off
+    }
+  }
 output "eDP-1" {
     transform "normal"
-    background-color "#151515"
-    //mode "1920x1080@40.001"
-    //mode "1680x1050"
-    //mode "1920x1080@79.982"
-    backdrop-color "#080808"
+    mode "1920x1080@74.986"
+    backdrop-color "#050505aa"
     scale 1.5
 }
 layout {
@@ -65,10 +68,10 @@ hotkey-overlay {
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
-  off
+
     window-close {
       duration-ms 200 
-      curve "cubic-bezier" 0 1 0.25 1
+      curve "cubic-bezier" 0 1 0 1
     }
     window-open {
       duration-ms 200 
@@ -77,21 +80,21 @@ animations {
     slowdown 1
 
     workspace-switch {
-      duration-ms 500
+      duration-ms 550
       curve "cubic-bezier" 0 1 0 1
     }
     window-movement {
-      duration-ms 700
-      curve "cubic-bezier" 0 1 0 1
-
+      duration-ms 500
+      curve "cubic-bezier" 0 1.1 0 1
 
     }
     overview-open-close {
-      duration-ms 700
+      duration-ms 300
       curve "cubic-bezier" 0 1 0 1
+
     }
     horizontal-view-movement {
-      duration-ms 700
+      duration-ms 200
       curve "cubic-bezier" 0 1 0 1
 
     }
@@ -101,13 +104,15 @@ window-rule {
     geometry-corner-radius 0
 
 }
+layer-rule {
+    match namespace="^swww-daemon$"
+    place-within-backdrop false
+}
 window-rule {
   match is-focused=false
   opacity 0.97
 }
 
-window-rule {
-}
 window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
     open-floating true
