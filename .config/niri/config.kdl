@@ -1,8 +1,6 @@
 //https://yalter.github.io/niri/Configuration:-Input
-
-
 input {
-      workspace-auto-back-and-forth
+    workspace-auto-back-and-forth
     keyboard {
         xkb {
             layout "br,us"
@@ -18,40 +16,39 @@ input {
         scroll-method "two-finger"
     }
     mouse {
-    accel-speed -0.5
-  }
-  }
-  overview {
-    workspace-shadow {
-      spread 5
-      softness 100
-
+        accel-speed -0.5
     }
-  }
+}
+overview {
+    workspace-shadow {
+        spread 5
+        softness 100
+    }
+}
 output "eDP-1" {
     transform "normal"
-    mode "1920x1080@74.986"
+    mode "1920x1080@79.982"
     backdrop-color "#050505aa"
     scale 1.5
 }
 layout {
     gaps 6
-    center-focused-column "always"
+    center-focused-column "on-overflow"
     background-color "00000000"
     preset-column-widths {
         proportion 0.35
-	proportion 0.5
+        proportion 0.5
         proportion 0.7
     }
     default-column-width {
         proportion 0.4
     }
     focus-ring {
-      off
+        off
+        width 2
     }
     border {
-      off
-        active-color "#151515ff"
+        active-color "#f5f5f519"
         inactive-color "#101010ff"
         width 1
     }
@@ -71,51 +68,40 @@ hotkey-overlay {
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
-
     window-close {
-      duration-ms 150 
-      curve "cubic-bezier" 0 1 1 1
+        duration-ms 150
+        curve "cubic-bezier" 0 1 1 1
     }
     window-open {
-      duration-ms 200 
-	curve "cubic-bezier" 0 1.1 1 1
+        duration-ms 200
+        curve "cubic-bezier" 0 1.1 1 1
     }
     slowdown 1
-
     workspace-switch {
-      duration-ms 550
-      curve "cubic-bezier" 0 1 0 1
+        duration-ms 550
+        curve "cubic-bezier" 0 1.2 0 1
     }
     window-movement {
-      duration-ms 700
-      curve "cubic-bezier" 0 1.2 0 1
-
+        duration-ms 700
+        curve "cubic-bezier" 0 1.2 0 1
     }
     overview-open-close {
-      duration-ms 500
-      curve "cubic-bezier" 0 1 0 1
-
+        duration-ms 500
+        curve "cubic-bezier" 0 1 0 1
     }
     horizontal-view-movement {
-      duration-ms 450
-      curve "cubic-bezier" 0 1 0 1
-
+        duration-ms 450
+        curve "cubic-bezier" 0 1 0 1
     }
-}
-window-rule {
-    clip-to-geometry true
-    geometry-corner-radius 0
-
 }
 layer-rule {
     match namespace="^swww-daemon$"
     place-within-backdrop true
 }
 window-rule {
-  match is-focused=false
-  opacity 0.97
+    match is-focused=false
+    opacity 0.9
 }
-
 window-rule {
     match app-id="firefox$" title="^Picture-in-Picture$"
     open-floating true
