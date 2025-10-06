@@ -1,4 +1,5 @@
-// https://yalter.github.io/niri/Configuration:-Input
+//https://yalter.github.io/niri/Configuration:-Input
+
 
 input {
       workspace-auto-back-and-forth
@@ -22,7 +23,9 @@ input {
   }
   overview {
     workspace-shadow {
-      off
+      spread 5
+      softness 100
+
     }
   }
 output "eDP-1" {
@@ -34,7 +37,7 @@ output "eDP-1" {
 layout {
     gaps 6
     center-focused-column "always"
-    background-color "transparent"
+    background-color "00000000"
     preset-column-widths {
         proportion 0.35
 	proportion 0.5
@@ -70,12 +73,12 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 animations {
 
     window-close {
-      duration-ms 200 
-      curve "cubic-bezier" 0 1 0 1
+      duration-ms 150 
+      curve "cubic-bezier" 0 1 1 1
     }
     window-open {
       duration-ms 200 
-	curve "cubic-bezier" 0 1 0 1
+	curve "cubic-bezier" 0 1.1 1 1
     }
     slowdown 1
 
@@ -84,17 +87,17 @@ animations {
       curve "cubic-bezier" 0 1 0 1
     }
     window-movement {
-      duration-ms 500
-      curve "cubic-bezier" 0 1.1 0 1
+      duration-ms 700
+      curve "cubic-bezier" 0 1.2 0 1
 
     }
     overview-open-close {
-      duration-ms 300
+      duration-ms 500
       curve "cubic-bezier" 0 1 0 1
 
     }
     horizontal-view-movement {
-      duration-ms 200
+      duration-ms 450
       curve "cubic-bezier" 0 1 0 1
 
     }
@@ -106,7 +109,7 @@ window-rule {
 }
 layer-rule {
     match namespace="^swww-daemon$"
-    place-within-backdrop false
+    place-within-backdrop true
 }
 window-rule {
   match is-focused=false

@@ -17,15 +17,16 @@
       main = {
         terminal = "${pkgs.foot}/bin/foot -e";
         icons-enabled = false;
-        anchor = "center";
-        lines = 15;
+        anchor = "top";
+        lines = 1;
+	width = 150;
       };
       border = {
-        selection-radius = 2;
-        radius = 5;
+        selection-radius = 0;
+        radius = 0;
         width = 0;
       };
-      colors.selection = lib.mkForce "#151515ff";
+     colors.selection = lib.mkForce "#151515ff";
     };
   };
 }

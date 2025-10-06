@@ -10,5 +10,6 @@
     ./zathura.nix
     ./vscode.nix
     ./nushell.nix
+    ./fzf.nix
   ];
 }

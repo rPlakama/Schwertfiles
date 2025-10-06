@@ -6,7 +6,6 @@
     bat
     fd
     eza
-    fzf
     ripgrep
     # -- File & Archive Management -- #
     p7zip

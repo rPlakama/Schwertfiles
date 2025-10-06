@@ -16,7 +16,8 @@
     typstyle
 
     # Others
-    fish-lsp
     gcc
+    kdlfmt
+    fish-lsp
   ];
 }
