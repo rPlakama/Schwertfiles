@@ -10,5 +10,5 @@ echo "Starting swayidle daemon..."
 swayidle -w \
     timeout 300 'systemctl suspend' \
     resume 'niri msg output * dpms on' \
-    before-sleep hyprlock
+    before-sleep ~/.config/niri/scripts/swaylock.fish \
 disown
