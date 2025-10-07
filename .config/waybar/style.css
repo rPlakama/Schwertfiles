@@ -1,6 +1,6 @@
       /* Base */
 
-@define-color base00 #151515;
+@define-color base00 #101010;
 @define-color base01 #202020;
 @define-color base02 #303030;
 @define-color base03 #505050;
@@ -39,9 +39,9 @@
       }
 
       tooltip {
-      	background-color: alpha(@base00, 0.95);
-      	border: 1px solid transparent;
-      	border-radius: 0px;
+      	background-color: alpha(@base00, 1.0);
+	border-radius: 0px;
+	border-width: 0px;
       }
 
       /* Modules-wise */
@@ -62,6 +62,7 @@
       #pulseaudio {
       	margin-left: 4px;
       	margin-right: 4px;
+	border-radius: 0px;
       }
 
       /* Workspaces Specifics */

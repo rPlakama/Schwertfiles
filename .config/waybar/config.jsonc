@@ -24,10 +24,10 @@
       "tooltip": false
     },
     "layer": "top",
-    "margin-bottom": 3,
-    "margin-left": 5,
-    "margin-right": 5,
-    "margin-top": 0,
+   //"margin-bottom": 3,
+   //"margin-left": 5,
+   //"margin-right": 5,
+   //"margin-top": 0,
     "height": 30,
     "memory": {
       "format": "{used:0.1f}G",
