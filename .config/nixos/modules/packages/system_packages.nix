@@ -14,23 +14,17 @@
     # -- Desktop & Wayland Integration -- #
     fuzzel
     swayidle
-    hyprlock
     swww
     xwayland-satellite
     wl-clip-persist
     wl-clipboard-rs
     polkit_gnome
 
-    # -- System & Hardware Control -- #
     brightnessctl
-    ryzenadj
     pavucontrol
-
-    # -- Development & Dotfiles -- #
+    # Git
     git
     yadm
-    # -- Nix Ecosystem -- #
-    nix-output-monitor
   ];
 
   # -- Font's -- #

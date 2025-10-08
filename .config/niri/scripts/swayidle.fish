@@ -1,14 +1,7 @@
 #!/run/current-system/sw/bin/fish
-#
-if pgrep -x swayidle >/dev/null
-    echo "swayidle is already running."
-    exit 0
-end
 
 echo "Starting swayidle daemon..."
-
 swayidle -w \
-    timeout 300 'systemctl suspend' \
+    timeout 120 'systemctl suspend' \
     resume 'niri msg output * dpms on' \
-    before-sleep ~/.config/niri/scripts/swaylock.fish \
-disown
+    before-sleep swaylock

@@ -2,6 +2,7 @@
 {
   # -- User Programs -- #
   environment.systemPackages = with pkgs; [
+
     mpv
     btop
     qimgv
