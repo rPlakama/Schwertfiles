@@ -13,6 +13,7 @@
     du-dust
     dropbox
     firefox
+    spotify
     tidal-dl
     obs-studio
     qbittorrent

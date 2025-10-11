@@ -2,6 +2,10 @@
 
 {
 
-  programs.swaylock.enable = true;
-
+  programs.swaylock = {
+    enable = true;
+    settings = {
+      indicator-thickness = 5;
+    };
+  };
 }

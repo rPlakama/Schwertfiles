@@ -11,8 +11,8 @@ input {
     touchpad {
         tap
         dwt
-        accel-speed 0.2
-        accel-profile "flat"
+        accel-speed 0.1
+        accel-profile "adaptive"
         scroll-method "two-finger"
     }
     mouse {
@@ -21,7 +21,6 @@ input {
 }
 overview {
     workspace-shadow {
-        off
         spread 5
         softness 100
     }
@@ -120,6 +119,12 @@ block-out-from "screen-capture"
 binds {
     Mod+D hotkey-overlay-title="Fuzzel." {
         spawn "fuzzel"
+    }
+    Mod+Y hotkey-overlay-title="Yazi." {
+      spawn-sh "foot -e yazi"
+    }
+    Mod+Shift+C hotkey-overlay-title="Cliphist" {
+      spawn-sh "cliphist list | fuzzel --dmenu --lines 5 | cliphist decode | wl-copy"
     }
     Alt+Tab hotkey-overlay-title="Nvim." {
         spawn-sh "foot -e nvim"

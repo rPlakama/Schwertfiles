@@ -16,10 +16,14 @@
     swayidle
     swww
     xwayland-satellite
-    wl-clip-persist
-    wl-clipboard-rs
     polkit_gnome
 
+    # -- Clipboard -- #
+    cliphist
+    wl-clip-persist
+    wl-clipboard
+
+    # -- Hardware -- #
     brightnessctl
     pavucontrol
     # Git

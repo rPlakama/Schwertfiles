@@ -16,7 +16,7 @@
     typstyle
 
     # Others
-    gcc
+    nodejs
     kdlfmt
     fish-lsp
   ];
